@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="" >
+  <head>
+
+                  <!--[if !IE]> -->
+      <script src="//d2c87l0yth4zbw.global.ssl.fastly.net/js/vendor/jquery-2.1.3.min.c8ba96da.js"></script>
+    <!-- <![endif]-->
+
+    <!--[if gte IE 9]>
+      <script src="//d2c87l0yth4zbw.global.ssl.fastly.net/js/vendor/jquery-2.1.3.min.c8ba96da.js"></script>
+    <![endif]-->
+  
+        <!--[if lt IE 9]>
+      <script src="//d2c87l0yth4zbw.global.ssl.fastly.net/js/vendor/jquery-1.11.0.min.96ef3ca5.js"></script>
+    <![endif]-->
+      
+          <script src="//cdn.optimizely.com/js/146312396.js"></script>
+    
+          <meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQQGV1ZQGwEJU1BbBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="description" content="Spotify is a digital music service that gives you access to millions of songs.">
+      <meta name="keywords" content="Spotify, music, online, listen, streaming, play, digital, album, artist, playlist">
+
+              <meta property="fb:app_id" content="174829003346">
+        <meta property="og:title" content="Music for everyone.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.spotify.com/au/">
+        <meta property="og:image" content="http://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/_global/open-graph-default.png">
+        <meta property="og:description" content="Spotify is all the music you’ll ever need.">
+              
+        <meta name="apple-itunes-app" content="app-id=324684580">
+    
+    <title>Music for everyone - Spotify</title>
+
+          <link rel="icon" href="//d2c87l0yth4zbw-2.global.ssl.fastly.net/i/_global/favicon.png">
+      <!--[if IE]><link rel="shortcut icon" href="//d2c87l0yth4zbw.global.ssl.fastly.net/i/_global/favicon.ico"><![endif]-->
+    
+          <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//d2c87l0yth4zbw.global.ssl.fastly.net/i/_global/touch-icon-144.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//d2c87l0yth4zbw-2.global.ssl.fastly.net/i/_global/touch-icon-114.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//d2c87l0yth4zbw.global.ssl.fastly.net/i/_global/touch-icon-72.png">
+      <link rel="apple-touch-icon-precomposed" href="//d2c87l0yth4zbw-2.global.ssl.fastly.net/i/_global/touch-icon-57.png">
+    
+          <link rel="canonical" href="https://www.spotify.com/">
+    
+        <link rel="stylesheet" href="//d2c87l0yth4zbw.global.ssl.fastly.net/css/spotify.f21a06c4.css" />
+  
+    <link rel="stylesheet" href="//d2c87l0yth4zbw-2.global.ssl.fastly.net/css/homepage.0ffd7332.css" />
+  
+                <script src="//d2c87l0yth4zbw.global.ssl.fastly.net/js/vendor/modernizr.min.eeeeb906.js"></script>
+            <script>
+        Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
+      </script>
+      
+      <script>
+    (function() {
+        var spAnalytics = window.spAnalytics || {};
+        spAnalytics._q = [];
+        function proxy(fn) {
+            spAnalytics[fn] = function() {
+                spAnalytics._q.push([fn].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+        }
+        var funcs = ["init", "logEvent", "setUserId", "setUserProperties", "setVersionName", "setDomain", "setGlobalUserProperties"];
+        for (var i = 0; i < funcs.length; i++) {
+            proxy(funcs[i]);
+        }
+        window.spAnalytics = spAnalytics;
+    })();
+</script>
+    
+          <script>
+        var spweb = spweb || {};
+spweb.config = {
+  environment: {
+    staticUrl: 'https://d2c87l0yth4zbw.global.ssl.fastly.net'
+  },
+  sso: {
+    host: 'https://accounts.spotify.com'
+  },
+  autologin: {
+    ios: false,
+    android: false,
+    desktop_firefox: false,
+    desktop_others: false,
+    remotetoken: 'NAowChgKB1Nwb3RpZnkSABoGmAEByAEBJQC_d1YSFPRMemq9pTRJFhNYcasmAZME_Fdi'
+  },
+  facebook: {
+    appId: 174829003346,
+    locale: 'zz',
+    version: 'v2.2',
+    scopes: 'email,publish_actions,user_birthday,public_profile,user_friends'
+  },
+  twitter: {
+    enable: true
+  },
+  downloadLinks: {
+    android: 'https://play.google.com/store/apps/details?id=com.spotify.music',
+    mac: 'https://download.spotify.com/SpotifyInstaller.zip',
+    mac10_5: 'https://download.spotify.com/Spotify-0.8.5.dmg',
+    windows: 'https://download.spotify.com/SpotifySetup.exe',
+    windows_xp_sp2: 'https://download.spotify.com/SpotifyFullXPSP2.exe'
+  },
+  sheerid: {
+    universityUrl: 'https://services.sheerid.com/rest/0.5/organization?callback=?'
+  }
+};
+      </script>
+    
+  </head>
+
+      <body class=" m-au l-en page-homepage  is-loggedout  reboot ">
+          <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-7BJJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+window['ga'] = window['ga'] || function() {(window['ga'].q = window['ga'].q || []).push(arguments);};
+window['ga'].l = 1 * new Date();
+dataLayer = [];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-7BJJ');
+</script>
+<!-- End Google Tag Manager -->
+    
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+ <symbol id="spotify-logo" viewBox="0 0 827.79999 248.275">
+  <g transform="matrix(1.25 0 0 -1.25 0 248.28)">
+   <g transform="scale(.1)">
+    <path d="m1580.6 1105.8c-320.13 190.11-848.16 207.59-1153.8 114.84-49.078-14.89-100.97 12.82-115.84 61.89-14.872 49.1 12.8 100.96 61.914 115.88 350.8 106.49 933.97 85.91 1302.5-132.85 44.14-26.2 58.62-83.21 32.45-127.28-26.18-44.14-83.24-58.69-127.27-32.48zm-10.5-281.56c-22.46-36.449-70.11-47.867-106.51-25.5-266.88 164.05-673.86 211.58-989.6 115.73-40.945-12.367-84.191 10.722-96.629 51.582-12.339 40.949 10.754 84.119 51.629 96.569 360.7 109.45 809.1 56.44 1115.6-131.94 36.4-22.41 47.86-70.078 25.48-106.44zm-121.5-270.43c-17.84-29.258-55.95-38.43-85.1-20.598-233.22 142.54-526.75 174.73-872.45 95.758-33.312-7.629-66.511 13.25-74.109 46.551-7.633 33.312 13.164 66.511 46.555 74.109 378.3 86.48 702.8 49.269 964.57-110.69 29.19-17.832 38.38-55.953 20.53-85.132zm-455.48 1432.4c-548.48 0-993.12-444.6-993.12-993.06 0-548.53 444.64-993.14 993.12-993.14 548.5 0 993.12 444.61 993.12 993.14 0 548.47-444.62 993.1-993.12 993.1"/>
+    <path d="m2701.9 1069.4c-171.46 40.89-202 69.59-202 129.88 0 56.99 53.64 95.31 133.41 95.31 77.32 0 153.98-29.11 234.37-89.05 2.44-1.81 5.48-2.54 8.48-2.06 3 0.45 5.66 2.09 7.41 4.57l83.73 118.03c3.44 4.86 2.5 11.56-2.13 15.27-95.67 76.77-203.4 114.09-329.32 114.09-185.15 0-314.46-111.1-314.46-270.08 0-170.48 111.55-230.83 304.33-277.43 164.08-37.789 191.78-69.449 191.78-126.07 0-62.719-56-101.71-146.11-101.71-100.09 0-181.73 33.719-273.06 112.8-2.27 1.953-5.37 2.851-8.24 2.679-3.02-0.25-5.78-1.648-7.71-3.957l-93.87-111.72c-3.94-4.641-3.44-11.559 1.11-15.578 106.26-94.86 236.94-144.97 377.97-144.97 199.51 0 328.42 109.02 328.42 277.74 0 142.59-85.19 221.45-294.11 272.26"/>
+    <path d="m3592.2 878.31c0-120.4-74.17-204.42-180.36-204.42-105 0-184.19 87.839-184.19 204.42 0 116.57 79.19 204.42 184.19 204.42 104.48 0 180.36-85.949 180.36-204.42zm-144.83 360.22c-86.47 0-157.4-34.06-215.9-103.85v78.56c0 6.19-5.03 11.25-11.22 11.25h-153.53c-6.2 0-11.22-5.06-11.22-11.25v-872.86c0-6.199 5.02-11.25 11.22-11.25h153.53c6.19 0 11.22 5.051 11.22 11.25v275.52c58.51-65.66 129.45-97.726 215.9-97.726 160.69 0 323.34 123.69 323.34 360.14 0 236.5-162.65 360.22-323.34 360.22"/>
+    <path d="m4187.7 672.63c-110.07 0-193.05 88.43-193.05 205.68 0 117.75 80.11 203.19 190.51 203.19 110.77 0 194.31-88.43 194.31-205.76 0-117.72-80.65-203.11-191.77-203.11zm0 565.9c-206.94 0-369.05-159.34-369.05-362.79 0-201.24 161-358.9 366.51-358.9 207.66 0 370.27 158.8 370.27 361.47 0 202-161.49 360.22-367.73 360.22"/>
+    <path d="m4997.3 1224.5h-168.95v172.74c0 6.2-5.01 11.25-11.21 11.25h-153.52c-6.21 0-11.26-5.05-11.26-11.25v-172.74h-73.83c-6.18 0-11.18-5.06-11.18-11.25v-131.95c0-6.2 5-11.25 11.18-11.25h73.83v-341.45c0-137.98 68.67-207.94 204.12-207.94 55.07 0 100.77 11.372 143.83 35.801 3.5 1.949 5.68 5.723 5.68 9.731v125.66c0 3.871-2.03 7.531-5.34 9.57-3.35 2.102-7.51 2.199-10.93 0.5-29.58-14.879-58.18-21.738-90.13-21.738-49.26 0-71.24 22.359-71.24 72.488v317.38h168.95c6.21 0 11.21 5.05 11.21 11.25v131.95c0 6.19-5 11.25-11.21 11.25"/>
+    <path d="m5586 1223.8v21.22c0 62.41 23.92 90.24 77.6 90.24 32.01 0 57.72-6.36 86.52-15.96 3.54-1.12 7.24-0.56 10.12 1.56 2.96 2.12 4.64 5.53 4.64 9.13v129.38c0 4.95-3.18 9.33-7.94 10.78-30.42 9.05-69.33 18.34-127.61 18.34-141.82 0-216.77-79.86-216.77-230.86v-32.49h-73.76c-6.19 0-11.27-5.05-11.27-11.25v-132.62c0-6.2 5.08-11.25 11.27-11.25h73.76v-526.66c0-6.199 5-11.25 11.19-11.25h153.54c6.2 0 11.25 5.051 11.25 11.25v526.66h143.35l219.59-526.52c-24.93-55.329-49.44-66.329-82.91-66.329-27.05 0-55.53 8.071-84.65 24.008-2.75 1.5-5.99 1.762-8.95 0.84-2.93-1.027-5.4-3.207-6.64-6.059l-52.04-114.17c-2.48-5.387-0.36-11.727 4.83-14.528 54.33-29.422 103.37-41.98 163.98-41.98 113.37 0 176.03 52.808 231.28 194.89l266.36 688.3c1.34 3.46 0.94 7.37-1.18 10.44-2.11 3.05-5.51 4.89-9.24 4.89h-159.83c-4.78 0-9.07-3.04-10.63-7.54l-164-467.82-179.3 468.02c-1.64 4.35-5.83 7.23-10.49 7.23h-262.28"/>
+    <path d="m5244.7 1224.5h-153.54c-6.2 0-11.25-5.06-11.25-11.25v-669.86c0-6.199 5.05-11.25 11.25-11.25h153.54c6.19 0 11.25 5.051 11.25 11.25v669.86c0 6.19-5.06 11.25-11.25 11.25"/>
+    <path d="m5168.7 1529.5c-60.82 0-110.19-49.24-110.19-110.06 0-60.87 49.37-110.16 110.19-110.16 60.8 0 110.11 49.29 110.11 110.16 0 60.82-49.31 110.06-110.11 110.06"/>
+    <path d="m6520.1 1157.9h-28.14v-35.88h28.14c14.04 0 22.42 6.87 22.42 17.95 0 11.67-8.38 17.93-22.42 17.93zm18.23-51.18 30.57-42.79h-25.77l-27.51 39.25h-23.66v-39.25h-21.57v113.42h50.58c26.34 0 43.68-13.48 43.68-36.18 0-18.59-10.74-29.95-26.32-34.45zm-23.95 108.37c-55.35 0-97.23-43.99-97.23-97.87 0-53.84 41.58-97.25 96.66-97.25 55.33 0 97.25 43.96 97.25 97.87 0 53.84-41.61 97.25-96.68 97.25zm-0.57-205.93c-60.76 0-108.05 48.8-108.05 108.06 0 59.27 47.9 108.62 108.62 108.62 60.76 0 108.04-48.79 108.04-108 0-59.27-47.86-108.68-108.61-108.68"/>
+   </g>
+  </g>
+ </symbol>
+ <symbol id="facebook-icon" viewBox="0 0 448 448">
+  <path d="m119.75 242.25v-74h63.75v-54.5q0-46.5 26-72.125t69.25-25.625q36.75 0 57 3v66h-39.25q-21.5 0-29 9t-7.5 27v47.25h73.25l-9.75 74h-63.5v189.75h-76.5v-189.75h-63.75z"/>
+ </symbol>
+ <symbol id="twitter-icon" viewBox="0 0 448 448">
+  <path d="m27 347.75q8.75 1 19.5 1 56.25 0 100.25-34.5-26.25-0.5-47-16.125t-28.5-39.875q8.25 1.25 15.25 1.25 10.75 0 21.25-2.75-28-5.75-46.375-27.875t-18.375-51.375v-1q17 9.5 36.5 10.25-16.5-11-26.25-28.75t-9.75-38.5q0-22 11-40.75 30.25 37.25 73.625 59.625t92.875 24.875q-2-9.5-2-18.5 0-33.5 23.625-57.125t57.125-23.625q35 0 59 25.5 27.25-5.25 51.25-19.5-9.25 28.75-35.5 44.5 23.25-2.5 46.5-12.5-16.75 24.5-40.5 41.75 0.25 3.5 0.25 10.5 0 32.5-9.5 64.875t-28.875 62.125-46.125 52.625-64.5 36.5-80.75 13.625q-67.75 0-124-36.25z"/>
+ </symbol>
+ <symbol id="instagram-icon" viewBox="0 0 448 448">
+  <path d="m32 366.75v-285.5q0-20.25 14.5-34.75t34.75-14.5h285.5q20.25 0 34.75 14.5t14.5 34.75v285.5q0 20.25-14.5 34.75t-34.75 14.5h-285.5q-20.25 0-34.75-14.5t-14.5-34.75zm42.749-10.25q0 6.5 4.375 10.875t10.875 4.375h267.25q6.25 0 10.75-4.375t4.5-10.875v-162h-33.75q5 15.75 5 32.75 0 31.5-16 58.125t-43.5 42.125-60 15.5q-49.25 0-84.25-33.875t-35-81.875q0-17 5-32.75h-35.25v162zm72.501-133.25q0 31 22.625 52.875t54.375 21.875q32 0 54.625-21.875t22.625-52.875-22.625-52.875-54.625-21.875q-31.75 0-54.375 21.875t-22.625 52.875zm147.25-90q0 7.25 5 12.25t12.25 5h43.5q7.25 0 12.25-5t5-12.25v-41.25q0-7-5-12.125t-12.25-5.125h-43.5q-7.25 0-12.25 5.125t-5 12.125v41.25z"/>
+ </symbol>
+ <symbol id="user-icon" viewBox="0 0 1024 1024">
+  <path d="m730.06 679.64q-45.377 53.444-101.84 83.443t-120 29.999q-64.032 0-120.75-30.503t-102.6-84.451q-40.335 13.109-77.645 29.747t-53.948 26.722l-17.142 10.084q-29.747 19.159-51.175 57.729t-21.428 73.107 25.461 59.242 60.754 24.705h716.95q35.293 0 60.754-24.705t25.461-59.242-21.428-72.603-51.679-57.225q-6.554-4.033-18.907-10.84t-51.427-24.453-79.409-30.755zm-221.84 25.72q-34.285 0-67.561-14.873t-60.754-40.335-51.175-60.502-40.083-75.124-25.461-84.451-9.075-87.728q0-64.032 19.915-116.22t54.452-85.964 80.67-51.931 99.072-18.151 99.072 18.151 80.67 51.931 54.452 85.964 19.915 116.22q0 65.04-20.167 130.58t-53.948 116.72-81.426 83.443-98.568 32.268z"/>
+ </symbol>
+<symbol id="chevron-down" viewBox="0 0 1024 1024">
+  <path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+</symbol>
+</svg>
+  
+          <div id="fb-root"></div>
+    
+      <div class="body-holder">
+      <div class="wrap">
+
+              
+
+<header id="js-navbar" class="navbar navbar-default navbar-fixed-top " role="banner">
+    <div class="container">
+    <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="sidepanel" data-target="#navbar-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      
+      
+                    <a href="/au/account/overview/" class="user-link hidden">
+              
+    <div class="user-icon-container img-circle navbar-user-img">
+      <svg class="user-icon">
+        <use xlink:href="#user-icon">
+      </svg>
+    </div>
+
+  
+        </a>
+            <a class="navbar-brand" href="/au/">
+        <span class="navbar-logo">Spotify</span>
+      </a>
+    </div>
+          <nav class="collapse navbar-collapse" id="navbar-nav" role="navigation">
+        
+<ul class="nav navbar-nav navbar-right nav-main">
+
+    
+        <li >
+    <a href="/au/premium/?checkout=false" id="nav-link-premium" data-ga-category="menu" data-ga-action="premium">
+      Premium
+                </a>
+  </li>
+
+  
+    <li >
+    <a href="https://support.spotify.com" id="nav-link-help" data-ga-category="menu" data-ga-action="help">
+      Help
+                </a>
+  </li>
+
+
+      
+<li >
+  <a href="/au/download/"
+    id="nav-link-download"
+    class="js-goto-signup js-get-spotify js-gtm-event"
+    data-ga-category="menu"
+    data-ga-action="download"
+    data-gtm-event-name="download_spotify_button_clicked">Download
+   </a>
+</li>
+  
+  <li role="separator" class="divider"></li>
+
+  
+  
+      
+    <li class="alternate sidepanel-item-small " >
+    <a href="/au/signup/" id="nav-link-sign_up" data-ga-category="menu" data-ga-action="sign_up">
+      Sign up
+                </a>
+  </li>
+
+  <li class="alternate sidepanel-item-small">
+                <a href="https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fau%2Faccount%2Foverview%2F" id="header-login-link" class="user-link">
+              <span class="user-text navbar-user-text">Log In</span>
+
+        </a>
+    
+  </li>
+  </ul>
+      </nav>
+      </div>
+</header>
+    
+
+          
+
+
+    
+    
+      
+<div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div class="carousel-inner" role="listbox">
+
+    
+          <div class="item active" data-controls="white">
+        
+<div class="jumbotron jumbotron-inverse jumbotron-holiday bg-midnight">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-lg-8 text-holder">
+        <h1><span class="text-powder-blue">3 months of </span><span class="text-white"><span class="text-powder-blue">Premium for </span>$0.99</span></h1>
+
+        <p>Only $11.99/month afterwards.</p>
+
+        <a  href="https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fau%2Fpurchase%2Fpanel%2F%3Fpromo%3Dthree_for_x"  class="btn btn-bubblegum ">
+          Go Premium
+        </a>
+        <p>or sign up for our <a href="/au/download/">free service</a>.</p>
+
+        <p class="small"><a href="/au/legal/intro-offer-terms-and-conditions/">Terms and conditions</a> apply. Offer not available to users who already tried Premium.</p>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+                <div class="item " data-controls="white">
+        
+<div class="jumbotron jumbotron-inverse jumbotron-holiday jumbotron-holiday-family bg-midnight">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-lg-8 text-holder">
+        <h1><span class="text-white text-pop">Free Premium <br><span class="text-powder-blue">for your family.</span></span></h1>
+
+        <p>For the first 3 months, pay only $11.99 per month for the whole family.</p>
+
+        <a  href="https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fau%2Fpurchase%2Fpanel%2F%3Fcategory%3DfamilyplanIntroOffer"  class="btn btn-bubblegum ">
+          Get Family Plan
+        </a>
+
+        <p class="small"><a href="/au/legal/family-plan-special-offer/">Terms and conditions</a> apply. Gift up to 4 family members. Offer not available in conjunction with any other offer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+          
+          <div class="item " data-controls="white">
+        
+<div class="jumbotron jumbotron-playstation">
+  <div class="jumbotron-bg lazy" data-original="//d2c87l0yth4zbw-2.global.ssl.fastly.net/i/home/carousel/bg-playstation.jpg"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 text-holder">
+        <img class="playstation-logo" src="//d2c87l0yth4zbw.global.ssl.fastly.net/i/home/carousel/playstation.png">
+        <h1>
+          <span class="text-white">
+                        Premium on PlayStation®.
+          </span>
+        </h1>
+        <p>
+          <span class="text-white">
+                        Take your gaming to the next level with Premium.
+          </span>
+        </p>
+        <a href="/au/playstation/" class="btn btn-block">
+          Learn more
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+            </div>
+  <div class="container">
+    <div class="carousel-controls">
+      <a class="carousel-control left" href="#heroCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <ol class="carousel-indicators">
+                  <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#heroCarousel" data-slide-to="1" ></li>
+                  <li data-target="#heroCarousel" data-slide-to="2" ></li>
+              </ol>
+      <a class="carousel-control right" href="#heroCarousel" data-slide="next">
+        <span class="icon-next"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+  
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-5 col-katy-perry">
+      <div class="jumbotron-bg lazy lazy-no-small" data-original="//d2c87l0yth4zbw.global.ssl.fastly.net/i/home/katy-perry.jpg"></div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="jumbotron jumbotron-katy-perry">
+            <div class="container">
+                              <h1>Play music you love.</h1>
+                <p>Listen to your favorite songs, check out new releases, or play music that takes you back.</p>
+                            <p class="features-links hidden-xs">
+                <a href="/au/download/"
+                   class="js-goto-signup js-gtm-event"
+                   data-gtm-event-name="download_spotify_button_clicked"
+                   data-ga-category="home (features)"
+                   data-ga-action="download">
+                  Download Spotify
+                </a>
+              </p>
+              <p class="features-links hidden-xs">
+              <a href="//www.spotify.com/au/redirect/webplayer/?utm_source=www.spotify.com&utm_medium=www_musicforeveryonebox"
+                   data-ga-category="home (features)"
+                   data-ga-action="web-player">
+                  Go to Web Player
+                </a>
+              </p>
+              <p class="hidden-xs">
+                <span class="features-line"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7 col-albums">
+      <div class="row">
+        <div class="col-xs-6 col-album bg-gray" id="album-slot1"></div>
+        <div class="col-xs-6 col-album bg-gray-lighter" id="album-slot2"></div>
+        <div class="col-sm-4 col-album hidden-xs bg-gray-light" id="album-slot3"></div>
+        <div class="col-sm-4 col-album hidden-xs bg-gray-lightest" id="album-slot4"></div>
+        <div class="col-sm-4 col-album hidden-xs bg-gray" id="album-slot5"></div>
+      </div>
+      <div class="row row-entertain">
+        <div class="col-sm-7 entertain-text">
+          <div class="jumbotron jumbotron-entertain">
+            <div class="container">
+                              <h1>Go with the moment.</h1>
+                <p>You can soundtrack your entire life with Spotify. Whatever you’re doing or feeling, we’ve got the music to make it better.</p>
+                          </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-5 hidden-xs col-album bg-gray-light" id="album-slot9">
+        </div>
+      </div>
+      <div class="row visible-xs-block">
+        <div class="col-xs-4 col-album bg-lighter" id="album-slot6"></div>
+        <div class="col-xs-4 col-album bg-gray" id="album-slot7"></div>
+        <div class="col-xs-4 col-album bg-gray-light" id="album-slot8"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="jumbotron jumbotron-yim-2015 text-center">
+  <div class="jumbotron-bg lazy" data-original="//d2c87l0yth4zbw.global.ssl.fastly.net/i/home/yim-2015-hero.jpg"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-10 col-lg-offset-1">
+        <p class="year-badge">2015</p>
+        <h1><span class="text-center">How did 2015 sound to you?</span></h1>
+        <p class="text-center lead">This year had so many standout moments.<br />But what music made 2015 for you?</p>
+        <p>
+          <a href="https://yearinmusic.spotify.com/?utm_source=spotifyhomepage&utm_medium=mkt_consumer&utm_campaign=engagement_yim2015_all&utm_content=all501685&utm_term=dotcom"
+             class="btn"
+             data-ga-category="home"
+             data-ga-action="yim-2015">
+            Get Spotify&#039;s Year In Music
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+<div class="comparison">
+  <div class="container">
+
+    <h1 class="text-center">Listen <strong>free</strong> or subscribe to <strong>Spotify Premium</strong>.</h1>
+
+    <div class="row">
+      <div class="col-sm-4 col-sm-push-6 col-premium featured">
+        <div class="shadow-box">
+          <span class="recommended">recommended</span>
+          <h2>Premium</h2>
+          <p class="price">$11.99 <span class="small-down">/month</span></p>
+                      <small>
+              <span class="text-gold">Try 3 months now for $0.99*</span>
+            </small>
+                    <ul>
+            <li class="checked">Shuffle play</li>
+            <li class="checked">Ad free</li>
+            <li class="checked">Unlimited skips</li>
+            <li class="checked">Listen offline</li>
+            <li class="checked">Play any track</li>
+            <li class="checked">High quality audio</li>
+          </ul>
+          <a  href="https://accounts.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Fau%2Fpurchase%2Fpanel%2F%3Fpromo%3Dthree_for_x"  class="btn btn-green btn-block ">
+            Get Premium
+          </a>
+        </div>
+      </div>
+              <div class="visible-xs-block">
+            <div class="col-sm-8 col-sm-offset-2 col-offers">
+    <div class="offers">
+              <div class="offer">
+          <h3 class="offer-title">Spotify Family</h3>
+          <a class="btn btn-link btn-sm"
+            href="/au/family/"
+            data-ga-category="premium"
+            data-ga-action="offers"
+            data-ga-label="family">Learn more</a>
+        </div>
+              <div class="offer">
+          <h3 class="offer-title">PlayStation<sup>®</sup></h3>
+          <a class="btn btn-link btn-sm"
+            href="/au/playstation/"
+            data-ga-category="premium"
+            data-ga-action="offers"
+            data-ga-label="playstation">Learn more</a>
+        </div>
+          </div>
+  </div>
+
+        </div>
+                  <div class="col-sm-4 col-sm-pull-2 col-free">
+        <div class="shadow-box">
+          <h2>Free</h2>
+          <p class="price">$0.00 <span class="small-down">/month</span></p>
+          <ul>
+            <li class="checked">Shuffle play</li>
+            <li>Ad free</li>
+            <li>Unlimited skips</li>
+            <li>Listen offline</li>
+            <li>Play any track</li>
+            <li>High quality audio</li>
+          </ul>
+          <a href="/au/download/" class="btn btn-halo btn-block js-goto-signup">
+            Get Free
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="container hidden-xs">
+      <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 col-offers">
+    <div class="offers">
+              <div class="offer">
+          <h3 class="offer-title">Spotify Family</h3>
+          <a class="btn btn-link btn-sm"
+            href="/au/family/"
+            data-ga-category="premium"
+            data-ga-action="offers"
+            data-ga-label="family">Learn more</a>
+        </div>
+              <div class="offer">
+          <h3 class="offer-title">PlayStation<sup>®</sup></h3>
+          <a class="btn btn-link btn-sm"
+            href="/au/playstation/"
+            data-ga-category="premium"
+            data-ga-action="offers"
+            data-ga-label="playstation">Learn more</a>
+        </div>
+          </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron jumbotron-terms">
+    <div class="container container-terms text-center">
+  <small class="legal">
+    <a href="/au/legal/intro-offer-terms-and-conditions/">Terms and conditions</a> apply. Offer not available to users who already tried Premium.
+  </small>
+</div>
+  </div>
+
+      </div>
+
+      <footer role="contentinfo" class="footer footer-default ">
+  <div class="container">
+    <nav class="row">
+
+            <div class="col-xs-12 col-md-2">
+        <div class="footer-logo">
+          <a href="/au/">Spotify</a>
+        </div>
+      </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3 class="nav-title">Company</h3>
+        <ul class="nav">
+          
+  <li >
+    <a href="/au/about-us/contact/" id="nav-link-about" data-ga-category="menu" data-ga-action="about">
+      About
+                </a>
+  </li>
+
+  <li >
+    <a href="/au/jobs/" id="nav-link-jobs" data-ga-category="menu" data-ga-action="jobs">
+      Jobs
+                </a>
+  </li>
+
+  <li >
+    <a href="https://press.spotify.com/au/" id="nav-link-press" data-ga-category="menu" data-ga-action="press">
+      Press
+                </a>
+  </li>
+
+  <li >
+    <a href="https://news.spotify.com/au/" id="nav-link-news" data-ga-category="menu" data-ga-action="news">
+      News
+                </a>
+  </li>
+
+        </ul>
+      </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3 class="nav-title">Communities</h3>
+        <ul class="nav">
+          
+  <li >
+    <a href="https://www.spotifyartists.com/" id="nav-link-artists" data-ga-category="menu" data-ga-action="artists">
+      Artists
+                </a>
+  </li>
+
+  <li >
+    <a href="/au/about-us/labels/" id="nav-link-labels" data-ga-category="menu" data-ga-action="labels">
+      Labels
+                </a>
+  </li>
+
+  <li >
+    <a href="https://developer.spotify.com/" id="nav-link-developers" data-ga-category="menu" data-ga-action="developers">
+      Developers
+                </a>
+  </li>
+
+  <li >
+    <a href="/au/brands/" id="nav-link-brands" data-ga-category="menu" data-ga-action="brands">
+      Brands
+                </a>
+  </li>
+
+        </ul>
+      </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3 class="nav-title">Useful links</h3>
+        <ul class="nav">
+            <li >
+    <a href="https://support.spotify.com" id="nav-link-help" data-ga-category="menu" data-ga-action="help">
+      Help
+                </a>
+  </li>
+
+  <li >
+    <a href="/au/get-spotify/e-card/" id="nav-link-gift" data-ga-category="menu" data-ga-action="gift">
+      Gift
+                </a>
+  </li>
+
+  <li class="hidden-xs " >
+    <a href="//www.spotify.com/au/redirect/webplayer/?utm_source=www.spotify.com&amp;utm_medium=www_footer" id="nav-link-play" data-ga-category="menu" data-ga-action="play">
+      Web Player
+                </a>
+  </li>
+
+        </ul>
+      </div>
+
+            <div class="col-xs-12 col-md-4 col-social">
+        <ul class="nav">
+          <li>
+  <a href="http://instagram.com/spotify">
+    <svg class="social-icon">
+      <use xlink:href="#instagram-icon">
+    <svg>
+    <span class="social-text">Instagram</span>
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/spotify">
+    <svg class="social-icon">
+      <use xlink:href="#twitter-icon">
+    <svg>
+    <span class="social-text">Twitter</span></a>
+</li>
+<li>
+  <a href="https://www.facebook.com/Spotify">
+    <svg class="social-icon">
+      <use xlink:href="#facebook-icon">
+    <svg>
+    <span class="social-text">Facebook</span>
+  </a>
+</li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="row row-small">
+      <div class="col-xs-7 col-md-4 col-md-offset-2">
+
+                <ul class="nav nav-small">
+          <li>
+            <a href="/au/legal/">Legal</a>
+          </li>
+          <li>
+            <a href="/au/legal/privacy-policy/#cookies">Cookies</a>
+          </li>
+          <li>
+            <a id="_bapw-link" href="http://info.evidon.com/pub_info/1120?v=1" target="_blank"><img src="https://cdn.betrad.com/pub/icon1.png" id="_bapw-icon" style="border:0 !important;display:inline !important;vertical-align:middle !important;  margin-top: -2px !important;"/> <span>AdChoices</span></a><script>/*<![CDATA[*/(function(){var c=1120,g=1816,b=false,i=document,f=i.getElementById("_bapw-link"),h=(i.location.protocol=="https:"),a=(h?"https":"http")+"://";function e(j){var d=new Image();d.src=a+"l.betrad.com/pub/p.gif?pid="+c+"&ocid="+g+"&i"+j+"=1&r="+Math.random()}f.onclick=function(){e("c");return true};e("i")}());/*]]>*/</script>
+          </li>
+        </ul>
+      </div>
+
+            <div class="col-xs-5 col-md-6 text-right">
+                <a class="market" href="/au/select-your-country/" title="Click to change">
+          <div class="media">
+            <div class="media-body media-middle">
+              Australia
+            </div>
+            <div class="media-right media-middle">
+              <span class="media-object flag-icon flag-icon-au"></span>
+            </div>
+          </div>
+        </a>
+
+                <small class="copyright">&copy; 2015 Spotify AB</small>
+      </div>
+    </nav>
+  </div>
+</footer>
+  
+             <script src="//d2c87l0yth4zbw-2.global.ssl.fastly.net/js/spweb-site.min.a9fff830.js"></script>
+       
+
+    <script src="//d2c87l0yth4zbw-2.global.ssl.fastly.net/home.min.72683c6e.js"></script>
+  
+  <script>
+    spweb.albumArt.tracks = [{"artist":"Sigala","track":"Easy Love","album":"Easy Love","preview_url":"\/\/p.scdn.co\/mp3-preview\/348b81931484f3fedb2eedc6b9d0c859caedad37","images":{"300":"\/\/i.scdn.co\/image\/17dfcd51d6e09f1766805b59ed2522aaad96d307","64":"\/\/i.scdn.co\/image\/82428e77b158b7d29c86ed38cf701138bcc5aec0","640":"\/\/i.scdn.co\/image\/9bd5b0acc7f8d9a77ca247d479b9086121249012"}},{"artist":"Shawn Mendes","track":"Stitches","album":"Handwritten","preview_url":"","images":{"300":"\/\/i.scdn.co\/image\/0401ffb679d32f90bdec89ee49f696cfdd081718","64":"\/\/i.scdn.co\/image\/dbc119565169aa775384695e9c7d7c3744ce588e","640":"\/\/i.scdn.co\/image\/4af7a3c7987543cf1622b5f8af8bfed987ad6a8b"}},{"artist":"Lunchmoney Lewis","track":"Whip It!","album":"Whip It!","preview_url":"\/\/p.scdn.co\/mp3-preview\/8d264bb93415f943b0020308329a23682b150bb7","images":{"300":"\/\/i.scdn.co\/image\/9402087a0a4975b6733886d9bab1b5d49a40ee08","64":"\/\/i.scdn.co\/image\/e0e0d5779b4ee97eb71b2dd3eeb84e2d3b49433d","640":"\/\/i.scdn.co\/image\/4bb100e044e05ad1569427aa7575c26abfa2aebb"}},{"artist":"DJ Snake","track":"Middle","album":"Middle","preview_url":"\/\/p.scdn.co\/mp3-preview\/31d03363d4c6c52ac948d4f08f81ef52ad0d603e","images":{"300":"\/\/i.scdn.co\/image\/a1ee03e63dfcfe5ed73b8e4485ca6d44707d5b79","64":"\/\/i.scdn.co\/image\/907c661d0b59619e26fc54dec11326bee6a5e2b4","640":"\/\/i.scdn.co\/image\/9bbd049f92a5fd4a25f003a83fa03cbda1049961"}},{"artist":"Duke Dumont","track":"Ocean Drive","album":"Ocean Drive","preview_url":"\/\/p.scdn.co\/mp3-preview\/62a6f4a3429184bb44d0ba4052b3367cd0e96a8c","images":{"300":"\/\/i.scdn.co\/image\/7c497f27b4259763eaea2ab95780c995623094be","64":"\/\/i.scdn.co\/image\/37798d323af1362b0f53e709d1aebe561891d842","640":"\/\/i.scdn.co\/image\/25ab5b6cb7eb74386eab04d79239fe089bc08190"}},{"artist":"Calvin Harris","track":"How Deep Is Your Love","album":"How Deep Is Your Love","preview_url":"\/\/p.scdn.co\/mp3-preview\/2beeadd17ed8642a6770f02e575aa6dfed81a3aa","images":{"300":"\/\/i.scdn.co\/image\/3186ff2fd55bf05a34111504109fa24e9c805fff","64":"\/\/i.scdn.co\/image\/edba7af9006154319d7b98d7d483e2943a73ed0a","640":"\/\/i.scdn.co\/image\/7d803d8421d8ac9138255419a04a71323b31c9e3"}},{"artist":"Ed Sheeran","track":"Photograph","album":"x","preview_url":"\/\/p.scdn.co\/mp3-preview\/323627f4a6a5da9705eae7bd6197ad662a5a502f","images":{"300":"\/\/i.scdn.co\/image\/c6574e297a501e44d051f9130c883e1fdfcb3099","64":"\/\/i.scdn.co\/image\/dd88378ab44f521fa2fdeb011039812e2e66367e","640":"\/\/i.scdn.co\/image\/646e9619750dfa3d1eadbbea959dc6f528a9109e"}},{"artist":"The Weeknd","track":"Can't Feel My Face","album":"Beauty Behind The Madness","preview_url":"\/\/p.scdn.co\/mp3-preview\/7ff897cedd6b61021dd97bbb3f7f12b3e181a952","images":{"300":"\/\/i.scdn.co\/image\/fef8458af72a9816f520a5c73e311db94b2498d9","64":"\/\/i.scdn.co\/image\/3557e0d4bdd8a01de2ab6da45dd6e470878e840d","640":"\/\/i.scdn.co\/image\/51a60fbb7daba6e6fbc0d3b47e34017dce6f3921"}},{"artist":"Drake","track":"Hotline Bling","album":"Hotline Bling","preview_url":"\/\/p.scdn.co\/mp3-preview\/289cc93c1ff05b38fd94ae866b4a2f0918a747ee","images":{"300":"\/\/i.scdn.co\/image\/9b05baf696e196f4be59f89b56b66898f55dcd3c","64":"\/\/i.scdn.co\/image\/0955c0646a745f959ef8041be46afed3bcda8997","640":"\/\/i.scdn.co\/image\/809e5bf1f7fc4367a494c09ad69eef81a98318cb"}},{"artist":"Justin Bieber","track":"What Do You Mean?","album":"Purpose","preview_url":"\/\/p.scdn.co\/mp3-preview\/5aa25a1450549c6fa9f2f1eeaa26fe1449dad232","images":{"300":"\/\/i.scdn.co\/image\/0ff94c8fd87a2dbce2a31c2cfd79ea49e858da97","64":"\/\/i.scdn.co\/image\/78d953a3512c4f78fc2b80eca2db0ffd2c06c718","640":"\/\/i.scdn.co\/image\/d30f10db04a3303623d70d7d930da769f5590019"}},{"artist":"Dawin","track":"Dessert","album":"Dessert","preview_url":"\/\/p.scdn.co\/mp3-preview\/a1836b0e56e374715a77891df193453841283a8e","images":{"300":"\/\/i.scdn.co\/image\/fe798a14c761da0ef27dfe333569639648dbddca","64":"\/\/i.scdn.co\/image\/038310794626d673127b560884814ac03680f5ed","640":"\/\/i.scdn.co\/image\/1fb5bac587599194488bd23ab63cad92c0eb7850"}},{"artist":"Robin Schulz","track":"Sugar (feat. Francesco Yates)","album":"SUGAR","preview_url":"\/\/p.scdn.co\/mp3-preview\/5986f088616b069959b9bcde83ffa97ed6a76e0f","images":{"300":"\/\/i.scdn.co\/image\/53fea48ae7ad87d8dea8fbf28ba2573b8a332a11","64":"\/\/i.scdn.co\/image\/6b773ffad981f3bfb260a1db3a47da2851c6c569","640":"\/\/i.scdn.co\/image\/e26dc9724f6492b8ac093f730d98a8382662f0f7"}},{"artist":"Adele","track":"Hello","album":"Hello","preview_url":"\/\/p.scdn.co\/mp3-preview\/e7eac4f61aed454a0878afd670f22347236fbc76","images":{"300":"\/\/i.scdn.co\/image\/f5a5998ad8ec30e78e425a928cd250bd8902a339","64":"\/\/i.scdn.co\/image\/e2227261266297e6532ededd25fee51a14f1b24a","640":"\/\/i.scdn.co\/image\/d83a086148afe6539dae524607cbe4b6ccdd0360"}},{"artist":"Fetty Wap","track":"679 (feat. Remy Boyz)","album":"679 (feat. Remy Boyz)","preview_url":"\/\/p.scdn.co\/mp3-preview\/92889de6d80ff86e5780fb0c413d10ffde0619a6","images":{"300":"\/\/i.scdn.co\/image\/7c0b1feae88f8523e3ca4adf95114086c5d4c310","64":"\/\/i.scdn.co\/image\/23386bc6354d44999c26c84bae95fad00133d46a","640":"\/\/i.scdn.co\/image\/253f2041305189e6ba285ae3f2794256763677af"}},{"artist":"Jack \u00dc","track":"Where Are \u00dc Now (with Justin Bieber)","album":"Skrillex and Diplo present Jack \u00dc","preview_url":"\/\/p.scdn.co\/mp3-preview\/374e5d28ca9edde1613208d148a2e3f60fb86dc4","images":{"300":"\/\/i.scdn.co\/image\/7cba10274638d0d3834ef3afb0722b5d9011d4f1","64":"\/\/i.scdn.co\/image\/2aad9c6ce42cdbc5860c01e262a4cf65bdc9649e","640":"\/\/i.scdn.co\/image\/292c18a8d58184c6943033e10aa1deb98efc07de"}},{"artist":"Rudimental","track":"Lay It All On Me (feat. Ed Sheeran)","album":"Lay It All On Me (feat. Ed Sheeran)","preview_url":"\/\/p.scdn.co\/mp3-preview\/59d1a551ebfa6f001c3c2b17a66ed3daf3f4c103","images":{"300":"\/\/i.scdn.co\/image\/c3b9fd80a5f3cb4da0c7de4c3ce7f57b266dfa2d","64":"\/\/i.scdn.co\/image\/0a88046eb77ca7dad4a629d47d185cdeced0dfff","640":"\/\/i.scdn.co\/image\/088b8fbcc06756b5dd942ffdd492ead8c2deaf41"}},{"artist":"Zara Larsson","track":"Never Forget You","album":"Never Forget You","preview_url":"\/\/p.scdn.co\/mp3-preview\/8c7b0c5ce42deb5fffd7c73a142a983cfdfc5e7c","images":{"300":"\/\/i.scdn.co\/image\/e57ffe8598b4255e9700484cbefdd10133eeb7e7","64":"\/\/i.scdn.co\/image\/722fddc895ca02e3f65b5f02bbf80d2f4b19d112","640":"\/\/i.scdn.co\/image\/7b3ff5759ab4525984c00b868d85ed441e128eca"}},{"artist":"Macklemore & Ryan Lewis","track":"Downtown (feat. Eric Nally, Melle Mel, Kool Moe Dee & Grandmaster Caz)","album":"Downtown (feat. Eric Nally, Melle Mel, Kool Moe Dee & Grandmaster Caz)","preview_url":"\/\/p.scdn.co\/mp3-preview\/de0b366503af2b0ae9e5fd71936f7a3e7cf536fa","images":{"300":"\/\/i.scdn.co\/image\/f89bbc1a5a9c72faf1d05757f6da18a4d7bc8c55","64":"\/\/i.scdn.co\/image\/b40beaa8bb6f039c9741619072530d9497270194","640":"\/\/i.scdn.co\/image\/5298b1a3dd0a697b2344c84e1404e347b319c5f7"}},{"artist":"Major Lazer","track":"Lean On (feat. M\u00d8 & DJ Snake)","album":"Peace Is The Mission","preview_url":"\/\/p.scdn.co\/mp3-preview\/5e12efcb716926b0efc6659957d65f35dec3ac86","images":{"300":"\/\/i.scdn.co\/image\/f46451be38eb93d975d3231502a72e5ac6858d7c","64":"\/\/i.scdn.co\/image\/9637bd0deb3406f5fd1d5be70a9296c5478326cd","640":"\/\/i.scdn.co\/image\/8edc32348f57a12caa2301243b045493137fbd90"}},{"artist":"Felix Jaehn","track":"Ain't Nobody (Loves Me Better)","album":"Ain't Nobody (Loves Me Better)","preview_url":"\/\/p.scdn.co\/mp3-preview\/960597c7915bbcba53ab66bbd8399b8d83593be4","images":{"300":"\/\/i.scdn.co\/image\/9a94737353cc4c20df7a9a03a7912c36b88d5f63","64":"\/\/i.scdn.co\/image\/d6eca630138b35b99c41f4c5b2f7327c1f6cad15","640":"\/\/i.scdn.co\/image\/8ed01a11d8bb681c0949be3ed555561046281dbc"}},{"artist":"Ariana Grande","track":"Focus","album":"Focus","preview_url":"\/\/p.scdn.co\/mp3-preview\/5a9d703cf3dfc2e0c3b1aea5fbd4a67e0e23806b","images":{"300":"\/\/i.scdn.co\/image\/bdb2a48dbb09ff2a5a422e5d9bf59fe4e0e6f5cb","64":"\/\/i.scdn.co\/image\/c384b5ab894868f9e0e1bb30b121a2105ad3b16c","640":"\/\/i.scdn.co\/image\/f01b3b8ae2073939ac5a429f444d0048efb3b76a"}},{"artist":"Disclosure","track":"Magnets","album":"Caracal","preview_url":"\/\/p.scdn.co\/mp3-preview\/f79f41b2dfeb4d85c6adb39ca33d34d2c81cf336","images":{"300":"\/\/i.scdn.co\/image\/2339550bc55570a05c141511258aec3a57e9223e","64":"\/\/i.scdn.co\/image\/5c2999c648ffd6feb9dbb8edb21e004cf9cf2428","640":"\/\/i.scdn.co\/image\/3998b9d808087375c3648cee117847b12c76127a"}},{"artist":"Marcus Marr","track":"The Trouble with Us","album":"The Trouble with Us","preview_url":"\/\/p.scdn.co\/mp3-preview\/79bef46db0cc997666ae9c89e37d60a3d2cf98d1","images":{"300":"\/\/i.scdn.co\/image\/e2b11c3f06489e22c892dbf327e905fd76e242db","64":"\/\/i.scdn.co\/image\/66afcd893a3695fece226b26925d63daeb28a84f","640":"\/\/i.scdn.co\/image\/5905db7fc4375b7ff391839279f60bc81c3b334e"}},{"artist":"Nelly","track":"The Fix","album":"The Fix","preview_url":"\/\/p.scdn.co\/mp3-preview\/330eedfa8271e8236287f36a8bec465560c51437","images":{"300":"\/\/i.scdn.co\/image\/57a2c0386ebea960c7d8b47ae0dd1a2b578341d5","64":"\/\/i.scdn.co\/image\/3cee615a37f1ae11e3b0de05849d320e1b0c3945","640":"\/\/i.scdn.co\/image\/d9a6f3ecee1069771c869fc8f65037db963e0b81"}}];
+
+    if (spweb.albumArt.tracks.error) {
+      spweb.albumArt.tracks = [
+        {"images": {"640": "//i.scdn.co/image/0ca5fd85f37a5c57e5065bd2e37a9b94d9a684e6"}},
+        {"images": {"640": "//i.scdn.co/image/9ebf4df6beb7ac0d43eda3c30fa913df6775c730"}},
+        {"images": {"640": "//i.scdn.co/image/c780eb73d80dbff89198cb506f47ab43ca6141d8"}},
+        {"images": {"640": "//i.scdn.co/image/e1c459ccba6b4fc8e3d0aea3adfa1f364e00d1f8"}},
+        {"images": {"640": "//i.scdn.co/image/2731c1600c8d040dd41844158234a772072cf8dc"}},
+        {"images": {"640": "//i.scdn.co/image/99f6b118e71fcd63759d7cca0aa4b71635574af9"}},
+        {"images": {"640": "//i.scdn.co/image/6c4e8166ab5ad1b79b6623f8b402224c64372c8c"}},
+        {"images": {"640": "//i.scdn.co/image/292c18a8d58184c6943033e10aa1deb98efc07de"}},
+        {"images": {"640": "//i.scdn.co/image/8e2cedebf0e797d5999d6bd64b319e468e03422b"}},
+        {"images": {"640": "//i.scdn.co/image/287cc583b28a5639610256db74acb5b35f5d15fa"}},
+        {"images": {"640": "//i.scdn.co/image/2098d0a7b78023cc33562baa133ec77324f2d212"}},
+        {"images": {"640": "//i.scdn.co/image/b386234a852ac8c73a2b3f3a4e541735b2d353e5"}},
+        {"images": {"640": "//i.scdn.co/image/36369ddc20c25f1db9e403ae7e9ddab1d7abf915"}},
+        {"images": {"640": "//i.scdn.co/image/21760cc4b873adabef2fc6f0fbf907ecfe2e1f32"}},
+        {"images": {"640": "//i.scdn.co/image/efb2694a428174e3ecd0a275e45b46f683f3cf19"}},
+        {"images": {"640": "//i.scdn.co/image/0d8fc3c904c9788ae62fe2c34157f53c400177d7"}},
+        {"images": {"640": "//i.scdn.co/image/2f011c4c92093a50936b0feef747e7a1dddfd1fb"}},
+        {"images": {"640": "//i.scdn.co/image/ab00a40a69b4f1e62db16f7b718d727bfb58ef1f"}},
+        {"images": {"640": "//i.scdn.co/image/bd71bf61fb8c37ce9157edd01bb8637a5d994586"}},
+        {"images": {"640": "//i.scdn.co/image/3d373fbeabb3e80b61f7d8a82d151b7c190b7119"}}
+      ];
+    };
+
+    $(function() {
+      spweb.home.init();
+    });
+  </script>
+
+  </div>
+
+                            <script type="text/javascript" src="//d2c87l0yth4zbw-2.global.ssl.fastly.net/js/sessioncam.min.261988c1.js"></script>
+        
+                  <script>
+                        spweb.payment.sessionCam('au', '', 'au', '', '');
+          </script>
+        
+          <!-- SessionCam Client Integration v6.0 -->
+          <script type="text/javascript">
+              //<![CDATA[
+              var scRec=document.createElement('SCRIPT');
+              scRec.type='text/javascript';
+              scRec.src="//d2oh4tlt9mrke9.cloudfront.net/Record/js/sessioncam.recorder.js";
+              document.getElementsByTagName('head')[0].appendChild(scRec);
+              //]]>
+          </script>
+          <!-- End SessionCam -->
+          
+            <script>
+    (function() {
+        var sources = [];
+            sources.push('//d2c87l0yth4zbw-2.global.ssl.fastly.net/js/vendor/sp-analytics.min.a5c5d578.js');
+            (function(window, document) {
+            var s = document.getElementsByTagName('script')[0];
+
+            for (var i = 0; i < sources.length; i++) {
+                var as = document.createElement('script');
+                as.type = 'text/javascript';
+                as.async = true;
+                as.src = sources[i];
+                s.parentNode.insertBefore(as, s);
+            }
+        })(window, document);
+    })();
+</script>
+        <script>
+            spAnalytics.init(null, {apiEndpoint: '/au/spotify/framework/analytics/track/'})
+        </script>
+    
+                  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"056bbe16c3","applicationID":"2971901","transactionName":"blwBY0pSDEQFU0BfWlcWIlRMWg1ZS1hbW1A=","queueTime":0,"applicationTime":249,"atts":"QhsCFQJIH0o=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+  <!-- This page was rendered using Twig -->
+</html>

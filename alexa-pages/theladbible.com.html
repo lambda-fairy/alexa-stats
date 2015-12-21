@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQYGUVNSGwUBVFFUAwg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+        <!-- Google DFP Code -->
+    <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+            '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+
+    <!-- Start Visual Website Optimizer Asynchronous Code -->
+    <script type='text/javascript'>
+        var _vwo_code=(function(){
+            var account_id=192632,
+                    settings_tolerance=2000,
+                    library_tolerance=2500,
+                    use_existing_jquery=false,
+                    // DO NOT EDIT BELOW THIS LINE
+                    f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+    </script>
+    <!-- End Visual Website Optimizer Asynchronous Code -->
+
+                    
+    <link rel="icon" sizes="192x192" href="/apple-touch-icon.png?v=2">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Add to homescreen for Safari on iOS -->
+                
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="/apple-touch-icon.png?v=2">
+    <meta name="msapplication-TileColor" content="#15ace6">
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+
+    <title>            Home
+     | The LAD Bible</title>
+
+    
+        <link rel="stylesheet" href="/css/main.min.css" />
+    
+    <!-- Start Alexa Certify Javascript -->
+    <script type="text/javascript">
+        _atrk_opts = { atrk_acct:"jzgkj1aAkN00Ej", domain:"theladbible.com",dynamic: true};
+        (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=jzgkj1aAkN00Ej" style="display:none" height="1" width="1" alt="" /></noscript>
+    <!-- End Alexa Certify Javascript -->
+
+
+
+    
+                    
+
+    <!-- SEO Meta Information -->
+    
+    <!-- FB markup -->
+
+<meta property="fb:app_id" content="331116490288120">
+
+<!-- Twitter markup -->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@TheLadBible">
+<meta name="twitter:domain" content="theladbible.com">
+
+
+                    
+
+                
+    <!-- Real OG shizzle -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.theladbible.com/">
+    <meta property="og:title" content="Home | The LAD Bible">
+    <meta property="og:description" content="The LAD Bible is one of the largest communities for guys aged 16-30 in the world. Send us your funniest pictures and videos!">
+    <meta property="og:image" content="http://www.theladbible.com/apple-touch-icon.png">
+
+    <meta name="description" content="The LAD Bible is one of the largest communities for guys aged 16-30 in the world. Send us your funniest pictures and videos!">
+    <link rel="image_src" href="http://www.theladbible.com/apple-touch-icon.png">
+
+    <link rel="canonical" href="http://www.theladbible.com/">
+
+
+    <!-- Mezzobit Tag Manager -->
+    <script async="1">
+        (function() {
+            __mtm = [ '557f014d5a1b37a630ef1ded', 'd36wtdrdo22bqa.cloudfront.net/mngr' ];
+            var s = document.createElement('script');
+            s.async = 1;
+            s.src = '//' + __mtm[1] + '/mtm.js';
+            var e = document.getElementsByTagName('script')[0];
+            (e.parentNode || document.body).insertBefore(s, e);
+        })();
+    </script>
+    <!-- End Mezzobit Tag Manager -->
+
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+                <!--[if IE]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+                <script src="/js/matchMediaPolyfill.js"></script>
+                <![endif]-->
+
+    
+</head>
+<body>
+    <div class="app-launch-interstitial-container">
+        <div class="app-launch-interstitial-container__ios">
+            <div class="header clearfix">
+                                <img class="logo" src="/images/e0b4fab.png" />
+                                <p><a href="javascript:void(0);" id="ios-no-thanks">No Thanks</a></p>
+            </div>
+            <a class="ios-store-linkout" href="https://itunes.apple.com/us/app/theladbible/id1049341920?ls=1&mt=8" target="_blank">
+                                <img src="/images/b0676d5.png" class="phone" />
+                            </a>
+            <div class="copy">
+                <a class="ios-store-linkout" href="https://itunes.apple.com/us/app/theladbible/id1049341920?ls=1&mt=8" target="_blank">
+                                        <img src="/images/5b4b488.svg" />
+                                    </a>
+            </div>
+        </div>
+        <div class="app-launch-interstitial-container__android">
+            <div class="header clearfix">
+                                <img class="logo" src="/images/e0b4fab.png" />
+                                <p><a href="javascript:void(0);" id="android-no-thanks">No Thanks</a></p>
+            </div>
+            <a class="android-store-linkout" href="https://play.google.com/store/apps/details?id=com.theladbible.android" target="_blank">
+                                <img src="/images/b93ca21.png" class="phone phone__android" />
+                            </a>
+            <div class="copy">
+                <p>We didn't forget about you, available now</p>
+                <a class="android-store-linkout" href="https://play.google.com/store/apps/details?id=com.theladbible.android" target="_blank">
+                                        <img src="/images/7de91fc.png" />
+                                    </a>
+            </div>
+        </div>
+    </div>
+
+     
+    
+    <nav class="mega-menu">
+    <div class="wrapper">
+        <header>
+            <div class="nav-toggle">
+                                <img class="nav-icon close-icon" src="/images/42bf1a2.png" role="collapse" />
+                
+            </div>
+        </header>
+
+        <section class="primary-nav">
+    <ul>
+        <li><a data-trending="trending-funny" href="/category/funny">Funny</a></li>
+        <li><a data-trending="trending-entertainment" href="/category/entertainment">Entertainment</a></li>
+        <li><a data-trending="trending-news" href="/category/news">News</a></li>
+        <li><a data-trending="trending-tech" href="/type/technology">Technology</a></li>
+        <li><a data-trending="trending-videos" href="/category/videos">Videos</a></li>
+        <li><a data-trending="trending-pictures" href="/category/pictures">Pictures</a></li>
+
+        <li><a data-trending="trending-more" href="/category/more">More</a></li>
+
+        <li><a href="http://www.theoddsbible.com/?utm_source=theladbible.com&utm_medium=channel&utm_campaign=TheLadBible" target="_blank">TheOddsBible</a></li>
+
+        <li><a href="/submit">Submit Your Content</a></li>
+    </ul>
+</section>
+
+<section class="trending-nav">
+
+    <div class="trending-content trending-funny">
+        <section class="trending">
+    <h1>Trending in Funny</h1>
+    <ul>
+                                    <li>
+                    <article>
+                        <a href="/articles/reindeer-escapes-from-tesco-store-and-causes-traffic-chaos">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5676d6538836c.jpg">
+                            <h1>Reindeer Escapes From TESCO Store And Causes Traffic Chaos</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/funny" class="category category-funny">Funny</a>
+                                    | <a href="/type/animals" class="type type-animals">Animals</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/little-girl-goes-full-savage-in-hilarious-note-to-parents-after-she-finds-out-santa-isn-t-real">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5676015a1afbb.jpg">
+                            <h1>Little Girl Goes Full Savage In Hilarious Note To Parents After She Finds Out Santa Isn&#039;t Real</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/funny" class="category category-funny">Funny</a>
+                                    | <a href="/type/viral" class="type type-viral">Viral</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/you-ve-never-seen-anyone-friend-zoned-as-bad-as-this-guy">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5674a7dab004d.JPG">
+                            <h1>You&#039;ve Never Seen Anyone Friend-Zoned As Bad As This Guy</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/funny" class="category category-funny">Funny</a>
+                                    | <a href="/type/fail" class="type type-fail">Fail</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                        </ul>
+</section>
+    </div>
+    <div class="trending-content trending-entertainment">
+        <section class="trending">
+    <h1>Trending in Entertainment</h1>
+    <ul>
+                                    <li>
+                    <article>
+                        <a href="/articles/stormzy-managed-to-outsell-x-factor-winner-in-the-charts">
+                            <img src="http://www1.theladbible.com/images/content/82x82/56747f159dc6a.jpg">
+                            <h1>Stormzy Managed To Outsell X Factor Winner In The Charts</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/entertainment" class="category category-entertainment">Entertainment</a>
+                                    | <a href="/type/music" class="type type-music">Music</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/craig-david-freestyling-over-stormzy-s-shut-up-is-the-best-thing-you-ll-listen-to-today">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5675f83f2eb45.jpg">
+                            <h1>Craig David Freestyling Over Stormzy&#039;s &#039;Shut Up&#039; Is The Best Thing You&#039;ll Listen To Today</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/entertainment" class="category category-entertainment">Entertainment</a>
+                                    | <a href="/type/viral" class="type type-viral">Viral</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/a-first-look-at-the-actors-who-will-be-playing-tupac-and-biggie-in-all-eyez-on-me">
+                            <img src="http://www1.theladbible.com/images/content/82x82/56769a4e2f4f3.jpg">
+                            <h1>A First Look At The Actors Who Will Be Playing Tupac And Biggie In ‘All Eyez On Me’</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/entertainment" class="category category-entertainment">Entertainment</a>
+                                    | <a href="/type/film-and-tv" class="type type-film-and-tv">Film &amp; TV</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                        </ul>
+</section>
+    </div>
+    <div class="trending-content trending-news">
+        <section class="trending">
+    <h1>Trending in News</h1>
+    <ul>
+                                    <li>
+                    <article>
+                        <a href="/articles/a-hunter-was-crushed-by-a-young-elephant-that-he-was-trying-to-kill">
+                            <img src="http://www1.theladbible.com/images/content/82x82/56753651602cc.PNG">
+                            <h1>A Hunter Was Crushed To Death By A Baby Elephant That He Was Trying To Kill</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/news" class="category category-news">News</a>
+                                    | <a href="/type/news" class="type type-news">News</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/little-girl-mistakes-a-man-for-santa-and-he-plays-along-like-a-hero">
+                            <img src="http://www1.theladbible.com/images/content/82x82/567405a77fa5a.jpg">
+                            <h1>Little Girl Mistakes A Man For Santa And He Plays Along Like A Hero</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/news" class="category category-news">News</a>
+                                    | <a href="/type/news" class="type type-news">News</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/30-of-republicans-think-america-should-bomb-agrabah-the-fictional-city-in-aladdin">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5674bfe0d2aa7.JPG">
+                            <h1>30% Of Republicans Think America Should Bomb Agrabah, The Fictional City In &#039;Aladdin&#039;</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/news" class="category category-news">News</a>
+                                    | <a href="/type/" class="type type-"></a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                        </ul>
+</section>
+    </div>
+    <div class="trending-content trending-videos">
+        <section class="trending">
+    <h1>Trending in Videos</h1>
+    <ul>
+                                    <li>
+                    <article>
+                        <a href="/articles/the-slow-mo-guys-and-steve-o-have-teamed-up-to-make-an-awesome-video">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5676042b7a5c2.jpg">
+                            <h1>The Slow Mo Guys And Steve-O Have Teamed Up To Make An Awesome Video</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/videos" class="category category-videos">Videos</a>
+                                    | <a href="/type/viral" class="type type-viral">Viral</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                        </ul>
+</section>
+    </div>
+    <div class="trending-content trending-pictures">
+        <section class="trending">
+    <h1>Trending in Pictures</h1>
+    <ul>
+                                    <li>
+                    <article>
+                        <a href="/albums/photoshop-battle-adolf-hitler-wearing-kimono">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5677088d510f3.jpg">
+                            <h1>Photoshop Battle: Adolf Hitler Wearing Kimono.</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/pictures" class="category category-pictures">Pictures</a>
+                                    | <a href="/type/daily-ladness" class="type type-daily-ladness">Daily Ladness</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/albums/evening-ladness-705">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5676e4417d5d3.jpg">
+                            <h1>Sunday Ladness</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/pictures" class="category category-pictures">Pictures</a>
+                                    | <a href="/type/daily-ladness" class="type type-daily-ladness">Daily Ladness</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/albums/afternoon-ladness-704">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5675968ade5a7.jpg">
+                            <h1>Afternoon Ladness</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/pictures" class="category category-pictures">Pictures</a>
+                                    | <a href="/type/daily-ladness" class="type type-daily-ladness">Daily Ladness</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                        </ul>
+</section>
+    </div>
+    <div class="trending-content trending-more">
+        <section class="trending">
+    <h1>Trending in More</h1>
+    <ul>
+                                    <li>
+                    <article>
+                        <a href="/articles/comedian-divides-opinion-after-defending-dads-from-paedophile-accusations">
+                            <img src="http://www1.theladbible.com/images/content/82x82/567410b492ce4.jpg">
+                            <h1>Comedian Divides Opinion After Defending Dads From &#039;Paedophile&#039; Accusations</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/more" class="category category-more">More</a>
+                                    | <a href="/type/viral" class="type type-viral">Viral</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/cara-delevingne-gets-revenge-on-paparazzi-who-allegedly-took-up-skirt-photo-of-her-after-twitter-rant">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5675e0450f146.jpg">
+                            <h1>Cara Delevingne Gets Revenge On Paparazzi Who Allegedly Took Up-Skirt Photo Of Her After Twitter Rant</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/more" class="category category-more">More</a>
+                                    | <a href="/type/celebrity" class="type type-celebrity">Celebrity</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                            <li>
+                    <article>
+                        <a href="/articles/rich-kid-of-instagram-lana-scolaro-thinks-the-average-brit-has-ps5000-a-month-spare-for-shopping">
+                            <img src="http://www1.theladbible.com/images/content/82x82/5673f931e071a.jpg">
+                            <h1>&#039;Rich Kid Of Instagram&#039; Thinks The Average Brit Has £5000 A Month To Spend On Shopping</h1>
+                        </a>
+                                                
+                                                    
+                            <div class="taxonomy-container">
+                                <span class="taxonomy">
+                                    <a href="/category/more" class="category category-more">More</a>
+                                    | <a href="/type/viral" class="type type-viral">Viral</a>
+                                </span>
+                            </div>
+                        
+                    </article>
+                </li>
+                        </ul>
+</section>
+    </div>
+    <div class="trending-content trending-tech">
+            </div>
+
+</section>
+
+<section class="secondary-nav">
+    <ul>
+                    <li><a href="/type/viral">Viral</a></li>
+                    <li><a href="/type/weird">Weird</a></li>
+                    <li><a href="/type/sport">Sport</a></li>
+                    <li><a href="/type/celebrity">Celebrity</a></li>
+                    <li><a href="/type/film-and-tv">Film &amp; TV</a></li>
+                    <li><a href="/type/gaming">Gaming</a></li>
+                    <li><a href="/type/music">Music</a></li>
+                    <li><a href="/type/interesting">Interesting</a></li>
+                    <li><a href="/type/technology">Technology</a></li>
+                    <li><a href="/type/news">News</a></li>
+                    <li><a href="/type/food">Food</a></li>
+                    <li><a href="/type/cars">Cars</a></li>
+                    <li><a href="/type/awesome">Awesome</a></li>
+                    <li><a href="/type/animals">Animals</a></li>
+                    <li><a href="/type/feels">Feels</a></li>
+                    <li><a href="/type/inspirational">Inspirational</a></li>
+                    <li><a href="/type/fail">Fail</a></li>
+                    <li><a href="/type/daily-ladness">Daily Ladness</a></li>
+            </ul>
+</section>
+
+        <ul class="tertiary-nav">
+            <li>&copy; 65twenty</li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/terms-and-conditions">Website Terms &amp; Conditions</a></li>
+            <li><a href="/privacy-and-cookies">Privacy &amp; Cookies</a></li>
+            <li><a href="/advertise-with-us">Advertise With Us</a></li>
+        </ul>
+
+    </div>
+</nav>
+        <div id="container">
+
+            
+        <div class="appBanner">
+    <a class="appBanner__close">
+        <i class="fa fa-times"></i>
+    </a>
+    <div class="appBanner__ico">
+                    <img src="/images/ebd4912.png" />
+            </div>
+    <div class="appBanner__info">
+        <div class="title">TheLADbible</div>
+        <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <div class="price">
+            FREE - On the App Store
+        </div>
+    </div>
+    <a class="appBanner__link" href="https://itunes.apple.com/gb/app/theladbible/id1049341920?ls=1&mt=8" target="_blank">View</a>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        // check for a cookie.
+        var appurl = 'fb331116490288120://';
+        var appstore = 'https://itunes.apple.com/gb/app/theladbible/id1049341920?mt=8';
+
+        var timeout;
+
+        function preventPopup() {
+            clearTimeout(timeout);
+            timeout = null;
+            window.removeEventListener('pagehide', preventPopup);
+        }
+        function startApp() {
+            document.location = appurl;
+            timeout = setTimeout(function(){
+                document.location = appstore;
+            }, 2000);
+            window.addEventListener('pagehide', preventPopup);
+        }
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+                ios = /iphone|ipod|ipad/.test( userAgent );
+
+        function setCookie() {
+            document.cookie = "ios_app_banner_dismissed=true";
+        }
+
+        function cookieExists() {
+            var cname = "ios_app_banner_dismissed";
+
+            var name = cname + "=",
+                    ca = document.cookie.split(';'),
+                    i,
+                    c,
+                    ca_length = ca.length;
+            for (i = 0; i < ca_length; i += 1) {
+                c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) !== -1) {
+                    return true; //c.substring(name.length, c.length);
+                }
+            }
+            return false;
+        }
+
+        $('a.appBanner__close').on('click', function(e) {
+            // set a cookie
+            e.preventDefault();
+            setCookie();
+            $('div.appBanner').removeClass('appBanner--active');
+            checkHeader();
+        });
+
+        $('.appBanner__link').on('click', function(e) {
+            if (ios) {
+                startApp();
+            }
+        });
+
+        function checkHeader() {
+            if ($('div.appBanner').hasClass('appBanner--active')) {
+                $('#container > header').css('top', '82px');
+            } else {
+                $('#container > header').css('top', '0');
+            }
+        }
+
+        if (ios && !cookieExists()) {
+            $('.appBanner').addClass('appBanner--active');
+            checkHeader();
+        }
+    });
+</script>
+<header>
+    <div class="wrapper">
+        <div class="nav-top">
+            <a href="/" class="logo-link">
+                                                                                <img class="logo" src="data:image/png;base64,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" />
+            </a>
+            <ul class="taxonomy" data-selected="home">
+                <a href="/category/funny"><li class="funny">Funny</li></a>
+                <a href="/category/entertainment"><li class="entertainment">Entertainment</li></a>
+                <a href="/category/news"><li class="news">News</li></a>
+                <a href="/type/technology"><li class="technology">Technology</li></a>
+                <a href="/category/videos"><li class="videos">Videos</li></a>
+                <a href="/category/pictures"><li class="pictures">Pictures</li></a>
+                <a href="/category/more"><li class="more">More</li></a>
+            </ul>
+
+            
+            <div class="nav-toggle">
+                                <img class="nav-icon hamburger-icon" src="/images/56ed8e2.png" role="expand" />
+                            </div>
+        </div>
+                                                                                                                                                                                                                                            </div>
+</header>
+        <main>
+            
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var win = window || {};
+                        win.contentCategory = 'home';
+                        win.pageType = 'list';
+        });
+    </script>
+
+    
+    
+    <section class="list">
+        
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/dog-saves-woman-from-sex-attacker-in-manchester" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56774d1e0acdf.JPG" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Dog Saves Woman From Sex Attacker In Manchester</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Hero</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/news" class="category category-news" itemprop="about" content="News">News</a>
+                | <a href="/type/news" class="type type-news" itemprop="about" content="News">News</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-21T00:53:00+0000">5 minutes ago </time> | 0 Shares <meta itemprop="interactionCount" content="UserLikes:0" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/duncan-bannatyne-went-full-on-savage-on-a-13-year-old-kid-on-twitter" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56774a7dae4be.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Duncan Bannatyne Went Full On Savage On A 13-Year-Old Kid On Twitter</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">And his dad jumped in...</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/celebrity" class="type type-celebrity" itemprop="about" content="Celebrity">Celebrity</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-21T00:42:00+0000">16 minutes ago </time> | 0 Shares <meta itemprop="interactionCount" content="UserLikes:0" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/the-rock-has-a-perfect-response-for-everyone-laughing-at-his-sleeve-buttoning-pose" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/567743b4192aa.JPG" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">The Rock Has A Perfect Response For Everyone Laughing At His Sleeve-Buttoning Pose</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Sorry about that, mate.</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/funny" class="category category-funny" itemprop="about" content="Funny">Funny</a>
+                | <a href="/type/celebrity" class="type type-celebrity" itemprop="about" content="Celebrity">Celebrity</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-21T00:14:00+0000">44 minutes ago </time> | 1 Shares <meta itemprop="interactionCount" content="UserLikes:1" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/guy-tells-his-wife-not-to-spoil-star-wars-and-he-ll-live-to-regret-it" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56773d9ed6cbf.JPG" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Guy Tells His Wife Not To Spoil Star Wars And He&#039;ll Live To Regret It</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Poor guy</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/community" class="category category-community" itemprop="about" content="Community">Community</a>
+                | <a href="/type/fail" class="type type-fail" itemprop="about" content="Fail">Fail</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T23:36:00+0000">1 hour ago </time> | 1 Shares <meta itemprop="interactionCount" content="UserLikes:1" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/john-cena-breaks-his-squatting-record-by-squatting-an-outrageous-611-pounds" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5677394eb4dd5.JPG" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">John Cena Breaks His Squatting Record By Squatting An Outrageous 611 Pounds</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Seriously impressive</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/celebrity" class="type type-celebrity" itemprop="about" content="Celebrity">Celebrity</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T23:28:00+0000">1 hour ago </time> | 1 Shares <meta itemprop="interactionCount" content="UserLikes:1" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/take-a-look-inside-the-mansion-conor-mcgregor-has-been-staying-in" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56772f780cfe9.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Take A Look Inside The Mansion Conor McGregor Has Been Staying In</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Wow</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/sport" class="type type-sport" itemprop="about" content="Sport">Sport</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T22:46:00+0000">2 hours ago </time> | 963 Shares <meta itemprop="interactionCount" content="UserLikes:963" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/martin-shkreli-s-twitter-has-been-hacked-and-it-s-brutal" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56771d8b86afb.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Martin Shkreli&#039;s Twitter Has Been Hacked And It&#039;s Brutal</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">He&#039;s had quite a week</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/news" class="category category-news" itemprop="about" content="News">News</a>
+                | <a href="/type/news" class="type type-news" itemprop="about" content="News">News</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T21:16:00+0000">4 hours ago </time> | 997 Shares <meta itemprop="interactionCount" content="UserLikes:997" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/andy-murray-wins-sports-personality-of-the-year-award" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56771918b1913.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Andy Murray Wins Sports Personality Of The Year Award</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Deserved?</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/sport" class="type type-sport" itemprop="about" content="Sport">Sport</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T20:59:00+0000">4 hours ago </time> | 7 Shares <meta itemprop="interactionCount" content="UserLikes:7" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/gary-lineker-just-had-a-nightmare-live-on-television" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56771584c9334.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Gary Lineker Just Had A Nightmare Live On Television</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Oh no</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/film-and-tv" class="type type-film-and-tv" itemprop="about" content="Film &amp; TV">Film &amp; TV</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T20:55:00+0000">4 hours ago </time> | 976 Shares <meta itemprop="interactionCount" content="UserLikes:976" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/albums/evening-ladness-706" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/56771a1eabbf4.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Evening Ladness</h1>
+            </span>
+
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/pictures" class="category category-pictures" itemprop="about" content="Pictures">Pictures</a>
+                | <a href="/type/daily-ladness" class="type type-daily-ladness" itemprop="about" content="Daily Ladness">Daily Ladness</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T20:52:00+0000">4 hours ago </time> | 0 Shares <meta itemprop="interactionCount" content="UserLikes:0" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/albums/photoshop-battle-adolf-hitler-wearing-kimono" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5677088d510f3.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Photoshop Battle: Adolf Hitler Wearing Kimono.</h1>
+            </span>
+
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/pictures" class="category category-pictures" itemprop="about" content="Pictures">Pictures</a>
+                | <a href="/type/daily-ladness" class="type type-daily-ladness" itemprop="about" content="Daily Ladness">Daily Ladness</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T19:03:00+0000">6 hours ago </time> | 928 Shares <meta itemprop="interactionCount" content="UserLikes:928" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/tyson-fury-reveals-the-reason-his-wife-won-t-be-attending-the-sports-personality-of-the-year-awards" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676f635745b4.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Tyson Fury Reveals The Reason His Wife Won&#039;t Be Attending The Sports Personality Of The Year Awards</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Oh Tyson</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/sport" class="type type-sport" itemprop="about" content="Sport">Sport</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T18:47:00+0000">6 hours ago </time> | 1,403 Shares <meta itemprop="interactionCount" content="UserLikes:1403" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/man-tries-to-pinch-a-woman-s-bum-gets-knocked-the-f-ck-out" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676e75295dc4.JPG" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Man Tries To Pinch A Woman’s Bum, Gets Knocked The F*ck Out</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Sweet justice</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/fail" class="type type-fail" itemprop="about" content="Fail">Fail</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T17:38:00+0000">7 hours ago </time> | 1,741 Shares <meta itemprop="interactionCount" content="UserLikes:1741" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/albums/evening-ladness-705" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676e4417d5d3.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Sunday Ladness</h1>
+            </span>
+
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/pictures" class="category category-pictures" itemprop="about" content="Pictures">Pictures</a>
+                | <a href="/type/daily-ladness" class="type type-daily-ladness" itemprop="about" content="Daily Ladness">Daily Ladness</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T16:41:00+0000">8 hours ago </time> | 1 Shares <meta itemprop="interactionCount" content="UserLikes:1" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/reindeer-escapes-from-tesco-store-and-causes-traffic-chaos" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676d6538836c.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Reindeer Escapes From TESCO Store And Causes Traffic Chaos</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Had enough of Christmas? So has this guy</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/funny" class="category category-funny" itemprop="about" content="Funny">Funny</a>
+                | <a href="/type/animals" class="type type-animals" itemprop="about" content="Animals">Animals</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T16:26:00+0000">9 hours ago </time> | 3,535 Shares <meta itemprop="interactionCount" content="UserLikes:3535" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/some-hero-has-turned-dj-khaled-s-snapchat-into-a-website-that-generates-random-success-comments" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676cec6d6c7a.JPG" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Some Hero Has Turned DJ Khaled’s Snapchat Into A Website That Generates Random Success Comments</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Ride with me</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/music" class="type type-music" itemprop="about" content="Music">Music</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T15:56:00+0000">9 hours ago </time> | 3 Shares <meta itemprop="interactionCount" content="UserLikes:3" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/police-in-mexico-rescue-dog-from-building-blaze" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676ae9fd5ec2.JPG" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Police In Mexico Rescue Dog From Building Blaze</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">Awesome guys</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/news" class="category category-news" itemprop="about" content="News">News</a>
+                | <a href="/type/animals" class="type type-animals" itemprop="about" content="Animals">Animals</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T15:27:00+0000">10 hours ago </time> | 1 Shares <meta itemprop="interactionCount" content="UserLikes:1" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/conor-mcgregor-responds-to-comments-from-rafael-dos-anjos-and-others" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676c7977baf7.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Conor McGregor Responds To Comments From Rafael dos Anjos And Others</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">It was inevitable</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/sport" class="type type-sport" itemprop="about" content="Sport">Sport</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T15:23:00+0000">10 hours ago </time> | 4,662 Shares <meta itemprop="interactionCount" content="UserLikes:4662" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/australian-entertainer-films-himself-abusing-his-girlfriend-in-a-pathetic-attempt-to-create-a-funny-video" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676c306602d7.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Australian &#039;Entertainer&#039; Films Himself Abusing His Girlfriend In A Pathetic Attempt To Create A Funny Video</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">People will do anything for a video these days.</p>
+            
+        </a>
+
+                            
+                
+            <span class="taxonomy">
+                <p> </p>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T14:09:00+0000">11 hours ago </time> | 4,662 Shares <meta itemprop="interactionCount" content="UserLikes:4662" /></span>
+    </article>
+
+                
+    <article data-properties="" itemscope itemtype="http://schema.org/Article">
+        <a href="/articles/this-is-why-advent-calendar-chocolates-always-taste-so-different" itemprop="url">
+
+                        
+                
+                        
+            <img src="http://www1.theladbible.com/images/content/320w/5676b43ea5f68.jpg" itemprop="image" />
+
+            <span class="headline-wrapper">
+                <h1 itemprop="headline">Here&#039;s Why Advent Calendar Chocolates Always Taste So Different</h1>
+            </span>
+
+                            <p itemprop="alternativeHeadline">They do though!</p>
+            
+        </a>
+
+                            
+                                                                        
+            <span class="taxonomy">
+                <a href="/category/entertainment" class="category category-entertainment" itemprop="about" content="Entertainment">Entertainment</a>
+                | <a href="/type/food" class="type type-food" itemprop="about" content="Food">Food</a>
+            </span>
+                <span class="meta-data"><time itemprop="datePublished" datetime="2015-12-20T13:46:00+0000">11 hours ago </time> | 2,155 Shares <meta itemprop="interactionCount" content="UserLikes:2155" /></span>
+    </article>
+    </section>
+
+                <div class="list-footer">
+            <a href="#" data-base-url="" data-meta="home" class="load-more">Load More</a>
+        </div>
+    
+        </main>
+
+         
+        <footer>
+    <div class="wrapper">
+        <section class="footer-section-links">
+            <ul>
+                <a href="/category/funny"><li class="footer-funny"><span>Funny</span></li></a>
+                <a href="/category/news"><li class="footer-news"><span>News</span></li></a>
+                <a href="/category/entertainment"><li class="footer-entertainment"><span>Entertainment</span></li></a>
+                <a href="/category/pictures"><li class="footer-pictures"><span>Pictures</span></li></a>
+                <a href="/category/community"><li class="footer-community"><span>Community</span></li></a>
+                <a href="/category/more"><li class="footer-more"><span>More</span></li></a>
+                <a href="http://www.theoddsbible.com/?utm_source=theladbible.com&utm_medium=channel&utm_campaign=TheLadBible" target="_blank"><li class="footer-odds"><span>TheOddsBible</span></li></a>
+                <a href="http://www.thesportbible.com/?utm_source=theladbible.com&utm_medium=channel&utm_campaign=TheLadBible" target="_blank"><li class="footer-sport"><span>TheSportBible</span></li></a>
+            </ul>
+        </section>
+        <section class="footer-social-links">
+            <ul class="no-snapchat">
+                <a href="https://www.facebook.com/LADbible" target="_blank"><li class="footer-facebook"></li></a>
+                <a href="https://twitter.com/theladbible" target="_blank"><li class="footer-twitter"></li></a>
+                <a href="https://www.youtube.com/user/theladbible" target="_blank"><li class="footer-youtube"></li></a>
+                <a href="https://instagram.com/teamladbible/" target="_blank"><li class="footer-instagram"></li></a>
+                <!--<a href="snapchat://?u=TeamSPORTbible" target="_blank"><li class="footer-snapchat"></li></a>-->
+            </ul>
+        </section>
+        <section class="footer-company-links">
+            <ul>
+                <li><a href="/advertise-with-us">Advertise with us</a></li>
+                <li><a href="/contact-us">Contact us</a></li>
+                <li><a href="/about-us">About us</a></li>
+                <li><a href="/jobs">Jobs</a></li>
+                <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                <li><a href="/privacy-and-cookies">Privacy &amp; Cookies</a></li>
+            </ul>
+        </section>
+
+    </div>
+</footer>    </div>
+
+
+    <script>
+        var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+        var isWindows = /windows phone/i.test(navigator.userAgent.toLowerCase());
+        var isBlackberry = /blackberry/i.test(navigator.userAgent.toLowerCase());
+        var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        var isiPhone = /iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+
+        if (!isAndroid || !isWindows || !isBlackberry || !isiDevice) {
+            $('.icon-whats-app').parent().remove();
+        }
+
+//        if(isAndroid){
+//            $('html').toggleClass('app-launch-interstitial');
+//            $('body').ready(function () {
+//                $('#app-no-thanks').click(function () {
+//                    if($('.app-launch-interstitial:visible')) {
+//                        $('html').toggleClass('app-launch-interstitial');
+//                    }
+//                });
+//
+//                $('.app-store-linkout').click(function () {
+//                    if($('.app-launch-interstitial:visible')) {
+//                        $('html').toggleClass('app-launch-interstitial');
+//                    }
+//                });
+//            });
+//        }
+
+    </script>
+
+    <!---
+    <div id="blocked-content">
+        <img src="https://lh4.googleusercontent.com/-1XOS9gxksvw/VMgvIrVlTwI/AAAAAAAAZcM/nZHTpwQghAc/s500/sad%2520agnes.gif" alt="">
+        <h3>It looks like your using AdBlocking Software</h3>
+        <p>We rely on revenue from advertisements to help maintain the highest levels of banter found on the net. Please consider supporting us by whitelisting our website.</p>
+    </div> -->
+
+        
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
+
+            <script src="/js/isotope-fit-columns.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script> 
+    
+                    <script src="/js/modernizr-touch.js"></script>
+        
+        <script>
+            window.cookieconsent_options = {
+                learnMore: 'Click here to find out more.',
+                message: '<p>We\'re using cookies to improve your experience.</p>',
+                link: '/privacy-and-cookies',
+                dismiss: 'X',
+                theme: false
+            };
+        </script>
+
+                    <script src="/js/cookieconsent.min.js"></script>
+        
+                    <script src="/js/sixty520.js"></script>
+        
+                    <script src="/js/advert.js"></script>
+        
+        <script type="text/javascript">
+            var el = document.getElementById("adBlockTester");
+            window.adBlockoDetected = (el == undefined || el == null);
+            // document.getElementById('blocked-content').style.cssText = "right: 40px !important; display:block;";
+        </script>
+
+    
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"02e1d6149b","applicationID":"6100649","transactionName":"YAYDbBBYVkBYUE0KXFlMIFsWUFddFkBQG0dOVlMIPVpXXU1WVxdsVAwPTAdXTGxQXV0GSw==","queueTime":0,"applicationTime":568,"atts":"TEEAGlhCRU4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>

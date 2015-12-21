@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta property="og:url" content="http://www.tistory.com">
+	<meta property="og:site_name" content="TISTORY">
+	<meta property="og:title" content="TISTORY">
+	<meta property="og:description" content="나를 표현하는 블로그를 만들어보세요.">
+	<meta property="og:image" content="http://m1.daumcdn.net/svc/image/U03/common_icon/557567EA016E200001">
+	<title>TISTORY</title>
+	<link rel="shortcut icon" href="//i1.daumcdn.net/cfs.tistory/static/top/favicon.ico">
+	<link rel="stylesheet" href="//s1.daumcdn.net/svc/attach/U0301/cssjs/tistory-web-top/1450426112/static/css/pc/T.p.top.css">
+    
+<link rel="stylesheet" href="//s1.daumcdn.net/svc/attach/U0301/cssjs/tistory-web-top/1450426112/static/css/pc/T.p.top.home.css">
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="//s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type="text/javascript" src="//s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-2.1.0.min.js"></script>
+<!--<![endif]-->
+<script type="text/javascript" src="//s1.daumcdn.net/svc/original/U03/cssjs/jquery/plugin/jquery.cookie-1.4.0.min.js"></script>
+<script type="text/javascript" src="//s1.daumcdn.net/svc/original/U03/cssjs/userAgent/userAgent-1.0.14.min.js"></script>
+</head>
+<body>
+	<div id="daumIndex">
+		<a href="#daumGnb">메뉴 바로가기</a>
+		<a href="#daumBody">본문 바로가기</a>
+	</div>
+	<div id="daumWrap">
+		<div id="daumHead" class="#GNB" role="banner">
+			<h1>
+				<a href="/" id="daumServiceLogo" class="#logo"><span class="ir_wa">TISTORY</span></a>
+			</h1>
+			<div id="daumGnb" role="navigation">
+				<h2 class="screen_out">TISTORY 메인메뉴</h2>
+				<ul class="gnb_tistory">
+					<li class="on"><a href="/" class="link_gnb link_gnb1 #home"><span class="ir_wa">홈</span></a></li>
+					<li><a href="/category" class="link_gnb link_gnb2 #best"><span class="ir_wa">주제별</span></a></li>
+                    <li id="communityGnb" ><a href="/community" class="link_gnb link_gnb3 community_sub #community">
+                        <span class="ir_wa">커뮤니티</span></a>
+                        <ul id="communitySub" class="gnb_sub"  style="display: none;" >  <!-- 커뮤니티 메뉴에 마우스오버 또는 포커스시 display:block 부여 -->
+
+                            <li><a href="/community/forum" class="link_sub link_sub2"><span class="ir_wa">Forum</span></a></li>
+                            <li><a href="/community/t-time" class="link_sub link_sub1"><span class="ir_wa">T-time</span></a></li> <!-- 현재페이지에 sub_on 클래스 추가  -->
+                        </ul>
+                    </li>
+                    <li><a href="/skin" class="link_gnb link_gnb4 #skin"><span class="ir_wa">스킨</span></a></li>
+					<li><a href="/thankyou" class="link_gnb link_gnb5 #betblogger" target="_blank"><span class="ir_wa">우수블로그</span></a></li>
+                </ul>
+				<a href="/invitation" class="btn_comm link_invite #invitation">티스토리를 시작하시려면, 초대장 받기</a>
+			</div>
+		</div>
+		<hr class="hide">
+		<div id="daumContent" role="main" style="min-height:1200px">
+						<div id="cSub">
+				<div class="inner_topcontent">
+					<div class="ico_comm info_notice">
+						<strong class="screen_out">공지사항</strong>
+													<a href="http://notice.tistory.com/2281" class="link_notice">최고의 블로그에 도전해주세요!</a>
+											</div>
+					<div class="info_utility #login_section">
+												<button id="loginLayerOpenButton" type="button" class="btn_login"><span class="ico_comm ico_login">로그인</span></button>
+						<div id="loginLayer" class="layer_login" style="display: none">
+							<form id="mainLoginForm" method="post" action="https://www.tistory.com/auth/login">
+								<fieldset>
+									<legend class="screen_hide">로그인 정보 입력폼</legend>
+									<div class="input_info ">
+										<label for="loginId" class="lab_g">아이디</label>
+										<input type="text" id="loginId" class="tf_g focus_blur_input" name="loginId" value="">
+									</div>
+									<div class="input_info">
+										<label for="loginPw" class="lab_g">비밀번호</label>
+										<input type="password" id="loginPw" class="tf_g focus_blur_input" name="password">
+									</div>
+									<div class="login_append">
+										<input id="checkEmail" class="inp_comm" type="checkbox" name="rememberLoginId">
+										<label for="checkEmail" class="lab_comm">이메일 저장</label>
+										<span class="txt_bar">|</span><a href="/member/find/loginId" class="link_append">아이디</a><span class="link_append">/</span><a href="/member/find/password" class="link_append">비밀번호 찾기</a>
+									</div>
+									<button type="submit" class="btn_login">로그인</button>
+									<a href="http://login.daum.net/accounts/loginform.do?daumauth=1&amp;url=https%3A%2F%2Fwww.tistory.com%2Fauth%2Flogin%3FthroughDaum%3Dtrue%26redirectUrl%3D" class="link_daumlogin">
+										Daum 메일주소로 가입하셨다면
+										<span class="txt_login">Daum 아이디로 로그인</span>
+									</a>
+								</fieldset>
+							</form>
+							<a href="javascript:;" id="loginLayerCloseButton" class="btn_comm btn_close">레이어 닫기</a>
+						</div>
+											</div>
+					<h2 class="screen_out">검색</h2>
+					<div class="tistory_sch">
+						<form id="searchForm" role="search" method="get" action="http://search.daum.net/search" target="_blank">
+							<fieldset>
+								<legend class="screen_out">티스토리 검색어 입력폼</legend>
+								<input type="hidden" name="w" value="blog">
+								<input type="hidden" name="f" value="section">
+								<input type="hidden" name="SA" value="tistory">
+								<input type="hidden" name="lpp" value="10">
+								<input type="hidden" name="nil_profile" value="vsearch">
+								<input type="hidden" name="nil_src" value="tistory">
+								<div class="box_search">
+									<label for="searchInp" class="lab_info">티스토리 검색</label>
+									<input type="text" id="searchInp" class="tf_search" title="검색어 입력" name="q">
+									<button type="submit" class="btn_search"><span class="ico_comm ico_search">검색</span></button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div><!--// cSub -->
+						<div id="mArticle">
+
+<h2 id="daumBody" class="screen_out">TISTORY 홈 본문</h2>
+<h3 class="screen_out">프로모션 콘텐츠</h3>
+<div class="promotion_feature">
+	<div class="thumb_promotion">
+					<div class="thumb_promotion_item">
+							<a href="http://award.blog.daum.net/award" class="link_thumb #promotion show">
+					<img src="http://t1.daumcdn.net/section/oc/8b2f598f7ecd4a76aa9edd6e81c41bab" class="img_g" alt="블로그어워드2015" width="925" height="400">
+				</a>
+										</div>
+			</div>
+	<span class="paging_promotion">
+		<span class="screen_out">현재페이지</span>
+								<em class="num_page">1</em>
+						</span>
+	<div class="wrap_btn">
+		<button type="button" class="btn_comm btn_prev">이전</button>
+		<button type="button" class="btn_comm btn_next">다음</button>
+	</div>
+</div>
+<div class="tistory_recomm #recomm">
+						<div class="recomm_blog #content$tiaraCount">
+				<a href="http://oldhotelier.tistory.com/766" class="link_recomm" target="_blank">
+					<img src="http://t1.daumcdn.net/section/oc/11370c33264c49b6823fab88a6fa5e35" class="img_g" alt="호텔리어가 말하는 뷔페 잘 먹는 법">
+					<strong class="tit_subject">호텔리어가 말하는 뷔페 잘 먹는 법</strong>
+					<span class="txt_writer">늙은 호텔리어 몽돌님</span>
+					<p class="desc_recomm">최근 블로그 유입어 중 눈에 확 띄는게 있었더랬습니다. &quot;뷔페 적게 먹는 법&quot;.....오타이겠거니 무시했습니다만 한 블친의말씀이 명답이었어요.'요즘은 다이어트에 관심이 많으니 그 많은음식들 중에 맛있는 것만 골라 적게 먹는 방법을 고민할 수도 있다'고......그렇지만 어쩐답니까? 안타깝지만 이런 분들께서는 비싼 비용을 지..</p>
+					<div class="info_subtheme">
+											<em id="daumLikeCategoryName1487118_766" class="txt_subtheme"></em>
+						<span class="daumLikeCount ico_comm num_empathy" data-likeuid="1487118_766">0</span>
+										</div>
+					<span class="frame_g"></span>
+				</a>
+			</div>
+					<div class="recomm_blog #content$tiaraCount">
+				<a href="http://rayspace.tistory.com/627" class="link_recomm" target="_blank">
+					<img src="http://t1.daumcdn.net/section/oc/43fe259c9a93459abcb6224ce82bcbf1" class="img_g" alt="2015 한국영화 신 스틸러 열전">
+					<strong class="tit_subject">2015 한국영화 신 스틸러 열전</strong>
+					<span class="txt_writer">Youchang님</span>
+					<p class="desc_recomm">결산의 계절을 맞아 올 한해 사랑받은 신스틸러 10명을 뽑아봤다. '신스틸러(Scene Stealer)'란 맛깔나는 연기로 주연 이상의 주목을 받은 조역을 뜻한다. 출연 분량은 짧지만 영화를 보고 나면 주연만큼 기억에 남는다. 관객의 취향이 다양해지면서 개성 있는 인물에 대한 선호가 늘고 있어 신스틸러는 갈수록 영화 흥행의 주..</p>
+					<div class="info_subtheme">
+											<em id="daumLikeCategoryName118751_627" class="txt_subtheme"></em>
+						<span class="daumLikeCount ico_comm num_empathy" data-likeuid="118751_627">0</span>
+										</div>
+					<span class="frame_g"></span>
+				</a>
+			</div>
+				<h3 class="screen_out">추천 콘텐츠</h3>
+	<div class="recomm_blog recomm_type2 #content1">
+		<a href="http://saik.kr/1193" class="link_recomm" target="_blank">
+			<img src="http://t1.daumcdn.net/section/oc/98f42bbc8d234124bd967e95c783bcb7" class="img_g" alt="한 해 동안 촬영한 부산의 야경">
+			<strong class="tit_subject">한 해 동안 촬영한 부산의 야경</strong>
+			<span class="txt_writer">김사익님</span>
+			<div class="info_subtheme">
+							<em id="daumLikeCategoryName55760_1193" class="txt_subtheme"></em>
+				<span class="daumLikeCount ico_comm num_empathy" data-likeuid="55760_1193">0</span>
+						</div>
+			<span class="frame_g"></span>
+		</a>
+	</div>
+				<div class="recomm_blog #content2">
+			<a href="http://catchrod.tistory.com/1575" class="link_recomm" target="_blank">
+								<img src="http://t1.daumcdn.net/section/oc/0c32eaa7edac486cbbe6f1a97f3c01df" class="img_g" alt="중저가 메탈 스마트폰 선택 가이드">
+								<strong class="tit_subject">중저가 메탈 스마트폰 선택 가이드</strong>
+				<span class="txt_writer">니자드님</span>
+				<p class="desc_recomm">처음 탄생했을 때 플라스틱은 혁신적인 신소재였다. 비교적 견고하면서 원하는 모양으로 쉽게 성형이 가능했다. 열에 강하게 만들 수도 있고 가볍고 썩지 않으며 저렴하니 이만큼 좋은 소재는 찾기 힘들었다. 20세기 후반 선진국의 모든 생활기기는 플라스틱으로 뒤덮였다고 해도 과언이 아니다.그렇지만 이처럼 너무 많이 쓰인..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName398932_1575" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="398932_1575">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+				<div class="recomm_blog #content3">
+			<a href="http://www.khaiyang.com/2718" class="link_recomm" target="_blank">
+								<img src="http://t1.daumcdn.net/section/oc/0038b5924b6641a4a526bf37bd3b54d2" class="img_g" alt="2016년 전기차 대전 친환경 차량의 역습">
+								<strong class="tit_subject">2016년 전기차 대전 친환경 차량의 역습</strong>
+				<span class="txt_writer">Khai님</span>
+				<p class="desc_recomm">지난달 미국 인디애나 폴리스를 다녀오면서 부러웠던 것이 하나 있었습니다. 그것은 도로에서 친환경차량을 쉽게 볼 수 있었고 관련 인프라 시설이 잘 갖추어져 있었다는 것 입니다. 국내에서는 보기 힘든 전기차인 쉐보레 볼트와 테슬라를 쉽게 접하는 것은 물론 전기를 충전 시설도 쉽게 만날 수 있었습니다. 전기충전 인프라..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName116406_2718" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="116406_2718">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+			<div class="wrap_recomm">
+			<div class="recomm_blog recomm_type3 #content4">
+			<a href="http://jamja.tistory.com/6379" class="link_recomm" target="_blank">
+								<strong class="tit_subject">잘생김을 연기하는 '응답 시리즈' 주인공들</strong>
+				<span class="txt_writer">웅크린 감자님</span>
+				<p class="desc_recomm">영화는 개성파, 드라마는 꽃미남한국영화계에서는남자배우의 외모가 크게 중요치 않다. 실제로 천만영화들만 살펴봐도 꽃미남이 주인공으로 활약하는 영화보다 아닌 영화가 압도적으로 많다. 사진만 찍으면 합성이 아니냐는 소리를 듣는 머리크기를 자랑하는 오달수가 '천만요정'으로 활약하는 곳이 바로 한국영화계이다. 그..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName110520_6379" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="110520_6379">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+				<div class="recomm_blog #content5">
+			<a href="http://emptydream.tistory.com/3934" class="link_recomm" target="_blank">
+								<img src="http://t1.daumcdn.net/section/oc/371307fcd05c4df6b07bbeca1f81a6dd" class="img_g" alt="배려 없는 세상 참 씁쓸하다">
+								<strong class="tit_subject">배려 없는 세상 참 씁쓸하다</strong>
+				<span class="txt_writer">빈꿈님</span>
+				<p class="desc_recomm">요즘은 학교 가정통신문도 스마트폰으로 보내고 읽는다는 말을 듣고 참 씁쓸했다. 온 세상이 효율을 중요시하고, 편리함을 따른다해도 학교는 그래서는 안 되지 않나. 비록 이 사회가 돈 없으면 죽으라는 걸 기조로 삼고, 핸드폰 없으면 온라인으로 금융거래도 거의 할 수 없도록 만들어놨지만, 최소한 학교는, 특히 초등학교는 ..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName18393_3934" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="18393_3934">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+				<div class="recomm_blog recomm_type3 #content6">
+			<a href="http://bambimel.tistory.com/108" class="link_recomm" target="_blank">
+								<strong class="tit_subject">파란 바닷속으로 사이판 다이빙 투어</strong>
+				<span class="txt_writer">밤비멜님</span>
+				<p class="desc_recomm">추운 겨울이 왔다!!!제주에서 겨울 다이빙이 그리 좋다는데나는 5미리 웻슈트밖에 없고.... 드라이 살려니 내년에 한창 바쁠텐데 몇 번 입고 창고행 될까봐 고심하던차..버디와 나는 따뜻한 나라로 가기로 결심했다 ㅋㅋㅋ후보 목적지들은 사이판과 시밀란시밀란은 12월에서 3월까지인가 시즌이 따로 있어 꼭 가보고 싶었지만리..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName1809311_108" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="1809311_108">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+				<div class="recomm_blog #content7">
+			<a href="http://trainerkang.com/2183" class="link_recomm" target="_blank">
+								<img src="http://t1.daumcdn.net/section/oc/b2d272c4d2e446369e21b9384abed95e" class="img_g" alt="균형 잡힌 몸매 위한 코어 운동 넷">
+								<strong class="tit_subject">균형 잡힌 몸매 위한 코어 운동 넷</strong>
+				<span class="txt_writer">트레이너&quot;강&quot;님</span>
+				<p class="desc_recomm">안녕하세요. 시청역 헬스장 피트니스월드의 트레이너 강입니다.날씨가 많이 추워졌습니다. 모두 건강에 유의하시고요~!금일은 균형잡힌 몸매를 위한 코어운동 네 가지를 소개합니다.소개할 코어운동은 버티기 동작에서 상, 하체를 움직여 불안정성을 눂여 코어를 강화하는 운동입니다.코어근육이 약하신 분들은 동작이 어려울..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName348952_2183" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="348952_2183">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+				<div class="recomm_blog #content8">
+			<a href="http://ggng2.tistory.com/1291" class="link_recomm" target="_blank">
+								<img src="http://t1.daumcdn.net/section/oc/c695e46a75df46119a0f357209f78c51" class="img_g" alt="부서지지 않게 감자조림 황금레시피">
+								<strong class="tit_subject">부서지지 않게 감자조림 황금레시피</strong>
+				<span class="txt_writer">헬로끙이님</span>
+				<p class="desc_recomm">감자조림 황금레시피 부서지지않게 실패없는 레시피신랑이 좋아하는 감자조림 만들어 보았어요 ^^반찬거리 없을때 집에 보관해뒀던 감자로 조림해 만들어 놓으면모든 가족들이 좋아하는 든든한 반찬이 된답니다감자조림을 만들다 보면 감자의 모양이 딱 잡히지 않고뭉개지거나 하는 경우가 많은데 그대로 따라만 하시면 실패..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName960620_1291" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="960620_1291">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+				<div class="recomm_blog #content9">
+			<a href="http://enjoiyourlife.com/1521" class="link_recomm" target="_blank">
+								<img src="http://t1.daumcdn.net/section/oc/da10e6c024a6459899e4af13dcf5fd74" class="img_g" alt="샤오미를 주목해야 하는 이유">
+								<strong class="tit_subject">샤오미를 주목해야 하는 이유</strong>
+				<span class="txt_writer">자유인-님</span>
+				<p class="desc_recomm">최근 2년 동안, 스마트폰 시장에서 가장 많은 이슈를 만들었던 기업 중 하나로 '샤오미(Xiaomi)'를 꼽을 수 있습니다. 스마트폰 뿐만아니라 배터리팩, 공기청정기, 전기스쿠터 등여러 가지 제품을 만들면서 '돈 될 만한 것은 다 한다'라는 말이 있을 정도로 무서운 저력을 보여주고 있는 샤오미지만, 샤오미에게서 '스마트폰'을 ..</p>
+				<div class="info_subtheme">
+									<em id="daumLikeCategoryName95041_1521" class="txt_subtheme"></em>
+					<span class="daumLikeCount ico_comm num_empathy" data-likeuid="95041_1521">0</span>
+								</div>
+				<span class="frame_g"></span>
+			</a>
+		</div>
+		</div>
+</div>
+
+<script src="//s1.daumcdn.net/svc/attach/U0301/cssjs/tistory-web-top/1450426112/static/js/T.js"></script>
+<script src="//s1.daumcdn.net/svc/attach/U0301/cssjs/tistory-web-top/1450426112/static/js/T.util.js"></script>
+<script src="//s1.daumcdn.net/svc/attach/U0301/cssjs/tistory-web-top/1450426112/static/js/pc/T.p.top.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	var _tiq = 'undefined' !== typeof _tiq ? _tiq : [];
+
+	_tiq.push(['__setSection', 'TOP']);
+	_tiq.push(['__setParam', 'puid', 1450659990716]);
+	_tiq.push(['__setParam', 'svcdomain', 'www.tistory.com']);
+	_tiq.push(['__trackPageview', {
+		svcdomain: 'www.tistory.com',
+		title: document.title,
+		category: '',
+		param2: 't'
+	}]);
+	_tiq.push(['__clickOn']);
+
+	(function(d) {
+		var se = d.createElement('script'); se.type = 'text/javascript'; se.async = true;
+		se.src = '//m1.daumcdn.net/tiara/js/td.min.js?v=5206';
+		var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+	})(document);
+	//]]>
+</script><script src="//s1.daumcdn.net/svc/attach/U0301/cssjs/tistory-web-top/1450426112/static/js/pc/T.p.top.home.js"></script>
+		</div><!--// mArticle -->
+		<a href="/guide" class="btn_comm link_guide #guide">TISTORY GUIDE 티스토리 사용법을 알려드립니다.</a>
+	</div> 
+	<!-- // daumContent -->
+	<hr class="hide">
+
+	<div id="daumFoot" class="footer_tistory" role="contentinfo">
+	<div class="inner_footer"> 
+		<h2 class="screen_out">서비스 이용정보</h2>
+		<div class="info_service">
+			<a href="/info/openApi" class="link_info">오픈 API</a><span class="txt_bar">|</span><a href="/info/contract" class="link_info">이용약관</a><span class="txt_bar">|</span><a href="http://www.daum.net/doc/info_protection.html?service=tistory" target="_blank" class="link_info fw_b">개인정보취급방침</a><span class="txt_bar">|</span><a href="http://www.daum.net/doc/youthpolicy.html" target="_blank" class="link_info">청소년보호정책</a><span class="txt_bar">|</span><a href="https://cs.daum.net/redbell/top.html" target="_blank" class="link_info">권리침해신고</a><span class="txt_bar">|</span><a href="http://cs.daum.net/faq/173.html" target="_blank" class="link_info">고객센터</a><span class="txt_bar">|</span><a href="/info/emailPolicy" class="link_info">E-mail수집거부정책</a>
+		</div>
+		<address class="txt_copyright">Copyright &copy; <a href="http://www.kakaocorp.com/" class="link_daum">Kakao Corp.</a> All rights reserved.</address>
+	</div>
+</div>	<!-- // daumFoot -->
+</div>
+</body>
+</html>

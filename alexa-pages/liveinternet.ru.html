@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>-->
+<!--   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+    <meta http-equiv="Content-Language" content="ru" />
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+
+    <meta name="robots" content="all" />
+    <meta name="description" content="LiveInternet - крупный сервис дневников и сообществ, авторитетный сервис статистики для сайтов" />
+    <meta name="keywords" content="дневник, блог, сообщество, дневники, блоги, сообщества, счетчик, рейтинг, статистика сайта" />
+    <meta http-equiv="X-XRDS-Location" content="http://www.liveinternet.ru/openid/server/server.php/idpXrds" />
+    <title>LiveInternet @ Статистика и дневники, почта и поиск</title>
+
+    <base href="http://www.liveinternet.ru/" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="http://www.liveinternet.ru/" rel="home" />
+
+	<link href="/utf/main_new.css?v=4" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="/utf/global.js"></script>
+	
+	<script type="text/javascript" src="http://www.liveinternet.ru/q/js/jquery-1.4.2.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="http://www.liveinternet.ru/q/js/jquery.autocomplete.mod.js" charset="utf-8"></script>
+	<link href="http://www.liveinternet.ru/q/skin/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+</head>
+   
+<body>
+
+
+<div class="allpage">
+<div class="allpageinner">
+
+    <!-- Userbar -->
+    <div class="userbar">
+        <div class="fl">
+            Войти:
+            <span class="userbarlinks">
+                <a id="_li-serv_stat" href="/stat/" class="stat">В статистику</a>
+                <a id="_li-serv_blog" href="/journals.php?s=&action1=login" class="blog">В дневник</a>
+                <a id="_li-serv_mail1" href="http://g.liveinternet.ru/login_page.html?new" class="mail">В почту</a>
+            </span>
+        </div>
+        <div class="fr" id="_li-panel"></div>
+        
+    </div>
+    <!-- /Userbar -->                                    
+    <!--LiveInternet counter--><script type="text/javascript"><!--
+	if (window==top)document.write('<img src="http://counter.yadro.ru/hit;li_face?r'+
+        escape(document.referrer)+((typeof(screen)=='undefined')?'':
+        ';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+        screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+        ';hru;'+Math.random()+
+        '" width=1 height=1 alt="">')//--></script><!--/LiveInternet-->
+<script type="text/javascript"><!--
+if (window!=top){
+new Image().src="http://counter.yadro.ru/hit;li_frame?r"+escape(document.referrer);
+//window.alert("Страница "+document.referrer+
+//" заражена iframe-вирусом, обратитесь к вебмастеру данного сайта.");
+}//--></script>
+    
+    <!-- Rightcolumn -->
+    <div class="float100">
+        <div class="rightcolumn box">
+            <!-- News -->
+            <div class="news">
+            	<h2><a href='http://mediametrics.ru/rating/ru/hour.html'>Популярные новости</a></h2><table cellpadding=4 cellspacing=0 border=0 width=500>
+<tr><td><img src='http://mediametrics.ru/favicon/ria.ru.ico' width=16 height=16 valign=top vspace=2 hspace=0 alt='ria.ru' title='ria.ru' border=0></td><td><a href='http://mediametrics.ru/rating/ru/hour.html?article=187672508' target=_blank title='ria.ru'>Рамзана Кадырова оштрафовали за вождение с непристегнутым ремнем</a></td></tr>
+<tr><td><img src='http://mediametrics.ru/favicon/ria.ru.ico' width=16 height=16 valign=top vspace=2 hspace=0 alt='ria.ru' title='ria.ru' border=0></td><td><a href='http://mediametrics.ru/rating/ru/hour.html?article=187558864' target=_blank title='ria.ru'>American Thinker: Обама &quot;уничтожает&quot; Соединенные Штаты</a></td></tr>
+<tr><td><img src='http://mediametrics.ru/favicon/lifenews.ru.ico' width=16 height=16 valign=top vspace=2 hspace=0 alt='lifenews.ru' title='lifenews.ru' border=0></td><td><a href='http://mediametrics.ru/rating/ru/hour.html?article=187477180' target=_blank title='lifenews.ru'>Пенсионер чудом выжил, прыгнув с 7-го этажа горящего дома в Волгограде</a></td></tr>
+<tr><td><img src='http://mediametrics.ru/favicon/lifenews.ru.ico' width=16 height=16 valign=top vspace=2 hspace=0 alt='lifenews.ru' title='lifenews.ru' border=0></td><td><a href='http://mediametrics.ru/rating/ru/hour.html?article=187638175' target=_blank title='lifenews.ru'>Аэроэкспресс, следовавший из Шереметьево, сбил женщину с ребёнком</a></td></tr>
+<tr><td><img src='http://mediametrics.ru/favicon/ghhauto.ru.ico' width=16 height=16 valign=top vspace=2 hspace=0 alt='ghhauto.ru' title='ghhauto.ru' border=0></td><td><a href='http://mediametrics.ru/rating/ru/hour.html?article=187553091' target=_blank title='ghhauto.ru'>Дмитрий Киселев удалил опрос «Лгун года», в котором побеждал Путин</a></td></tr>
+</table>
+
+            </div>
+            <!-- /News -->
+        </div> 
+    </div>
+    <!-- /Rightcolumn -->
+    
+    <!-- Leftcolumn -->
+    <div class="leftcolumn box">
+        <!-- Rating -->
+        <h2><a href="http://www.liveinternet.ru/rating/#geo=ru">Рейтинг сайтов</a></h2>
+        <b class="highlight"><a href="http://www.liveinternet.ru/add">Получить счетчик</a></b>
+        <div class="statisticbox">Всего 1.56&nbsp;млн. сайтов, сегодня 0.69&nbsp;млрд. просмотров, вчера&nbsp;- 8.16&nbsp;млрд.
+</div>
+        <div class="rating">
+            <ul>
+		<li><a href="/rating/#geo=ru;group=auto">Авто</a></li> 
+		<li><a href="/rating/#geo=ru;group=regions">Города и регионы</a></li> 
+		<li><a href="/rating/#geo=ru;group=house">Дом и семья</a></li> 
+		<li><a href="/rating/#geo=ru;group=meeting">Знакомства, общение</a></li> 
+		<li><a href="/rating/#geo=ru;group=games">Игры</a></li> 
+		<li><a href="/rating/#geo=ru;group=internet">Интернет</a></li> 
+		<li><a href="/rating/#geo=ru;group=cinema">Кино</a></li>
+            </ul>
+            <ul>
+                <li><a href="/rating/#geo=ru;group=computers">Компьютеры</a></li>
+                <li><a href="/rating/#geo=ru;group=literature">Литература</a></li>
+                <li><a href="/rating/#geo=ru;group=music">Музыка</a></li>
+                <li><a href="/rating/#geo=ru;group=mp3">MP3</a></li>
+                <li><a href="/rating/#geo=ru;group=media">Новости, СМИ</a></li>
+                <li><a href="/rating/#geo=ru;group=education">Обучение</a></li>
+                <li><a href="/rating/#geo=ru;group=weather">Погода</a></li>
+            </ul>
+            <ul>
+                <li><a href="/rating/#geo=ru;group=tourism">Путешествия</a></li>
+                <li><a href="/rating/#geo=ru;group=job">Работа</a></li>
+                <li><a href="/rating/#geo=ru;group=rest">Развлечения</a></li>
+                <li><a href="/rating/#geo=ru;group=software">Софт</a></li>
+                <li><a href="/rating/#geo=ru;group=sport">Спорт</a></li>
+                <li><a href="/rating/#geo=ru;group=goods">Товары, услуги</a></li>
+                <li><a href="/rating/#geo=ru;group=humor">Юмор</a></li>
+            </ul>
+        </div>
+        <!-- Rating -->
+    </div>
+    <!-- /Leftcolumn -->
+    
+    
+    <div class="clear"></div>
+
+    
+
+    
+
+    <!-- Header -->
+    <div class="header header_v1" style="margin-top:-25px;">
+        <div class="float100">
+            <div class="search">
+                <form action="/journal_redirect.php" method="post" name="GlobalSrcForm" id="GlobalSrcForm">
+		    		<input type="hidden" name="enc" value="utf-8" id="enc"/> 
+                    <div class="textbox">
+
+<input type="text" id="searcharea" name="string" class="text" value="" />
+
+
+</div>
+                    <div class="searchbutton"><input type="submit" value="Найти" title="Найти" /></div>
+                    <div class="searchlinks">
+                        <b>Искать в</b>
+                        <input type="radio" id="snet" name="stype" value="snet" checked="checked"/> <label for="snet">интернете</label>
+                        <input type="radio" id="ssite"  name="stype" value="ssite" /> <label for="ssite">дневниках</label>
+                        <input type="radio" id="sstat" name="stype" value="sstat"/> <label for="sstat">статистике</label>
+                        <input type="radio" id="smarket" name="stype" value="smarket"/> <label for="smarket">магазинах</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+		    jQuery('input[name="string"]').autocomplete('http://reco.li.ru/cgi-bin/search_prefix.cgi',
+		    {
+		        dataType: 'json',
+		        scroll: false,
+		        max: 10,
+		        cacheLength : 1024,
+		        multiple: false,
+		        matchContains: false,
+		        autoFill : false,
+		        selectFirst : false,
+		
+		        parse: function(data)
+		        {
+		            return jQuery.map(data, function(row) {
+		
+		                if ('q' in row)
+		                {
+		                    return {
+		                        data: row,
+		                        value: row.q,
+		                        result: row.q
+		                    }
+		                } else
+		                {
+		                    return null;
+		                }
+		                
+		            });
+		        },
+		
+		        formatItem: function(data, i, n, value)
+		        {
+/*		            if (('kb' in data) && (parseInt(data['kb']) == 1))
+		            {
+		                return '<i>' + data.q + '</i>';
+		            } else
+		            {     */
+		                return data.q;
+/*		            }*/
+		        }
+		    });		
+		    jQuery('input[name="string"]').bind('result', function(e)
+		    {
+		        jQuery('form[name="GlobalSrcForm"]').submit();
+		    });
+    </script>
+        <div class="logobox"><span title="LiveInternet.ru" class="logo"><span>LiveInternet</span></span>
+	  <p><a href="http://wiki.liveinternet.ru/KakSdelat'Startovojj" 
+		onClick="this.style.behavior='url(#default#homepage)';var ohp=this.isHomePage('http://www.liveinternet.ru/'); this.setHomePage('http://www.liveinternet.ru/'); var nhp=this.isHomePage('http://www.liveinternet.ru/'); return false;">
+	     сделать стартовой страницей</a></p>
+	</div>
+    </div>
+    <!-- /Header -->
+    
+	<!-- Header -->
+    <div class="header header_v2" style="margin-top:-5px;margin-bottom:-20px;">
+        <div class="float100">
+        	<div class="search">
+				<div class="mb20"><!-- style="border: thin solid;">-->
+                    <!--<span id="banmain_span"></span>-->
+
+                    <script type="text/javascript">
+                        var PStid="10210",PSsize="780x90";
+                    </script>
+                    <script id="PS_10210" type="text/javascript" src="//c.imrk.net/tag/1.js" charset="UTF-8"></script>
+
+                  <!--  <span id="banmain_span"></span>
+                    <script src='http://www.liveinternet.ru/cgi-bin/adv.fcgi?p=10&qtype=javascript&span-name=banmain_span&ref=liveinternet.ru'></script>-->
+                </div>
+        	</div>
+        </div>
+        <div class="headerlinks">
+            <table><tr><td height="100">&nbsp;&nbsp;</td></tr></table>
+    <!--        <a href="http://g.liveinternet.ru/register.php" class="createmail">Создать<br />почту @li.ru</a>
+            <a href="http://i.li.ru/download/litalk-setup-ru.exe" class="createtalk">LiTalk &mdash; наш<br />мессенджер</a>
+            -->
+        </div>
+    </div>
+    <!-- /Header --> 
+        
+    <!-- Rightcolumn -->
+    <div class="float100">
+        <div class="rightcolumn rightcolumn_v2">
+            <!-- Blog -->
+                <h2>
+                	<a href="/top/">Дневники</a>
+                	<a href="/includes/titlequotes_rss.php" class="icon rss"></a>
+                	<b class="highlight"><a href="/journal_register.php">Завести дневник</a></b> 
+                </h2>
+                <div class="statisticbox">3 587 303 дневников, 70 577 сообществ, 969 сообщений за последний час</div>
+                <ul class="bloglist">
+<li><div class="title">22:53 <a target=_blank href='http://www.liveinternet.ru/users/myparis/post379943670/'>ГДЕ ЖИВЁТ АЛЕН ДЕЛОН: ФИЛЬМ ВТОРОЙ</a></div><div class="user"><a href='http://www.liveinternet.ru/users/myparis/'><img style="margin:0px;" src="http://i.li.ru/images/m2.gif" width="20" height="16" border="0" alt="" /></a><a href='http://www.liveinternet.ru/users/myparis/profile/'>myparis</a></div></li>
+<li><div class="title">22:52 <a target=_blank href='http://www.liveinternet.ru/users/4262933/post379943574/'>ПОЛЕЗНО ЛИ ПИТЬ КОФЕ ПО УТРАМ?</a></div><div class="user"><a href='http://www.liveinternet.ru/users/4262933/'><img style="margin:0px;" src="http://i.li.ru/images/w2.gif" width="20" height="16" border="0" alt="" /></a><a href='http://www.liveinternet.ru/users/4262933/profile/'>Марина_Ушакова</a></div></li>
+<li><div class="title">22:46 <a target=_blank href='http://belorys.info/post379943071/'>Что скрывают за собой безобидные слова-паразиты</a></div><div class="user"><a href='http://belorys.info/'><img style="margin:0px;" src="http://i.li.ru/images/m2.gif" width="20" height="16" border="0" alt="" /></a><a href='http://belorys.info/profile/'>belorys_kh</a></div></li>
+<li><div class="title">22:35 <a target=_blank href='http://www.liveinternet.ru/users/varshan/post379942294/'>5 НОВЫХ МОДНЫХ САЛАТОВ НА НОВЫЙ ГОД</a></div><div class="user"><a href='http://www.liveinternet.ru/users/varshan/'><img style="margin:0px;" src="http://i.li.ru/images/w2.gif" width="20" height="16" border="0" alt="" /></a><a href='http://www.liveinternet.ru/users/varshan/profile/'>Varshan</a></div></li>
+<li><div class="title">22:29 <a target=_blank href='http://www.liveinternet.ru/users/4515852/post379941802/'>Говорит Владыка</a></div><div class="user"><a href='http://www.liveinternet.ru/users/4515852/'><img style="margin:0px;" src="http://i.li.ru/images/w2.gif" width="20" height="16" border="0" alt="" /></a><a href='http://www.liveinternet.ru/users/4515852/profile/'>Людмила_Вуколов</a></div></li>
+<li><div class="title">22:11 <a target=_blank href='http://new-anoli.ru/post379940453/'>Маскарпоне в домашних условиях.</a></div><div class="user"><a href='http://new-anoli.ru/'><img style="margin:0px;" src="http://i.li.ru/images/w2.gif" width="20" height="16" border="0" alt="" /></a><a href='http://new-anoli.ru/profile/'>Илона_Никишина</a></div></li>
+</ul>
+
+            <!-- Blog -->        
+                                	                        
+            <div class="clear"></div>            
+            
+            <!-- TV--> 
+            <h2><a href="http://www.liveinternet.ru/app/tv/">Программа передач</a></h2>
+                  
+	<div class="tvbox">
+				<div class="pb5"><b><a href="http://www.liveinternet.ru/app/tv/index.php?ev=central&date=2015-12-21&bid=379047336&chid=39">Мумия. Гробница императора драконов</a></b>  <b class="font09">11:30</b> <span class="nowrap"><img src="http://i.li.ru/ext/tv.akado.ru/images/data/akadotv/channelimage/image/114083/ctc_logo_33.gif" alt="СТС" width="0" height="0" class="tvlogo" /></span></div>
+		<p>16+ Фантастический боевик. Германия-США, 2008. Алекс О'Коннелл случайно выводит китайского императора-дракона из вечной спячки. В ролях: Б. Фрезер.</p>
+	</div>
+           
+            <!--ul class="tv">
+                <li>21:55 <a href="">Зверобой - 2. (16-я и 17-я серии)</a> - <a href="" class="gray">НТВ</a></li>
+                <li>22:00 <a href="">Доктор Хаус</a> - <a href="" class="gray">Домашний</a></li>
+                <li>22:00 <a href="">Тайны мира с Анной Чапман</a> - <a href="" class="gray">НТВ</a></li>
+            </ul-->
+            <!-- /TV -->
+            
+            
+            <!-- Service -->
+<!--            <h2>Другие сервисы сайта</h2>
+            <div class="service">
+                <ul>
+                    <li><a href="/nb_friends.php" title="Найдите дневники своих одноклассников, однокурсников, сослуживцев" target="_blank" >Одноклассники</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/top/tests/all/" title="Психологические и прикольные тесты" target="_blank" >Тесты</a></li>
+                    <li><a href="http://www.liveinternet.ru/market/" title="Удобный выбор из предложений сотен Интернет-магазинов" target="_blank" >Маркет товаров</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/dating/" title="Романтичные и дружеские знакомства для всех возрастов" target="_blank" >Знакомства</a></li>
+                    <li><a href="/app/postcards/" title="Виртуальные праздничные открытки" target="_blank" >Открытки</a></li>
+                </ul>
+            </div>-->
+            <!-- /Service -->
+            
+        </div> 
+    </div>
+    <!-- /Rightcolumn -->
+    
+    <!-- Leftcolumn -->
+    <div class="leftcolumn leftcolumn_v2">
+    
+	    <!-- Weather -->
+	          
+	            <div class="weather">
+	<h2><a href="http://www.liveinternet.ru/q/?q=%D0%9F%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" target="_blank">Погода: г. Москва, Россия</a></h2>
+	<ul>
+						<li>21.12  День 7° <b class="weathericon cloudy" title="Пасмурно"></b> Ночь 8°</li>
+								<li>22.12  День 4° <b class="weathericon cloudy" title="Пасмурно"></b> Ночь 5°</li>
+									</ul>
+</div>
+	          
+	    <!-- /Weather -->
+		
+	        <!-- Currency -->
+	        <div class="zpromo_currency">
+			  
+			    <div class="currency">
+               <h2><a href="http://ibk.ru/tag/%C2%E0%EB%FE%F2%E0/">Курсы валют</a> <b class="font07">от 20.12</b></h2>
+		<ul>
+<li><b class="icon dollar"></b> <a href="http://ibk.ru/tag/%C2%E0%EB%FE%F2%E0/">USD ЦБ</a> &mdash; <b>71,32</b> руб.</li>
+<li><b class="icon euro"></b> <a href="http://ibk.ru/tag/%C2%E0%EB%FE%F2%E0/">EUR ЦБ</a> &mdash; <b>77,41</b> руб.</li>
+</ul></div>
+
+			  
+			</div>	
+	        <!-- /Currency -->
+
+
+        <!-- Advertisement -->
+        <div class="gifts">
+            <h2><a target="_blank" href="http://www.technohelp.ru">Ремонт ноутбуков</a></h2>
+            <form action="http://www.technohelp.ru/" method="get" target="_blank" id='gifts'>
+                <select>
+                    <option value="doc21.html">Ремонт и upgrade</option>
+                    <option value="doc1.html">Срочный ремонт</option>
+                    <option value="doc3.html">Замена матриц</option>
+                    <option value="doc5.html">Ремонт матплат</option>
+                    <option value="doc6.html">Обмен ноутбуков</option>
+                    <option value="doc9.html">Замена CD/DVD</option>
+                    <option value="doc17.html">Пролили воду?</option>
+
+                </select>
+                <input type="submit" value="Заказать" />
+            </form>
+        </div>
+        <script type="text/javascript">
+            var giftUrl = function() {
+                var form =  $('#gifts');
+                var select = $(form).find('select');
+                var action = 'http://www.technohelp.ru';
+                $(select).change(function () {
+                    var option = $(select).find(':selected').attr('value');
+                    var url = action + '/' + option;
+                    window.open(url);
+                    $(form).submit(function () {
+                        window.location = url;
+                        return false;
+                    });
+                });
+            };
+            giftUrl();
+        </script>
+
+        <!-- Advertisement -->
+	         
+	                
+        <div style="clear:both;">                
+	        <!-- Advertisement -->
+	        <ul class="advertisement">
+	            <li>
+	                <h3><a target="_blank" href="http://www.torrnado.ru/">Скачать на TORRnado.ru:</a></h3>
+	                    <b><a href="http://torrnado.ru/viewforum.php?f=238">Ужасы / Мистика</a></b> -        <a href="http://torrnado.ru/viewtopic.php?t=155330">Дровосек / Lumberjack Man (Джош Беар) [2015г.]</a>
+	            </li>
+	
+	            <li>
+	                <h3><a target="_blank" href="http://www.jjc.ru/">Зарубежная недвижимость на портале JJC.Ru:</a></h3>
+	                    <b><a href="http://www.jjc.ru/Listing/Real_Estate/41134.html">Квартира с 2 спальнями и двумя большими террасами</a></b> - <a href="http://www.jjc.ru/Country/montenegro-realty/">Черногория</a>, 99,000 €
+	            </li>
+	        </ul>
+	        <!-- Advertisement -->
+	    </div>
+            
+        
+        <!-- Recomended -->
+        <h2>Рекомендуемые сайты</h2>
+        <div class="recomended">
+            <ul>
+                <li><a href="http://www.smart-lab.ru"  target="_blank" title="Форум трейдеров - форекс, акции, трейдинг, анализ, стратегии, истории успеха">Форум трейдеров</a> - смартлаб</li>
+                <li><a href="http://www.technohelp.ru"  target="_blank" title="Магазин ноутбуков,сервисный центр, метро Шабловская">Ноутбуки</a> - продажа и ремонт</li>
+                <li><a href="http://www.03.ru"  target="_blank" title="Медицинские консультации врачей, помогаем бесплатно с 1998 года">Советы врачей</a> - консультации</li>
+            </ul>
+            <ul>
+                <li><a href="http://www.3dnews.ru"  target="_blank" title="Новости и статьи о компьютерах и не только">Гаджеты и железки</a> - новости IT</li>
+                <li><a href="http://www.torrnado.ru/" target="_blank" title="Поможем быстро скачать всё что угодно - торрент трекер ТоррНадо.ру">Фильмы, музыка, игры</a> - скачать</li>
+            </ul>
+        </div>
+        <!-- /Recomended -->  
+         
+    </div>
+    <!-- /Leftcolumn -->
+    
+    
+    <div class="clear"></div>
+	<!--<script src='/cgi-bin/adv.fcgi?p=10&qtype=javascript&span-name=banmain_span'></script>-->
+	
+</div>
+</div>
+
+<script type="text/javascript" src="http://i.li.ru/ReActive/js/global/lib/protoculous-effects-packer.js" charset="utf-8"></script>
+<script type="text/javascript" src="/utf/lici.js"></script>
+<script type="text/JavaScript" src="/utf/li.js"></script>            
+<script type="text/javascript" src="/utf/main_new.js?v=3"></script>
+<script type="text/javascript">
+	LiCi.domReady (function(){	
+		Home.services.init();	
+		Home.userbar();
+		document.getElementById('searcharea').focus();	
+	});
+</script>
+<!-- internalinspector code start -->
+<script type="text/javascript" language="javascript"><!--
+document.write('<sc'+'ript src="http://www.internalinspector.com/cgi-bin/code.fcgi?r='+escape(document.referrer)+
+'&s='+((typeof(screen)=="undefined")?"":screen.width+"*"+screen.height+"*"+((screen.colorDepth)?screen.colorDepth:screen.pixelDepth))+"&u="+escape(document.URL)+
+"&h="+escape(document.title)+"&"+Math.random()+'" language="javascript" + type="text/javascript"></sc'+'ript>')//-->
+</script> 
+<!-- internalinspector code end -->
+
+
+
+                    <!-- Footer --> 
+<div class="footer"> 
+    <div class="footerinner"> 
+        <div class="counter"><a href="/stat/groups/li/" target="_blank"> 
+		<img src="http://counter.yadro.ru/logo;groups/li/?52.1" 
+			border="0" width="88" height="31" title="liveinternet.ru: показано количество просмотров и посетителей за 24 часа" /></a>	
+	</div> 
+        <div class="copy">&copy; LiveInternet.Ru</div> 
+        <div class="bottommenu"> 
+            <div> 
+                <b>Ссылки:</b> 
+                <a href="/">на главную</a> 
+                <a href="http://g.liveinternet.ru/login_page.html">почта</a> 
+                <a href="/dating/">знакомства</a> 
+                <a href="/nb_friends.php">одноклассники</a> 
+                <a href="/top/photo/">фото</a> 
+                <a href="/app/postcards/">открытки</a> 
+                <a href="/top/tests/all/">тесты</a> 
+                <a href="http://chat.li.ru/">чат</a> 
+            </div> 
+            <div> 
+                <b>О проекте:</b> 
+                <a href="/corp/about.html">о портале</a> 
+                <a href="http://wiki.liveinternet.ru/">помощь</a> 
+                <a href="/corp/contacts.html">контакты</a> 
+                <a href="/corp/main.html">разместить рекламу</a> 
+                <a href="http://www.li.ru/">версия для pda</a> 
+            </div> 
+        </div> 
+    </div> 
+</div> 
+<!-- /Footer --> 
+<!-- tnsViEx -->
+
+<div class="li-serv_popup" id="_li-serv_stat_pop" style="display: none;"><strong>Вход в статистику</strong><em title="Закрыть" onclick="Home.services.close()">x</em><form method="post" name="stat_login_form" id="stat_login_form" action="/stat/"><p><b>Адрес сайта</b><input type="text" name="url"></p><p><b>Пароль</b><input type="password" name="password"></p><span><a href="http://www.liveinternet.ru/stat/?what=reminder">Напомнить пароль</a><input type="submit" value="Войти"></span></form></div>
+
+<div class="li-serv_popup" id="_li-serv_blog_pop" style="display: none;"><strong>Вход в дневники</strong><em title="Закрыть" onclick="Home.services.close()">x</em><form method="post" name="diary_login_form" id="blog_login_form" action="http://www.liveinternet.ru/member.php"><p><b>Имя</b><input type="text" name="blog_username"></p><p><b>Пароль</b><input type="password" name="blog_password"></p><input type="hidden" name="action" value="login"><input type="hidden" name="charset" value="utf"><span><a href="http://www.liveinternet.ru/member.php?action=lostpw">Напомнить пароль</a><input type="submit" value="Войти"></span></form></div>
+
+<div class="li-serv_popup" id="_li-serv_mail_pop" style="display: none;"><strong>Вход в почту</strong><em title="Закрыть" onclick="Home.services.close()">x</em><form method="post" name="mail_login_form" id="mail_login_form" action="https://g.liveinternet.ru/auth/setcookie.php"><p><b>Логин</b><input type="text" name="mail_login"></p><p><b>Домен</b><select name="domain"><option value="li.ru" selected>@li.ru</option><option value="liveinternet.ru">@liveinternet.ru</option></select></p><p><b>Пароль</b><input type="password" name="mail_pass"></p><span><a href="http://g.liveinternet.ru/recover.php">Напомнить пароль</a><input type="submit" value="Войти"></span></form></div>
+
+</body>
+</html>
+    

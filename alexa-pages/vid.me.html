@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>vidme - simple video upload</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vidme is the simplest way to upload and share videos, no signup required.">
+        <meta name="keywords" content="Video hosting, video sharing, upload video, anonymous video, imgur, gif hosting, gif sharing, upload gif">
+                <meta name="author" content="vidme">
+        <base href="https://vid.me/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        
+                        <link rel="apple-touch-icon" sizes="57x57" href="https://static.vid.me/images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="https://static.vid.me/images/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="https://static.vid.me/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="https://static.vid.me/images/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="https://static.vid.me/images/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="https://static.vid.me/images/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="https://static.vid.me/images/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="https://static.vid.me/images/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="https://static.vid.me/images/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="https://static.vid.me/images/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="https://static.vid.me/images/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="https://static.vid.me/images/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="https://static.vid.me/images/favicon-32x32.png" sizes="32x32">
+        
+                <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-TileImage" content="https://static.vid.me/images/mstile-144x144.png">
+        <meta name="apple-itunes-app" content="app-id=774292353, app-argument=/">
+                <meta name="alexaVerifyID" content="EbaIZq9PH--SUxkPJZ0vY-uNqBU"/>
+        <meta name="version" content="2.1.0.4">
+        
+                            
+<meta property="og:site_name" content="vidme">
+
+                                            
+<meta property="fb:app_id" content="500311450085524">
+
+                
+                    <link href="https://d2ha22j8ys3e0o.cloudfront.net/build-common.css?aa3871db60fefecca8f7d0ac9f76d989-599-2-1-0-4" rel="stylesheet">
+            <link href="https://d2ha22j8ys3e0o.cloudfront.net/build-main.css?b7e8c0172d0eb9ccea9cb46718dc401e-599-2-1-0-4" rel="stylesheet">
+        
+        <script type="text/javascript">
+            var cdn = "https:\/\/d2ha22j8ys3e0o.cloudfront.net";
+            var cdnCounter = "599-2-1-0-4";
+            var require = {
+                baseUrl: cdn + '/js',
+                urlArgs: cdnCounter
+            };
+            var cdnStorage = "https:\/\/d1wst0behutosd.cloudfront.net";
+            var vmCookieName = "vmtoken";
+            var maxSize = 268435456;
+            var maxDescLen = 1000;
+            var pushExpires = null;
+            var pushHostname = "push.vid.me";
+            var pushToken = null;
+                    </script>
+
+                <script src="https://d2ha22j8ys3e0o.cloudfront.net/build-common.js?3a2718c18af096a07e1160541f0b4f9e-599-2-1-0-4" type="text/javascript"></script>
+        <script src="https://d2ha22j8ys3e0o.cloudfront.net/build-main.js?77ae72472649e76fa4042e42e0daa062-599-2-1-0-4" type="text/javascript"></script>
+        
+                    <style type="text/css">
+
+.videos_list .date-section {
+  display: block;
+}
+.videos_list .date-section:first-child {
+  margin-top: 0;
+}
+.videos_list .date-section .day {
+  font-size: 2em;
+}
+.header a.logo > span.logo-black,
+.header a.logo > span.logo-white {
+  background-repeat: no-repeat;
+}
+.pg-tag h1 {
+  margin-bottom: 1em;
+}
+.pg-search .listing>.gutter {
+  display: none; 
+}
+.videos_list>li .thumb_comments {
+  display: inline-block;
+}
+#index .splash_bg {
+  -webkit-filter: none;
+}
+@media (max-width: 767px) {
+  #tag .pills {
+    float: none;
+    text-align: center;
+  } 
+  .header a.logo span {
+    width: auto;
+  }
+}
+
+
+</style>
+        
+    </head>
+    <body class="device-desktop pg-index">
+
+                <div class="header signed-out">
+    <div class="container navbar navbar-inverse" role="navigation">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggle-search visible-phone"
+                    onclick="$('.js-search').toggle();$('.js-search input').focus()">
+                <i class="fa fa-search"></i>
+            </button>
+            <a href="/" class="logo navbar-brand">
+                <span class="logo-black" alt="vidme"
+                     style="background-image: url(https://d2ha22j8ys3e0o.cloudfront.net/images/logo.png?599-2-1-0-4);"></span>
+                <span class="logo-white" alt="vidme"
+                     style="background-image: url(https://d2ha22j8ys3e0o.cloudfront.net/images/logo_white.png?599-2-1-0-4);"></span>
+            </a>
+        </div>
+      
+        <ul class="menu-main hidden-phone">
+          <li>
+            <a href="/">Featured</a>
+          </li>
+          <li>
+            <a href="/new">New</a>
+          </li>
+          <li>
+            <a href="/following">Following</a>
+          </li>
+          <li id="nav-topdog">
+            <a href="/topdog">#topdog</a>
+          </li>
+        </ul>
+
+        <div class="search js-search">
+            <i class="fa fa-search" onClick="$('.js-search-input').show();"></i>
+            <input type="text" class="js-search-input" placeholder="search" />
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="menu nav navbar-nav">
+                              <li class="visible-phone hidden-desktop hidden-tablet">
+                  <a href="/">Featured</a>
+                </li>
+                <li class="visible-phone hidden-desktop hidden-tablet">
+                  <a href="/new">New</a>
+                </li>
+                <li class="visible-phone hidden-desktop hidden-tablet">
+                  <a href="/following">Following</a>
+                </li>
+                <li class="visible-phone hidden-desktop hidden-tablet">
+                  <a href="/feedback">Feedback</a>
+                </li>
+                <li class="visible-phone hidden-desktop hidden-tablet">
+                  <a href="/apps">Apps</a>
+                </li>
+                                    <li class="menu-signup">
+                        <a class="sign-up-link">Sign up</a>
+                    </li>
+                    <li class="menu-login">
+                        <a class="sign-in-link">Log in</a>
+                    </li>
+                                <li class="menu-more hidden-phone dropdown">
+                  <a><img class="ellipsis-white" src="https://d2ha22j8ys3e0o.cloudfront.net/images/menu-ellipsis-white.png" alt=""><img class="ellipsis-black" src="https://d2ha22j8ys3e0o.cloudfront.net/images/menu-ellipsis.png" alt=""></a>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a href="/about">About Vidme</a>
+                        </li>
+                        <li>
+                            <a href="/feedback">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="/apps">Apps</a>
+                        </li>
+                        <li>
+                            <a href="http://vidmeblog.tumblr.com" target="_blank">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/api">API</a>
+                        </li>
+                        <li>
+                            <a href="/terms-of-use">Terms</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-upload">
+                    <a class="menu-upload-button js-uploader-link rounded">Upload</a>
+                                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+        
+                                
+<div id="index">
+  
+    <div class="splash_bg"></div>
+    <div class="splash" id="upload">
+        <div class="inner">
+            <h1>
+              <span>Support today's best internet videos.</span>
+            </h1>
+            <div class="uploadbutton_wrapper">
+                <a class="uploadbutton btn js-uploader-link">
+                    Upload a video
+                </a>
+            </div>
+            <ul class="applinks">
+                <li class="iphone">
+                    <a href="https://itunes.apple.com/US/app/id774292353" target="_blank"
+                       data-label="iphone">
+                        <span>
+                          Get it for<br/><strong>iPhone</strong>
+                        </span>
+                    </a>
+                </li>
+                <li class="android">
+                    <a href="https://play.google.com/store/apps/details?id=me.vidd" target="_blank"
+                       data-label="android">
+                        <span>
+                          Get it for<br/><strong>Android</strong>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="index_contest">
+      <div class="inner">
+        <img src="https://d2ha22j8ys3e0o.cloudfront.net/images/contests/doge.png" />
+        <img src="https://d2ha22j8ys3e0o.cloudfront.net/images/contests/doggie.png" />
+        <span>
+          Have an awesome, hilarious or bizarre video of your dog? Upload it to the <a href="/topdog">#topdog contest</a> for
+          a chance to win $5,000!
+        </span>
+      </div>
+    </div>
+    
+    <div class="listing_wrapper">
+        <div class="listing">
+            <div class="inner">
+                <ul class="videos_list js-video-feed"
+                    data-type="home"
+                    data-marker="2015-12-17">
+                                            <li class='date-section'>
+                            <span class='day'>
+                                Today                            </span>
+                            <span class='date'>
+                                                            </span>
+                        </li>
+                        
+ 
+
+            <li data-id="6194168" 
+        data-channel=""
+        data-user=""
+        data-url="https://vid.me/JoAz"
+        class=" anonymous">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6194168"
+                       data-video-title="Confused Santa Cat"
+                       data-video-url="https://vid.me/JoAz"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/JoAz" class="js-video-vote-score" 
+                           data-video="6194168"
+                           data-score="64">
+                                                            <span class="num">64</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/JoAz"
+                   style="background:#cda07d">
+                    <span class="thumb_duration">
+                        0:46                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6194168/6194168.feed1.jpg?v2r1450480837" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6194168/6194168.feed2.jpg?v2r1450480837" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/JoAz">
+                          <span class="highlight">
+                            Confused Santa Cat                          </span>
+                        </a>
+                                                        </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/JoAz">
+                                    Confused Santa Cat                                </a>
+                            </div>
+                                                                    </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/JoAz">
+                            <span class="num">404,140</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/JoAz">
+                                <span class="num">17</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/JoAz">
+                            <time class="timestamp" title="December 17th, 2015, 10:47:48 pm PST" datetime="2015-12-17T22:47:48-08:00" data-timestamp="Thu, 17 Dec 2015 22:47:48 -0800">2d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6194168">
+                                98 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="5756349" 
+        data-channel=""
+        data-user="6807339"
+        data-url="https://vid.me/YnWa"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="5756349"
+                       data-video-title="Steven Seagal spars top UFC Fighter"
+                       data-video-url="https://vid.me/YnWa"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/YnWa" class="js-video-vote-score" 
+                           data-video="5756349"
+                           data-score="47">
+                                                            <span class="num">47</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/YnWa"
+                   style="background:#99b6df">
+                    <span class="thumb_duration">
+                        0:51                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/5756349/5756349.feed1.jpg?v2r1448649518" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/5756349/5756349.feed2.jpg?v2r1448649518" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/YnWa">
+                          <span class="highlight">
+                            Steven Seagal spars top UFC Fighter                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="6807339">
+                                <a href="https://vid.me/lethalrog"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d2ha22j8ys3e0o.cloudfront.net/images/default-avatars/40.png?599-2-1-0-4" alt="lethalrog"/>lethalrog</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/YnWa">
+                                    Steven Seagal spars top UFC Fighter                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/lethalrog"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d2ha22j8ys3e0o.cloudfront.net/images/default-avatars/40.png?599-2-1-0-4" alt="lethalrog"/>lethalrog</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/YnWa">
+                            <span class="num">60,407</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/YnWa">
+                                <span class="num">13</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/YnWa">
+                            <time class="timestamp" title="November 27th, 2015, 10:38:58 am PST" datetime="2015-11-27T10:38:58-08:00" data-timestamp="Fri, 27 Nov 2015 10:38:58 -0800">3w</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="5756349">
+                                15 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6188801" 
+        data-channel=""
+        data-user=""
+        data-url="https://vid.me/jly2"
+        class=" anonymous">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6188801"
+                       data-video-title="The Pennsylvania Pickle"
+                       data-video-url="https://vid.me/jly2"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/jly2" class="js-video-vote-score" 
+                           data-video="6188801"
+                           data-score="36">
+                                                            <span class="num">36</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/jly2"
+                   style="background:#72a9d3">
+                    <span class="thumb_duration">
+                        2:42                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6188801/6188801.feed1.jpg?v2r1450480825" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6188801/6188801.feed2.jpg?v2r1450480825" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/jly2">
+                          <span class="highlight">
+                            The Pennsylvania Pickle                          </span>
+                        </a>
+                                                        </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/jly2">
+                                    The Pennsylvania Pickle                                </a>
+                            </div>
+                                                                    </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/jly2">
+                            <span class="num">3,719</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/jly2">
+                                <span class="num">19</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/jly2">
+                            <time class="timestamp" title="December 17th, 2015, 5:45:18 pm PST" datetime="2015-12-17T17:45:18-08:00" data-timestamp="Thu, 17 Dec 2015 17:45:18 -0800">2d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6188801">
+                                8 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6210395" 
+        data-channel=""
+        data-user="6218147"
+        data-url="https://vid.me/wm6h"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6210395"
+                       data-video-title="UK PM David Cameron calls Trump&#039;s immigration remarks &quot;divisive, stupid &amp; wrong&quot;"
+                       data-video-url="https://vid.me/wm6h"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/wm6h" class="js-video-vote-score" 
+                           data-video="6210395"
+                           data-score="26">
+                                                            <span class="num">26</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/wm6h"
+                   style="background:#e26448">
+                    <span class="thumb_duration">
+                        0:29                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6210395/6210395.feed1.jpg?v2r1450486091" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6210395/6210395.feed2.jpg?v2r1450486091" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/wm6h">
+                          <span class="highlight">
+                            UK PM David Cameron calls Trump&#039;s immigration remarks &quot;divisive, stupid &amp; wrong&quot;                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="6218147">
+                                <a href="https://vid.me/OpposingViews"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6218147.small.jpg?v4r1441405482" alt="Opposing Views"/>Opposing Views</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/wm6h">
+                                    UK PM David Cameron calls Trump&#039;s immigration remarks &quot;divisive, stupid &amp; wrong&quot;                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/OpposingViews"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6218147.small.jpg?v4r1441405482" alt="Opposing Views"/>Opposing Views</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/wm6h">
+                            <span class="num">2,855</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/wm6h">
+                                <span class="num">11</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/wm6h">
+                            <time class="timestamp" title="December 18th, 2015, 4:48:27 pm PST" datetime="2015-12-18T16:48:27-08:00" data-timestamp="Fri, 18 Dec 2015 16:48:27 -0800">2d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6210395">
+                                4 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6210266" 
+        data-channel=""
+        data-user="1194892"
+        data-url="https://vid.me/XFX7"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6210266"
+                       data-video-title="Daily Monster: Caroling Edition"
+                       data-video-url="https://vid.me/XFX7"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/XFX7" class="js-video-vote-score" 
+                           data-video="6210266"
+                           data-score="26">
+                                                            <span class="num">26</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/XFX7"
+                   style="background:#d61c1a">
+                    <span class="thumb_duration">
+                        3:53                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6210266/6210266.feed1.jpg?v2r1450485767" alt="" width="300" height="225" style="margin-left: -0px; margin-top: -28px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6210266/6210266.feed2.jpg?v2r1450485767" alt="" width="120" height="90" style="margin-left: -0px; margin-top: -3px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/XFX7">
+                          <span class="highlight">
+                            Daily Monster: Caroling Edition                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="1194892">
+                                <a href="https://vid.me/StefanBucher"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/1194892.small.jpg?v4r1450389893" alt="StefanBucher"/>StefanBucher</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/XFX7">
+                                    Daily Monster: Caroling Edition                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/StefanBucher"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/1194892.small.jpg?v4r1450389893" alt="StefanBucher"/>StefanBucher</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/XFX7">
+                            <span class="num">2,309</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/XFX7">
+                                <span class="num">10</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/XFX7">
+                            <time class="timestamp" title="December 18th, 2015, 4:41:43 pm PST" datetime="2015-12-18T16:41:43-08:00" data-timestamp="Fri, 18 Dec 2015 16:41:43 -0800">2d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6210266">
+                                6 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+
+                                                                <li class='date-section'>
+                            <span class='day'>
+                                Thursday                            </span>
+                            <span class='date'>
+                                December 17                            </span>
+                        </li>
+                        
+ 
+
+            <li data-id="6031010" 
+        data-channel=""
+        data-user="5981687"
+        data-url="https://vid.me/vYrQ"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6031010"
+                       data-video-title="Man Robs Convenience Store While Riding a Hoverboard"
+                       data-video-url="https://vid.me/vYrQ"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/vYrQ" class="js-video-vote-score" 
+                           data-video="6031010"
+                           data-score="47">
+                                                            <span class="num">47</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/vYrQ"
+                   style="background:#90a883">
+                    <span class="thumb_duration">
+                        0:36                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6031010/6031010.feed1.jpg?v2r1449786835" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6031010/6031010.feed2.jpg?v2r1449786835" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/vYrQ">
+                          <span class="highlight">
+                            Man Robs Convenience Store While Riding a Hoverboard                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="5981687">
+                                <a href="https://vid.me/TheRealObama"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d2ha22j8ys3e0o.cloudfront.net/images/default-avatars/38.png?599-2-1-0-4" alt="TheRealObama"/>TheRealObama</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/vYrQ">
+                                    Man Robs Convenience Store While Riding a Hoverboard                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/TheRealObama"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d2ha22j8ys3e0o.cloudfront.net/images/default-avatars/38.png?599-2-1-0-4" alt="TheRealObama"/>TheRealObama</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/vYrQ">
+                            <span class="num">8,681</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/vYrQ">
+                                <span class="num">16</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/vYrQ">
+                            <time class="timestamp" title="December 10th, 2015, 2:33:47 pm PST" datetime="2015-12-10T14:33:47-08:00" data-timestamp="Thu, 10 Dec 2015 14:33:47 -0800">1w</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6031010">
+                                3 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6144740" 
+        data-channel=""
+        data-user="3834632"
+        data-url="https://vid.me/XVD7"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6144740"
+                       data-video-title="First Bong, Last Bong"
+                       data-video-url="https://vid.me/XVD7"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/XVD7" class="js-video-vote-score" 
+                           data-video="6144740"
+                           data-score="33">
+                                                            <span class="num">33</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/XVD7"
+                   style="background:#7f5258">
+                    <span class="thumb_duration">
+                        0:36                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6144740/6144740.feed1.jpg?v2r1450392192" alt="" width="300" height="535" style="margin-left: -0px; margin-top: -183px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6144740/6144740.feed2.jpg?v2r1450392192" alt="" width="120" height="214" style="margin-left: -0px; margin-top: -65px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/XVD7">
+                          <span class="highlight">
+                            First Bong, Last Bong                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="3834632">
+                                <a href="https://vid.me/EFARCHIVE"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/3834632.small.jpg?v4r1442308942" alt="EFARCHIVE"/>EFARCHIVE</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/XVD7">
+                                    First Bong, Last Bong                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/EFARCHIVE"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/3834632.small.jpg?v4r1442308942" alt="EFARCHIVE"/>EFARCHIVE</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/XVD7">
+                            <span class="num">65,684</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/XVD7">
+                                <span class="num">12</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/XVD7">
+                            <time class="timestamp" title="December 15th, 2015, 9:04:40 pm PST" datetime="2015-12-15T21:04:40-08:00" data-timestamp="Tue, 15 Dec 2015 21:04:40 -0800">4d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6144740">
+                                51 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6184190" 
+        data-channel=""
+        data-user="1194892"
+        data-url="https://vid.me/BXyF"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6184190"
+                       data-video-title="Daily Monster: Holiday Song Edition"
+                       data-video-url="https://vid.me/BXyF"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/BXyF" class="js-video-vote-score" 
+                           data-video="6184190"
+                           data-score="29">
+                                                            <span class="num">29</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/BXyF"
+                   style="background:#d10808">
+                    <span class="thumb_duration">
+                        3:21                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6184190/6184190.feed1.jpg?v2r1450389583" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6184190/6184190.feed2.jpg?v2r1450389583" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/BXyF">
+                          <span class="highlight">
+                            Daily Monster: Holiday Song Edition                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="1194892">
+                                <a href="https://vid.me/StefanBucher"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/1194892.small.jpg?v4r1450389893" alt="StefanBucher"/>StefanBucher</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/BXyF">
+                                    Daily Monster: Holiday Song Edition                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/StefanBucher"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/1194892.small.jpg?v4r1450389893" alt="StefanBucher"/>StefanBucher</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/BXyF">
+                            <span class="num">2,984</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/BXyF">
+                                <span class="num">5</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/BXyF">
+                            <time class="timestamp" title="December 17th, 2015, 1:57:43 pm PST" datetime="2015-12-17T13:57:43-08:00" data-timestamp="Thu, 17 Dec 2015 13:57:43 -0800">3d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6184190">
+                                4 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6151205" 
+        data-channel=""
+        data-user="8330981"
+        data-url="https://vid.me/n2jZ"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6151205"
+                       data-video-title="Unicorn poo | Daily Surprise 5"
+                       data-video-url="https://vid.me/n2jZ"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/n2jZ" class="js-video-vote-score" 
+                           data-video="6151205"
+                           data-score="30">
+                                                            <span class="num">30</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/n2jZ"
+                   style="background:#d8aca5">
+                    <span class="thumb_duration">
+                        2:33                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6151205/6151205.feed1.jpg?v2r1450278089" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6151205/6151205.feed2.jpg?v2r1450278089" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/n2jZ">
+                          <span class="highlight">
+                            Unicorn poo | Daily Surprise 5                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="8330981">
+                                <a href="https://vid.me/DailySurprise"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/8330981.gif?gv2r1450141639" alt="Daily Surprise"/>Daily Surprise</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/n2jZ">
+                                    Unicorn poo | Daily Surprise 5                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/DailySurprise"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/8330981.gif?gv2r1450141639" alt="Daily Surprise"/>Daily Surprise</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/n2jZ">
+                            <span class="num">3,354</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/n2jZ">
+                                <span class="num">10</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/n2jZ">
+                            <time class="timestamp" title="December 16th, 2015, 7:02:24 am PST" datetime="2015-12-16T07:02:24-08:00" data-timestamp="Wed, 16 Dec 2015 7:02:24 -0800">4d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6151205">
+                                4 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6166094" 
+        data-channel=""
+        data-user="6256568"
+        data-url="https://vid.me/q6Cw"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6166094"
+                       data-video-title="GoKart PUG"
+                       data-video-url="https://vid.me/q6Cw"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/q6Cw" class="js-video-vote-score" 
+                           data-video="6166094"
+                           data-score="30">
+                                                            <span class="num">30</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/q6Cw"
+                   style="background:transparent">
+                    <span class="thumb_duration">
+                        2:11                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6166094/6166094.feed1.jpg?v2r1450392182" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6166094/6166094.feed2.jpg?v2r1450392182" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/q6Cw">
+                          <span class="highlight">
+                            GoKart PUG                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="6256568">
+                                <a href="https://vid.me/atomthepug"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6256568.small.jpg?v4r1442272614" alt="Atom the Pug "/>Atom the Pug </a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/q6Cw">
+                                    GoKart PUG                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/atomthepug"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6256568.small.jpg?v4r1442272614" alt="Atom the Pug "/>Atom the Pug </a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/q6Cw">
+                            <span class="num">3,098</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/q6Cw">
+                                <span class="num">11</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/q6Cw">
+                            <time class="timestamp" title="December 16th, 2015, 6:32:11 pm PST" datetime="2015-12-16T18:32:11-08:00" data-timestamp="Wed, 16 Dec 2015 18:32:11 -0800">3d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6166094">
+                                4 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6184064" 
+        data-channel=""
+        data-user="6218147"
+        data-url="https://vid.me/y1TO"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6184064"
+                       data-video-title="Obama: In the Syrian seeking refuge today, we should see the Jewish refugee of WWII"
+                       data-video-url="https://vid.me/y1TO"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/y1TO" class="js-video-vote-score" 
+                           data-video="6184064"
+                           data-score="24">
+                                                            <span class="num">24</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/y1TO"
+                   style="background:#c85427">
+                    <span class="thumb_duration">
+                        0:32                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6184064/6184064.feed1.jpg?v2r1450389042" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6184064/6184064.feed2.jpg?v2r1450389042" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/y1TO">
+                          <span class="highlight">
+                            Obama: In the Syrian seeking refuge today, we should see the Jewish refugee of WWII                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="6218147">
+                                <a href="https://vid.me/OpposingViews"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6218147.small.jpg?v4r1441405482" alt="Opposing Views"/>Opposing Views</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/y1TO">
+                                    Obama: In the Syrian seeking refuge today, we should see the Jewish refugee of WWII                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/OpposingViews"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6218147.small.jpg?v4r1441405482" alt="Opposing Views"/>Opposing Views</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/y1TO">
+                            <span class="num">2,594</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/y1TO">
+                                <span class="num">4</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/y1TO">
+                            <time class="timestamp" title="December 17th, 2015, 1:51:00 pm PST" datetime="2015-12-17T13:51:00-08:00" data-timestamp="Thu, 17 Dec 2015 13:51:00 -0800">3d</time>                        </a>
+                    </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="6163673" 
+        data-channel=""
+        data-user="6615399"
+        data-url="https://vid.me/MBxS"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="6163673"
+                       data-video-title="People of Geldermalsen, Holland don&#039;t want refugees"
+                       data-video-url="https://vid.me/MBxS"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/MBxS" class="js-video-vote-score" 
+                           data-video="6163673"
+                           data-score="17">
+                                                            <span class="num">17</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/MBxS"
+                   style="background:#8b98b5">
+                    <span class="thumb_duration">
+                        0:30                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6163673/6163673.feed1.jpg?v2r1450311505" alt="" width="302" height="170" style="margin-left: -1px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/6163673/6163673.feed2.jpg?v2r1450311505" alt="" width="151" height="85" style="margin-left: -16px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/MBxS">
+                          <span class="highlight">
+                            People of Geldermalsen, Holland don&#039;t want refugees                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="6615399">
+                                <a href="https://vid.me/fdesouche"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6615399.small.jpg?v4r1442994590" alt="fdesouche"/>fdesouche</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/MBxS">
+                                    People of Geldermalsen, Holland don&#039;t want refugees                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/fdesouche"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/6615399.small.jpg?v4r1442994590" alt="fdesouche"/>fdesouche</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/MBxS">
+                            <span class="num">198,374</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/MBxS">
+                                <span class="num">5</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/MBxS">
+                            <time class="timestamp" title="December 16th, 2015, 4:18:28 pm PST" datetime="2015-12-16T16:18:28-08:00" data-timestamp="Wed, 16 Dec 2015 16:18:28 -0800">4d</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="6163673">
+                                3 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="9967" 
+        data-channel=""
+        data-user="13365"
+        data-url="https://vid.me/mxy"
+        class="">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="9967"
+                       data-video-title="Flappy man"
+                       data-video-url="https://vid.me/mxy"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/mxy" class="js-video-vote-score" 
+                           data-video="9967"
+                           data-score="34">
+                                                            <span class="num">34</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/mxy"
+                   style="background:#54bbb8">
+                    <span class="thumb_duration">
+                        0:06                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/9967/9967.feed1.jpg?v2r1450392023" alt="" width="300" height="300" style="margin-left: -0px; margin-top: -65px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/9967/9967.feed2.jpg?v2r1450392023" alt="" width="120" height="120" style="margin-left: -0px; margin-top: -18px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/mxy">
+                          <span class="highlight">
+                            Flappy man                          </span>
+                        </a>
+                                                                <div class="thumb_authors">
+                            <div class="thumb_author submitter" data-user="13365">
+                                <a href="https://vid.me/amit"
+                                   class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/13365.jpg" alt="amit"/>amit</a>
+                            </div>
+                                                    </div>
+                                    </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/mxy">
+                                    Flappy man                                </a>
+                            </div>
+                                                                            <div class="thumb_info_alt2">
+                                                                    <span class="thumb_author submitter">
+                                        <a href="https://vid.me/amit"
+                                           class="thumb_author_username"><img class="thumb_author_photo" src="https://d1wst0behutosd.cloudfront.net/avatars/13365.jpg" alt="amit"/>amit</a>
+                                    </span>
+                                                                                            </div>
+                                            </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/mxy">
+                            <span class="num">2,591</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/mxy">
+                                <span class="num">9</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/mxy">
+                            <time class="timestamp" title="March 4th, 2014, 5:25:19 am PST" datetime="2014-03-04T05:25:19-08:00" data-timestamp="Tue, 4 Mar 2014 5:25:19 -0800">Mar 04, 2014</time>                        </a>
+                    </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="8565" 
+        data-channel=""
+        data-user=""
+        data-url="https://vid.me/7H5"
+        class=" anonymous">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="8565"
+                       data-video-title="Plasma globe near an Xbox."
+                       data-video-url="https://vid.me/7H5"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/7H5" class="js-video-vote-score" 
+                           data-video="8565"
+                           data-score="30">
+                                                            <span class="num">30</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/7H5"
+                   style="background:#b5a6d6">
+                    <span class="thumb_duration">
+                        0:21                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/8565.jpg?v1r1410384853" alt="" width="300" height="170" style="margin-left: -0px; margin-top: -0px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/8565.jpg?v1r1410384853" alt="" width="150" height="85" style="margin-left: -15px; margin-top: -0px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/7H5">
+                          <span class="highlight">
+                            Plasma globe near an Xbox.                          </span>
+                        </a>
+                                                        </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/7H5">
+                                    Plasma globe near an Xbox.                                </a>
+                            </div>
+                                                                    </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/7H5">
+                            <span class="num">2,986</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/7H5">
+                                <span class="num">6</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/7H5">
+                            <time class="timestamp" title="February 19th, 2014, 2:18:47 pm PST" datetime="2014-02-19T14:18:47-08:00" data-timestamp="Wed, 19 Feb 2014 14:18:47 -0800">Feb 19, 2014</time>                        </a>
+                    </li>
+                                    </ul> 
+        </div>
+    </li>
+            <li data-id="8340" 
+        data-channel=""
+        data-user=""
+        data-url="https://vid.me/RBR"
+        class=" anonymous">
+        
+        <div class="inner">
+            <div class="thumb_vote_wrapper">
+                <div class="thumb_vote">
+                                        <a class="js-video-vote-up "
+                       data-video="8340"
+                       data-video-title="Eagle takes down deer"
+                       data-video-url="https://vid.me/RBR"><i class="fa fa-arrow-up"></i></a>
+                </div>
+                <div class="thumb_vote_score">
+                    <span class="thumb_score">
+                        <span href="https://vid.me/RBR" class="js-video-vote-score" 
+                           data-video="8340"
+                           data-score="33">
+                                                            <span class="num">33</span>
+                                                                                    </span>
+                    </span>
+                </div>
+                            </div>
+            <div class="thumb_wrapper">
+                <a href="https://vid.me/RBR"
+                   style="background:#5d4f47">
+                    <span class="thumb_duration">
+                        0:12                    </span>
+                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/8340.jpg?v1r1410312897" alt="" width="300" height="240" style="margin-left: -0px; margin-top: -35px" class="hidden-phone">                    <img src="https://d1wst0behutosd.cloudfront.net/thumbnails/8340.jpg?v1r1410312897" alt="" width="120" height="96" style="margin-left: -0px; margin-top: -6px" class="visible-phone">                </a>
+                <div class="thumb_title">
+                                                                                                                                                <a class="thumb_title_label" href="https://vid.me/RBR">
+                          <span class="highlight">
+                            Eagle takes down deer                          </span>
+                        </a>
+                                                        </div>
+            </div> 
+            <div class="thumb_info">
+                                    <div class="thumb_info_alt">
+                                                    <div class="thumb_title_alt">
+                                <a href="https://vid.me/RBR">
+                                    Eagle takes down deer                                </a>
+                            </div>
+                                                                    </div>
+                            </div>
+                <ul class="thumb_stats">
+                    <li class="thumb_stat thumb_views">
+                        <a href="https://vid.me/RBR">
+                            <span class="num">3,950</span>
+                            <span class="text">views</span>
+                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_comments">
+                            <a href="https://vid.me/RBR">
+                                <span class="num">8</span>
+                                <span class="text">comments</span>
+                            </a>
+                        </li>
+                                        <li class="thumb_stat thumb_date">
+                        <a href="https://vid.me/RBR">
+                            <time class="timestamp" title="February 18th, 2014, 3:43:29 pm PST" datetime="2014-02-18T15:43:29-08:00" data-timestamp="Tue, 18 Feb 2014 15:43:29 -0800">Feb 18, 2014</time>                        </a>
+                    </li>
+                                            <li class="thumb_stat thumb_watching">
+                            <span class="js-video-watchers" data-type="video"
+                                  data-video="8340">
+                                1 watching
+                            </span>
+                        </li>
+                                    </ul> 
+        </div>
+    </li>
+
+                                    </ul>
+            </div>
+
+            <div class="gutter">
+              <div class="section">
+                <div class="headline">
+                  Featured creators
+                </div>
+                <ul class="featured_users">
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/cannibal.png?');">
+                    <a href="/cannibal"><span>cannibal</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/adhd.jpg?');">
+                    <a href="/adhd"><span>adhd</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/opposing-views.png?');">
+                    <a href="/opposingviews"><span>opposingviews</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/gutsu.png?');">
+                    <a href="/gutsu"><span>gutsu</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/efarchive.png?');">
+                    <a href="/efarchive"><span>efarchive</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/alldefdigital.png?');">
+                    <a href="/alldefdigital"><span>alldefdigital</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/stefanbucher.jpg?');">
+                    <a href="/stefanbucher"><span>stefanbucher</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/atarrant.jpg?');">
+                    <a href="/atarrant"><span>atarrant</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/alexnsoto.gif?');">
+                    <a href="/alexnsoto"><span>alexnsoto</span></a>
+                  </li>
+                  <li style="background-image: url('https://d2ha22j8ys3e0o.cloudfront.net/images/featured-users/billiams.jpg?');">
+                    <a href="/billiams"><span>billiams</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section">
+                <ul class="gutter_footer">
+                  <li class="menu_footer_docs">
+                    <a href="/api">API</a>
+                  </li>
+                  <li class="menu_footer_privacy">
+                    <a href="/privacy">Privacy</a>
+                  </li>
+                  <li class="menu_footer_terms">
+                    <a href="/terms-of-use">Terms</a>
+                  </li>
+                  <li class="menu_footer_dmca">
+                    <a href="/dmca">DMCA</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
+        
+                
+<div class="footer">
+    <ul class="menu_footer">
+        <li class="menu_footer_jobs">
+            <a href="/jobs">Jobs</a>
+        </li>
+        <li class="menu_footer_twitter">
+            <a href="https://www.twitter.com/vidme" target="_blank">Twitter</a>
+        </li>
+        <li class="menu_footer_facebook">
+            <a href="https://www.facebook.com/vidme" target="_blank">Facebook</a>
+        </li>
+        <li class="menu_footer_reddit">
+            <a href="https://www.reddit.com/r/vidme" target="_blank">Subreddit</a>
+        </li>
+        <li class="menu_footer_docs">
+            <a href="/api">API</a>
+        </li>
+        <li class="menu_footer_privacy">
+            <a href="/privacy">Privacy</a>
+        </li>
+        <li class="menu_footer_terms">
+            <a href="/terms-of-use">Terms</a>
+        </li>
+        <li class="menu_footer_dmca">
+            <a href="/dmca">DMCA</a>
+        </li>
+    </ul>
+</div>
+                
+                
+                            <script type="text/javascript">
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-45776901-2', {
+                'cookieDomain': 'vid.me',
+                'sampleRate': 100              });
+              ga('require', 'displayfeatures');
+              ga('send', 'pageview');
+            </script>
+        
+                <script type="text/javascript">
+            (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+            for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+            mixpanel.init("c98292390a7ba53db66cba8049900fc5", {
+                api_host : "https://api.mixpanel.com"
+            });
+        </script>
+
+        
+        
+                        <script type="text/javascript">
+            _atrk_opts = { atrk_acct:"vjmHl1aE+GW1Ug", domain:"vid.me",dynamic: true};
+            (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+        </script>
+        <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=vjmHl1aE+GW1Ug" style="display:none" height="1" width="1" alt="" /></noscript>
+        
+                
+    </body>
+</html>

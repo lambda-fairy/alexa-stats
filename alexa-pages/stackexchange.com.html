@@ -1,0 +1,1379 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>
+    Hot Questions - Stack Exchange
+</title>
+    <link rel="stylesheet" href="//cdn.sstatic.net/skins/topbar/topbar.css" type="text/css" />
+    <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=5d80c7d21da6" type="text/css" />
+    <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico">
+    <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml">
+
+    <!--[if IE]>
+    <script src="//sstatic.net/stackexchange/js/third-party/html5shiv.js?v=9f4cac0f1832"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script>
+    <script src="//sstatic.net/stackexchange/js/master.js?v=36c16bcfea05"></script>
+    <script src="//sstatic.net/stackexchange/js/universal-login.js?v=bf6e4eb0b815"></script>
+    <script>$(function() { UniversalAuth.performAuth(); });</script>
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed of hot questions" href="/feeds/questions">
+    <link rel="openid.server" href="https://openid.stackexchange.com/openid/provider">
+    <link rel="openid2.provider" href="https://openid.stackexchange.com/openid/provider">
+
+</head>
+<body>
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div class="wrapper">
+        <div id="overlay-header"></div>
+        
+
+
+<section class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+        </div>
+
+        <div class="network-items">
+
+            <a href="//stackexchange.com"
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 153 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+        </div>
+
+        <div class="topbar-links">
+            <div class="links-container">
+                <span class="topbar-menu-links">
+                                            <a href="https://stackexchange.com/users/login#create-account">sign up</a>
+                        <a href="https://stackexchange.com/users/login">log in</a>
+                    
+                    <a data-loc="2" class="tour-link" href="/tour">tour</a>
+                    <a href="/about">about us</a>
+                    <a href="http://meta.stackexchange.com">meta</a>
+                </span>
+            </div>
+
+            <div class="search-container">
+                <form action="/search" method="get" autocomplete="off">
+                    <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script src="//sstatic.net/stackexchange/js/topbar.js?v=cf010b31fcd2"></script>
+
+        <header>
+            <div class="contentWrapper">
+                <a href="/"><h1>Stack Exchange</h1></a>
+        
+                <ul class="navMain">
+                    <li><a href="/sites" >All Sites</a></li>
+                    <li><a href="/leagues" >Top Users</a></li>
+                    <li><a href="/newsletters" >Newsletters</a></li>
+                    <li><a href="/blogs" >Blogs</a></li>
+                </ul>
+            </div>
+        </header>
+
+        
+
+
+        <section id="content">
+            <div class="contentWrapper">
+                
+
+<div class="hero-box">
+    <div class="close"><a title="click to close"><img src="/content/img/hero/close.png" alt="close" /></a></div>
+    <div class="row">
+        <div class="text">
+            <h3 class="title">Stack Exchange Q&amp;A communities are different. Here's how:</h3>
+        </div>
+        <div>
+            <div class="column">
+                <img src="/content/img/hero/bubble.png" alt="Speech bubbles" />
+                <div class="blurb">
+                    <em>Expert communities.</em><br />
+                    Each of our <span class="old">150</span> 
+                    communities is built by people passionate about a focused topic.
+                </div>
+            </div>
+            <div class="column">
+                <img src="/content/img/hero/vote.png" alt="Voting arrows" />
+                <div class="blurb">
+                    <em>The right answer. Right on top.</em><br />
+                    Experts like you can vote on posts, so the most helpful answers are easy to find.
+                </div>
+            </div>
+            <div class="column">
+                <img src="/content/img/hero/check.png" alt="checkmark" />
+                <div class="blurb">
+                    <em>Share knowledge. Earn trust.</em><br />
+                    Earn reputation and additional privileges for posts others find helpful.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row"><a data-loc="1" href="/tour" class="tour-link btn">Learn more</a></div>
+    <script>
+        $('.hero-box .close').click(function () {
+            $.cookie("hero", "closed", { path: "/", expires: 365 });
+            var $hero = $(".hero-box");
+            $hero.slideUp('fast', function () { $hero.remove(); });
+            StackExchange.helpers.gps('hero.closed');
+            return false;
+        });
+    </script>
+</div>
+    
+
+<div id="mainArea" class="at-top" data-location="0">
+
+    
+<div class="subheader">
+    <div class="tabs">
+            <a href="/" class="youarehere">hot</a>
+
+            <a href="/questions?tab=realtime">real-time</a>
+
+    </div>
+</div>
+<br class="cbo" />
+
+    <div id="question-list">
+    <div data-sid="codegolf.stackexchange.com" class="question-container">
+        <a href="http://codegolf.stackexchange.com/questions/67183/a-multiplication-table-for-the-cheela">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on codegolf.stackexchange.com"><img src="http://cdn.sstatic.net/codegolf/img/icon-48.png" alt="Programming Puzzles &amp; Code Golf" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://codegolf.stackexchange.com/questions/67183/a-multiplication-table-for-the-cheela"  title="This question has been arbitrarily awarded 104.745 hotness points">
+                    A multiplication table for the Cheela
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" class="post-tag ">code-golf</a>
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/number" class="post-tag ">number</a>
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/kolmogorov-complexity" class="post-tag ">kolmogorov-complexity</a>
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/base-conversion" class="post-tag ">base-conversion</a>
+                7 answers |
+                                    asked 7 hours ago
+                                    <span class="owner">
+                        by <a href="http://codegolf.stackexchange.com/users/36398/luis-mendo">Luis Mendo</a> on
+                    </span>
+                <a href="http://codegolf.stackexchange.com" class="question-host">
+codegolf                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="english.stackexchange.com" class="question-container">
+        <a href="http://english.stackexchange.com/questions/295126/if-living-in-the-countryside-is-rural-what-do-you-call-living-by-the-sea">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on english.stackexchange.com"><img src="http://cdn.sstatic.net/english/img/icon-48.png" alt="English Language &amp; Usage" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://english.stackexchange.com/questions/295126/if-living-in-the-countryside-is-rural-what-do-you-call-living-by-the-sea"  title="This question has been arbitrarily awarded 80.894 hotness points">
+                    If living in the countryside is rural, what do you call living by the sea?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://english.stackexchange.com/questions/tagged/single-word-requests" class="post-tag ">single-word-requests</a>
+                5 answers |
+                                    asked 6 hours ago
+                                    <span class="owner">
+                        by <a href="http://english.stackexchange.com/users/144538/curiousstudent">Curiousstudent</a> on
+                    </span>
+                <a href="http://english.stackexchange.com" class="question-host">
+english                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="codereview.stackexchange.com" class="question-container">
+        <a href="http://codereview.stackexchange.com/questions/114584/printing-all-possible-sums-of-two-n-sided-dice-rolls">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on codereview.stackexchange.com"><img src="http://cdn.sstatic.net/codereview/img/icon-48.png" alt="Code Review" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://codereview.stackexchange.com/questions/114584/printing-all-possible-sums-of-two-n-sided-dice-rolls"  title="This question has been arbitrarily awarded 54.451 hotness points">
+                    Printing all possible sums of two n-sided dice rolls
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://codereview.stackexchange.com/questions/tagged/python" class="post-tag ">python</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/combinatorics" class="post-tag ">combinatorics</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/dice" class="post-tag ">dice</a>
+                3 answers |
+                                    asked 2 hours ago
+                                    <span class="owner">
+                        by <a href="http://codereview.stackexchange.com/users/86255/intboolstring">intboolstring</a> on
+                    </span>
+                <a href="http://codereview.stackexchange.com" class="question-host">
+codereview                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="academia.stackexchange.com" class="question-container">
+        <a href="http://academia.stackexchange.com/questions/60404/are-professors-allowed-to-accuse-someone-of-cheating-based-on-a-general-increase">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on academia.stackexchange.com"><img src="http://cdn.sstatic.net/academia/img/icon-48.png" alt="Academia" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://academia.stackexchange.com/questions/60404/are-professors-allowed-to-accuse-someone-of-cheating-based-on-a-general-increase"  title="This question has been arbitrarily awarded 54.079 hotness points">
+                    Are professors allowed to accuse someone of cheating based on a general increase in test scores?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://academia.stackexchange.com/questions/tagged/exams" class="post-tag ">exams</a>
+                        <a href="http://academia.stackexchange.com/questions/tagged/cheating" class="post-tag ">cheating</a>
+                3 answers |
+                                    asked 7 hours ago
+                                    <span class="owner">
+                        by <a href="http://academia.stackexchange.com/users/42428/james-smith">James Smith</a> on
+                    </span>
+                <a href="http://academia.stackexchange.com" class="question-host">
+academia                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="codegolf.stackexchange.com" class="question-container">
+        <a href="http://codegolf.stackexchange.com/questions/67193/how-much-water-is-left">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on codegolf.stackexchange.com"><img src="http://cdn.sstatic.net/codegolf/img/icon-48.png" alt="Programming Puzzles &amp; Code Golf" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://codegolf.stackexchange.com/questions/67193/how-much-water-is-left"  title="This question has been arbitrarily awarded 52.133 hotness points">
+                    How much water is left?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" class="post-tag ">code-golf</a>
+                4 answers |
+                                    asked 4 hours ago
+                                    <span class="owner">
+                        by <a href="http://codegolf.stackexchange.com/users/40695/downgoat">Downgoat</a> on
+                    </span>
+                <a href="http://codegolf.stackexchange.com" class="question-host">
+codegolf                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="codereview.stackexchange.com" class="question-container">
+        <a href="http://codereview.stackexchange.com/questions/114564/check-if-2-arrays-have-exactly-the-same-elements-recursively">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on codereview.stackexchange.com"><img src="http://cdn.sstatic.net/codereview/img/icon-48.png" alt="Code Review" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://codereview.stackexchange.com/questions/114564/check-if-2-arrays-have-exactly-the-same-elements-recursively"  title="This question has been arbitrarily awarded 39.982 hotness points">
+                    Check if 2 arrays have (exactly) the same elements recursively
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://codereview.stackexchange.com/questions/tagged/c%2b%2b" class="post-tag ">c++</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/array" class="post-tag ">array</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/recursion" class="post-tag ">recursion</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/homework" class="post-tag ">homework</a>
+                4 answers |
+                                    asked 5 hours ago
+                                    <span class="owner">
+                        by <a href="http://codereview.stackexchange.com/users/92774/dg6">DG6</a> on
+                    </span>
+                <a href="http://codereview.stackexchange.com" class="question-host">
+codereview                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="tex.stackexchange.com" class="question-container">
+        <a href="http://tex.stackexchange.com/questions/284042/align-multiple-equations">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on tex.stackexchange.com"><img src="http://cdn.sstatic.net/tex/img/icon-48.png" alt="TeX - LaTeX" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://tex.stackexchange.com/questions/284042/align-multiple-equations"  title="This question has been arbitrarily awarded 39.784 hotness points">
+                    Align multiple equations
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://tex.stackexchange.com/questions/tagged/equations" class="post-tag ">equations</a>
+                        <a href="http://tex.stackexchange.com/questions/tagged/align" class="post-tag ">align</a>
+                2 answers |
+                                    asked 4 hours ago
+                                    <span class="owner">
+                        by <a href="http://tex.stackexchange.com/users/71629/w-v-ekeren">W. v. Ekeren</a> on
+                    </span>
+                <a href="http://tex.stackexchange.com" class="question-host">
+tex                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="electronics.stackexchange.com" class="question-container">
+        <a href="http://electronics.stackexchange.com/questions/207056/high-frequency-signal-using-low-frequency-micro-controller">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on electronics.stackexchange.com"><img src="http://cdn.sstatic.net/electronics/img/icon-48.png" alt="Electrical Engineering" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://electronics.stackexchange.com/questions/207056/high-frequency-signal-using-low-frequency-micro-controller"  title="This question has been arbitrarily awarded 39.118 hotness points">
+                    High frequency signal using low frequency micro-controller
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://electronics.stackexchange.com/questions/tagged/rf" class="post-tag ">rf</a>
+                        <a href="http://electronics.stackexchange.com/questions/tagged/high-frequency" class="post-tag ">high-frequency</a>
+                4 answers |
+                                    asked 4 hours ago
+                                    <span class="owner">
+                        by <a href="http://electronics.stackexchange.com/users/68606/whiskeyjack">Whiskeyjack</a> on
+                    </span>
+                <a href="http://electronics.stackexchange.com" class="question-host">
+electronics                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="travel.stackexchange.com" class="question-container">
+        <a href="http://travel.stackexchange.com/questions/60234/entry-on-an-eu-passport-after-deportation-from-the-uk-on-an-israeli-passport">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on travel.stackexchange.com"><img src="http://cdn.sstatic.net/travel/img/icon-48.png" alt="Travel" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://travel.stackexchange.com/questions/60234/entry-on-an-eu-passport-after-deportation-from-the-uk-on-an-israeli-passport"  title="This question has been arbitrarily awarded 36.745 hotness points">
+                    Entry on an EU passport after deportation from the UK on an Israeli passport
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://travel.stackexchange.com/questions/tagged/uk" class="post-tag ">uk</a>
+                        <a href="http://travel.stackexchange.com/questions/tagged/dual-nationality" class="post-tag ">dual-nationality</a>
+                3 answers |
+                                    asked 7 hours ago
+                                    <span class="owner">
+                        by <a href="http://travel.stackexchange.com/users/38239/user38239">user38239</a> on
+                    </span>
+                <a href="http://travel.stackexchange.com" class="question-host">
+travel                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="scifi.stackexchange.com" class="question-container">
+        <a href="http://scifi.stackexchange.com/questions/111381/why-did-harry-take-his-cauldron-to-the-privet-drive-home-for-the-summer-vacation">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on scifi.stackexchange.com"><img src="http://cdn.sstatic.net/scifi/img/icon-48.png" alt="Science Fiction &amp; Fantasy" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://scifi.stackexchange.com/questions/111381/why-did-harry-take-his-cauldron-to-the-privet-drive-home-for-the-summer-vacation"  title="This question has been arbitrarily awarded 36.451 hotness points">
+                    Why did Harry take his cauldron to the Privet drive home for the summer vacation?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://scifi.stackexchange.com/questions/tagged/harry-potter" class="post-tag ">harry-potter</a>
+                2 answers |
+                                    asked 5 hours ago
+                                    <span class="owner">
+                        by <a href="http://scifi.stackexchange.com/users/4918/b-jonas">b_jonas</a> on
+                    </span>
+                <a href="http://scifi.stackexchange.com" class="question-host">
+scifi                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="academia.stackexchange.com" class="question-container">
+        <a href="http://academia.stackexchange.com/questions/60385/how-to-overcome-academic-failure">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on academia.stackexchange.com"><img src="http://cdn.sstatic.net/academia/img/icon-48.png" alt="Academia" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://academia.stackexchange.com/questions/60385/how-to-overcome-academic-failure"  title="This question has been arbitrarily awarded 35.517 hotness points">
+                    How to overcome academic failure?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://academia.stackexchange.com/questions/tagged/undergraduate" class="post-tag ">undergraduate</a>
+                        <a href="http://academia.stackexchange.com/questions/tagged/changing-fields" class="post-tag ">changing-fields</a>
+                8 answers |
+                                    asked 12 hours ago
+                                    <span class="owner">
+                        by <a href="http://academia.stackexchange.com/users/46300/tim-hallyburton">Tim Hallyburton</a> on
+                    </span>
+                <a href="http://academia.stackexchange.com" class="question-host">
+academia                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="math.stackexchange.com" class="question-container">
+        <a href="http://math.stackexchange.com/questions/1583540/one-sided-inverse-of-a-function">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on math.stackexchange.com"><img src="http://cdn.sstatic.net/math/img/icon-48.png" alt="Mathematics" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://math.stackexchange.com/questions/1583540/one-sided-inverse-of-a-function"  title="This question has been arbitrarily awarded 35.367 hotness points">
+                    One-sided inverse of a function
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://math.stackexchange.com/questions/tagged/real-analysis" class="post-tag ">real-analysis</a>
+                        <a href="http://math.stackexchange.com/questions/tagged/functions" class="post-tag ">functions</a>
+                        <a href="http://math.stackexchange.com/questions/tagged/elementary-set-theory" class="post-tag ">elementary-set-theory</a>
+                4 answers |
+                                    asked 6 hours ago
+                                    <span class="owner">
+                        by <a href="http://math.stackexchange.com/users/293509/mr-mbb">Mr. MBB</a> on
+                    </span>
+                <a href="http://math.stackexchange.com" class="question-host">
+math                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="workplace.stackexchange.com" class="question-container">
+        <a href="http://workplace.stackexchange.com/questions/59664/why-are-places-specifying-m-f-in-the-job-title">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on workplace.stackexchange.com"><img src="http://cdn.sstatic.net/workplace/img/icon-48.png" alt="The Workplace" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://workplace.stackexchange.com/questions/59664/why-are-places-specifying-m-f-in-the-job-title"  title="This question has been arbitrarily awarded 33.361 hotness points">
+                    Why are places specifying &ldquo;(m/f)&rdquo; in the job title?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://workplace.stackexchange.com/questions/tagged/job-description" class="post-tag ">job-description</a>
+                        <a href="http://workplace.stackexchange.com/questions/tagged/job-listing" class="post-tag ">job-listing</a>
+                3 answers |
+                                    asked 9 hours ago
+                                    <span class="owner">
+                        by <a href="http://workplace.stackexchange.com/users/16200/benjamin-gruenbaum">Benjamin Gruenbaum</a> on
+                    </span>
+                <a href="http://workplace.stackexchange.com" class="question-host">
+workplace                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="photo.stackexchange.com" class="question-container">
+        <a href="http://photo.stackexchange.com/questions/72038/how-can-i-avoid-this-blur-during-taking-indoor-party-pictures">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on photo.stackexchange.com"><img src="http://cdn.sstatic.net/photo/img/icon-48.png" alt="Photography" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://photo.stackexchange.com/questions/72038/how-can-i-avoid-this-blur-during-taking-indoor-party-pictures"  title="This question has been arbitrarily awarded 32.451 hotness points">
+                    How can I avoid this blur during taking indoor party pictures?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://photo.stackexchange.com/questions/tagged/aperture" class="post-tag ">aperture</a>
+                        <a href="http://photo.stackexchange.com/questions/tagged/low-light" class="post-tag ">low-light</a>
+                        <a href="http://photo.stackexchange.com/questions/tagged/shutter-speed" class="post-tag ">shutter-speed</a>
+                        <a href="http://photo.stackexchange.com/questions/tagged/indoor" class="post-tag ">indoor</a>
+                        <a href="http://photo.stackexchange.com/questions/tagged/auto-iso" class="post-tag ">auto-iso</a>
+                6 answers |
+                                    asked 3 hours ago
+                                    <span class="owner">
+                        by <a href="http://photo.stackexchange.com/users/19485/deppfx">deppfx</a> on
+                    </span>
+                <a href="http://photo.stackexchange.com" class="question-host">
+photo                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="german.stackexchange.com" class="question-container">
+        <a href="http://german.stackexchange.com/questions/27275/is-the-genitive-used-at-all-in-everyday-german">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on german.stackexchange.com"><img src="http://cdn.sstatic.net/german/img/icon-48.png" alt="German Language" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://german.stackexchange.com/questions/27275/is-the-genitive-used-at-all-in-everyday-german"  title="This question has been arbitrarily awarded 32.361 hotness points">
+                    Is the genitive used at all in everyday German?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://german.stackexchange.com/questions/tagged/usage" class="post-tag ">usage</a>
+                        <a href="http://german.stackexchange.com/questions/tagged/genitive" class="post-tag ">genitive</a>
+                2 answers |
+                                    asked 6 hours ago
+                                    <span class="owner">
+                        by <a href="http://german.stackexchange.com/users/19557/lucas">Lucas</a> on
+                    </span>
+                <a href="http://german.stackexchange.com" class="question-host">
+german                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="worldbuilding.stackexchange.com" class="question-container">
+        <a href="http://worldbuilding.stackexchange.com/questions/31878/supersonic-bow-and-its-wielder">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on worldbuilding.stackexchange.com"><img src="http://cdn.sstatic.net/worldbuilding/img/icon-48.png" alt="Worldbuilding" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://worldbuilding.stackexchange.com/questions/31878/supersonic-bow-and-its-wielder"  title="This question has been arbitrarily awarded 27.305 hotness points">
+                    Supersonic bow and its wielder
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://worldbuilding.stackexchange.com/questions/tagged/magic" class="post-tag ">magic</a>
+                        <a href="http://worldbuilding.stackexchange.com/questions/tagged/physics" class="post-tag ">physics</a>
+                        <a href="http://worldbuilding.stackexchange.com/questions/tagged/weapons" class="post-tag ">weapons</a>
+                3 answers |
+                                    asked 8 hours ago
+                                    <span class="owner">
+                        by <a href="http://worldbuilding.stackexchange.com/users/15669/user1804234">user1804234</a> on
+                    </span>
+                <a href="http://worldbuilding.stackexchange.com" class="question-host">
+worldbuilding                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="scifi.stackexchange.com" class="question-container">
+        <a href="http://scifi.stackexchange.com/questions/111392/how-did-lucius-malfoy-know-siriuss-animagus-form">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on scifi.stackexchange.com"><img src="http://cdn.sstatic.net/scifi/img/icon-48.png" alt="Science Fiction &amp; Fantasy" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://scifi.stackexchange.com/questions/111392/how-did-lucius-malfoy-know-siriuss-animagus-form"  title="This question has been arbitrarily awarded 27.302 hotness points">
+                    How did Lucius Malfoy know Sirius&#39;s Animagus form?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://scifi.stackexchange.com/questions/tagged/harry-potter" class="post-tag ">harry-potter</a>
+                1 answers |
+                                    asked 3 hours ago
+                                    <span class="owner">
+                        by <a href="http://scifi.stackexchange.com/users/3500/slytherincess">Slytherincess</a> on
+                    </span>
+                <a href="http://scifi.stackexchange.com" class="question-host">
+scifi                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="codegolf.stackexchange.com" class="question-container">
+        <a href="http://codegolf.stackexchange.com/questions/67179/have-you-been-nice-this-year">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on codegolf.stackexchange.com"><img src="http://cdn.sstatic.net/codegolf/img/icon-48.png" alt="Programming Puzzles &amp; Code Golf" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://codegolf.stackexchange.com/questions/67179/have-you-been-nice-this-year"  title="This question has been arbitrarily awarded 27.015 hotness points">
+                    Have you been nice this year?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" class="post-tag ">code-golf</a>
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/math" class="post-tag ">math</a>
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/string" class="post-tag ">string</a>
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/sequence" class="post-tag ">sequence</a>
+                        <a href="http://codegolf.stackexchange.com/questions/tagged/division" class="post-tag ">division</a>
+                3 answers |
+                                    asked 9 hours ago
+                                    <span class="owner">
+                        by <a href="http://codegolf.stackexchange.com/users/34388/adnan">Adnan</a> on
+                    </span>
+                <a href="http://codegolf.stackexchange.com" class="question-host">
+codegolf                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="physics.stackexchange.com" class="question-container">
+        <a href="http://physics.stackexchange.com/questions/225163/are-capacitors-and-inductors-mirror-images-of-each-other">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on physics.stackexchange.com"><img src="http://cdn.sstatic.net/physics/img/icon-48.png" alt="Physics" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://physics.stackexchange.com/questions/225163/are-capacitors-and-inductors-mirror-images-of-each-other"  title="This question has been arbitrarily awarded 25.784 hotness points">
+                    Are capacitors and inductors mirror images of each other?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://physics.stackexchange.com/questions/tagged/electric-circuits" class="post-tag ">electric-circuits</a>
+                        <a href="http://physics.stackexchange.com/questions/tagged/capacitance" class="post-tag ">capacitance</a>
+                        <a href="http://physics.stackexchange.com/questions/tagged/inductance" class="post-tag ">inductance</a>
+                1 answers |
+                                    asked 4 hours ago
+                                    <span class="owner">
+                        by <a href="http://physics.stackexchange.com/users/98978/jake-mckenzie">jake mckenzie</a> on
+                    </span>
+                <a href="http://physics.stackexchange.com" class="question-host">
+physics                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="academia.stackexchange.com" class="question-container">
+        <a href="http://academia.stackexchange.com/questions/60346/is-it-bad-if-my-mom-comes-to-a-conference-with-me">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on academia.stackexchange.com"><img src="http://cdn.sstatic.net/academia/img/icon-48.png" alt="Academia" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://academia.stackexchange.com/questions/60346/is-it-bad-if-my-mom-comes-to-a-conference-with-me"  title="This question has been arbitrarily awarded 25.32 hotness points">
+                    Is it bad if my mom comes to a conference with me?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://academia.stackexchange.com/questions/tagged/conference" class="post-tag ">conference</a>
+                8 answers |
+                                    asked yesterday
+                                    <span class="owner">
+                        by <a href="http://academia.stackexchange.com/users/46272/user44796">user44796</a> on
+                    </span>
+                <a href="http://academia.stackexchange.com" class="question-host">
+academia                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="woodworking.stackexchange.com" class="question-container">
+        <a href="http://woodworking.stackexchange.com/questions/3045/why-do-i-go-through-so-many-philips-bits">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on woodworking.stackexchange.com"><img src="http://cdn.sstatic.net/woodworking/img/icon-48.png" alt="Woodworking" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://woodworking.stackexchange.com/questions/3045/why-do-i-go-through-so-many-philips-bits"  title="This question has been arbitrarily awarded 25.118 hotness points">
+                    Why do I go through so many philips bits?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://woodworking.stackexchange.com/questions/tagged/screws" class="post-tag ">screws</a>
+                        <a href="http://woodworking.stackexchange.com/questions/tagged/drill-bits" class="post-tag ">drill-bits</a>
+                        <a href="http://woodworking.stackexchange.com/questions/tagged/fasteners" class="post-tag ">fasteners</a>
+                3 answers |
+                                    asked 4 hours ago
+                                    <span class="owner">
+                        by <a href="http://woodworking.stackexchange.com/users/173/dongemus">dongemus</a> on
+                    </span>
+                <a href="http://woodworking.stackexchange.com" class="question-host">
+woodworking                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="codereview.stackexchange.com" class="question-container">
+        <a href="http://codereview.stackexchange.com/questions/114572/function-to-find-the-kth-match-2">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on codereview.stackexchange.com"><img src="http://cdn.sstatic.net/codereview/img/icon-48.png" alt="Code Review" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://codereview.stackexchange.com/questions/114572/function-to-find-the-kth-match-2"  title="This question has been arbitrarily awarded 24.882 hotness points">
+                    Function to find the kth match (2)
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://codereview.stackexchange.com/questions/tagged/performance" class="post-tag ">performance</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/vba" class="post-tag ">vba</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/excel" class="post-tag ">excel</a>
+                2 answers |
+                                    asked 4 hours ago
+                                    <span class="owner">
+                        by <a href="http://codereview.stackexchange.com/users/91809/dirk-reichel">Dirk Reichel</a> on
+                    </span>
+                <a href="http://codereview.stackexchange.com" class="question-host">
+codereview                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="english.stackexchange.com" class="question-container">
+        <a href="http://english.stackexchange.com/questions/295042/what-would-be-next-after-minor-major">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on english.stackexchange.com"><img src="http://cdn.sstatic.net/english/img/icon-48.png" alt="English Language &amp; Usage" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://english.stackexchange.com/questions/295042/what-would-be-next-after-minor-major"  title="This question has been arbitrarily awarded 24.39 hotness points">
+                    What would be next after minor, major, &hellip;?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://english.stackexchange.com/questions/tagged/single-word-requests" class="post-tag ">single-word-requests</a>
+                8 answers |
+                                    asked 18 hours ago
+                                    <span class="owner">
+                        by <a href="http://english.stackexchange.com/users/151378/daniel-r-collins">Daniel R. Collins</a> on
+                    </span>
+                <a href="http://english.stackexchange.com" class="question-host">
+english                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="stats.stackexchange.com" class="question-container">
+        <a href="http://stats.stackexchange.com/questions/187658/ran-a-logistic-regression-and-calculated-the-probabilities-but-they-appear-too-h">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on stats.stackexchange.com"><img src="http://cdn.sstatic.net/stats/img/icon-48.png" alt="Cross Validated" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://stats.stackexchange.com/questions/187658/ran-a-logistic-regression-and-calculated-the-probabilities-but-they-appear-too-h"  title="This question has been arbitrarily awarded 24.361 hotness points">
+                    Ran a logistic regression and calculated the probabilities but they appear too high
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://stats.stackexchange.com/questions/tagged/r" class="post-tag ">r</a>
+                        <a href="http://stats.stackexchange.com/questions/tagged/regression" class="post-tag ">regression</a>
+                        <a href="http://stats.stackexchange.com/questions/tagged/probability" class="post-tag ">probability</a>
+                        <a href="http://stats.stackexchange.com/questions/tagged/logistic" class="post-tag ">logistic</a>
+                        <a href="http://stats.stackexchange.com/questions/tagged/odds" class="post-tag ">odds</a>
+                2 answers |
+                                    asked 6 hours ago
+                                    <span class="owner">
+                        by <a href="http://stats.stackexchange.com/users/98739/richie">Richie</a> on
+                    </span>
+                <a href="http://stats.stackexchange.com" class="question-host">
+stats                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="chemistry.stackexchange.com" class="question-container">
+        <a href="http://chemistry.stackexchange.com/questions/42521/electron-withdrawing-groups-and-acidity">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on chemistry.stackexchange.com"><img src="http://cdn.sstatic.net/chemistry/img/icon-48.png" alt="Chemistry" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://chemistry.stackexchange.com/questions/42521/electron-withdrawing-groups-and-acidity"  title="This question has been arbitrarily awarded 23.784 hotness points">
+                    Electron withdrawing groups and acidity
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://chemistry.stackexchange.com/questions/tagged/organic-chemistry" class="post-tag ">organic-chemistry</a>
+                        <a href="http://chemistry.stackexchange.com/questions/tagged/acid-base" class="post-tag ">acid-base</a>
+                        <a href="http://chemistry.stackexchange.com/questions/tagged/aromatic-compounds" class="post-tag ">aromatic-compounds</a>
+                2 answers |
+                                    asked 5 hours ago
+                                    <span class="owner">
+                        by <a href="http://chemistry.stackexchange.com/users/23169/mel">Mel</a> on
+                    </span>
+                <a href="http://chemistry.stackexchange.com" class="question-host">
+chemistry                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="security.stackexchange.com" class="question-container">
+        <a href="http://security.stackexchange.com/questions/108602/what-does-the-juniper-backdoor-actually-allow-an-attacker-to-do">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on security.stackexchange.com"><img src="http://cdn.sstatic.net/security/img/icon-48.png" alt="Information Security" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://security.stackexchange.com/questions/108602/what-does-the-juniper-backdoor-actually-allow-an-attacker-to-do"  title="This question has been arbitrarily awarded 23.261 hotness points">
+                    What does the Juniper backdoor actually allow an attacker to do?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://security.stackexchange.com/questions/tagged/firewalls" class="post-tag ">firewalls</a>
+                        <a href="http://security.stackexchange.com/questions/tagged/backdoor" class="post-tag ">backdoor</a>
+                        <a href="http://security.stackexchange.com/questions/tagged/juniper" class="post-tag ">juniper</a>
+                2 answers |
+                                    asked 12 hours ago
+                                    <span class="owner">
+                        by <a href="http://security.stackexchange.com/users/485/rory-alsop">Rory Alsop</a> on
+                    </span>
+                <a href="http://security.stackexchange.com" class="question-host">
+security                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="scifi.stackexchange.com" class="question-container">
+        <a href="http://scifi.stackexchange.com/questions/111387/90s-fantasy-cartoon">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on scifi.stackexchange.com"><img src="http://cdn.sstatic.net/scifi/img/icon-48.png" alt="Science Fiction &amp; Fantasy" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://scifi.stackexchange.com/questions/111387/90s-fantasy-cartoon"  title="This question has been arbitrarily awarded 22.606 hotness points">
+                    90&#39;s Fantasy Cartoon
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://scifi.stackexchange.com/questions/tagged/story-identification" class="post-tag ">story-identification</a>
+                        <a href="http://scifi.stackexchange.com/questions/tagged/cartoon" class="post-tag ">cartoon</a>
+                        <a href="http://scifi.stackexchange.com/questions/tagged/90s" class="post-tag ">90s</a>
+                        <a href="http://scifi.stackexchange.com/questions/tagged/medieval" class="post-tag ">medieval</a>
+                2 answers |
+                                    asked 4 hours ago
+                                    <span class="owner">
+                        by <a href="http://scifi.stackexchange.com/users/57632/steve">Steve</a> on
+                    </span>
+                <a href="http://scifi.stackexchange.com" class="question-host">
+scifi                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="workplace.stackexchange.com" class="question-container">
+        <a href="http://workplace.stackexchange.com/questions/59672/how-to-handle-no-call-no-show-issues">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on workplace.stackexchange.com"><img src="http://cdn.sstatic.net/workplace/img/icon-48.png" alt="The Workplace" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://workplace.stackexchange.com/questions/59672/how-to-handle-no-call-no-show-issues"  title="This question has been arbitrarily awarded 21.796 hotness points">
+                    how to handle no call no show issues?
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://workplace.stackexchange.com/questions/tagged/professionalism" class="post-tag ">professionalism</a>
+                        <a href="http://workplace.stackexchange.com/questions/tagged/employees" class="post-tag ">employees</a>
+                3 answers |
+                                    asked 5 hours ago
+                                    <span class="owner">
+                        by <a href="http://workplace.stackexchange.com/users/45190/emre-dincer">Emre Dincer</a> on
+                    </span>
+                <a href="http://workplace.stackexchange.com" class="question-host">
+workplace                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="electronics.stackexchange.com" class="question-container">
+        <a href="http://electronics.stackexchange.com/questions/207021/battery-charge-times">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on electronics.stackexchange.com"><img src="http://cdn.sstatic.net/electronics/img/icon-48.png" alt="Electrical Engineering" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://electronics.stackexchange.com/questions/207021/battery-charge-times"  title="This question has been arbitrarily awarded 20.966 hotness points">
+                    Battery charge times
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://electronics.stackexchange.com/questions/tagged/batteries" class="post-tag ">batteries</a>
+                2 answers |
+                                    asked 9 hours ago
+                                    <span class="owner">
+                        by <a href="http://electronics.stackexchange.com/users/94959/downrep-nation">downrep_nation</a> on
+                    </span>
+                <a href="http://electronics.stackexchange.com" class="question-host">
+electronics                </a>
+            </div>
+        </div>
+    </div>
+    <div data-sid="codereview.stackexchange.com" class="question-container">
+        <a href="http://codereview.stackexchange.com/questions/114578/simple-factory-retrieving-object-by-name">
+
+                <div class="hot-question-site-icon">
+                    <span title="view this question on codereview.stackexchange.com"><img src="http://cdn.sstatic.net/codereview/img/icon-48.png" alt="Code Review" /></span>
+                </div>
+        </a>
+
+        <div class="question question-hot">
+            <h2>
+                <a class="question-link" href="http://codereview.stackexchange.com/questions/114578/simple-factory-retrieving-object-by-name"  title="This question has been arbitrarily awarded 20.306 hotness points">
+                    Simple factory retrieving object by name
+                </a>
+            </h2>
+            <div class="metaInfo">
+                        <a href="http://codereview.stackexchange.com/questions/tagged/c%2b%2b" class="post-tag ">c++</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/c%2b%2b11" class="post-tag ">c++11</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/design-patterns" class="post-tag ">design-patterns</a>
+                        <a href="http://codereview.stackexchange.com/questions/tagged/factory-method" class="post-tag ">factory-method</a>
+                2 answers |
+                                    asked 3 hours ago
+                                    <span class="owner">
+                        by <a href="http://codereview.stackexchange.com/users/92784/rafael-lucio">Rafael Lucio</a> on
+                    </span>
+                <a href="http://codereview.stackexchange.com" class="question-host">
+codereview                </a>
+            </div>
+        </div>
+    </div>
+
+<div class="page-sizer fr"><a href="?pagesize=15" title="show 15 items per page" class="page-numbers">15</a>
+<a href="?pagesize=30" title="show 30 items per page" class="current page-numbers">30</a>
+<a href="?pagesize=50" title="show 50 items per page" class="page-numbers">50</a>
+<span class="page-numbers desc">per page</span>
+</div><div class="pager fl" >
+<span class="page-numbers current">1</span>
+<a href="?page=2" title="go to page 2"><span class="page-numbers">2</span></a>
+<a href="?page=3" title="go to page 3"><span class="page-numbers">3</span></a>
+<a href="?page=4" title="go to page 4"><span class="page-numbers">4</span></a>
+<a href="?page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a>
+</div>
+    </div>
+</div>
+<div id="sideBar">
+    
+<div class="module featured-sidebar">
+    <div class="heading">Today's Featured Site</div>
+    <div class="featured-site" data-sid="bicycles.stackexchange.com">
+        <div class="site-icon">
+            <a href="http://bicycles.stackexchange.com">
+                <img src="http://cdn.sstatic.net/bicycles/img/apple-touch-icon.png" alt="Bicycles" class="featured-site-icon" /></a>
+        </div>
+        <div class="site-details">
+            <a href="http://bicycles.stackexchange.com" title="Bicycles - Q&amp;A for people who build and repair bicycles, people who train cycling, or commute on bicycles">
+                Bicycles
+            </a>
+            <br />
+            Q&amp;A for people who build and repair bicycles, people who train cycling, or commute on bicycles
+        </div>
+        <div class="site-stats">
+            <div class="stats-container">
+                <div class="stats" title="7,227 total questions">7.2k</div>
+                <div class="stats-label">questions</div>
+            </div>
+            <div class="stats-container">
+                <div class="stats" title="19,509 total answers">20k</div>
+                <div class="stats-label">answers</div>
+            </div>
+            <div class="stats-container">
+                <div class="stats">97%</div>
+                <div class="stats-label">answered</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="module users-sidebar">
+        <div class="heading">Top Network Users</div>
+        <p>These users asked or provided top answers for the posts on this page</p>
+            <div class="userDetails">
+                <a href="http://codegolf.stackexchange.com/users/36398/luis-mendo"><img src="https://i.stack.imgur.com/rFMSx.png?size=16&amp;g=1" alt="Luis Mendo"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://codegolf.stackexchange.com/users/36398/luis-mendo">Luis Mendo</a></span><br />
+                    <span title="Programming Puzzles &amp; Code Golf" class="sb-siteName">Programming Puzzles &amp; Code ...</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://english.stackexchange.com/users/144538/curiousstudent"><img src="http://www.gravatar.com/avatar/e1935fb9c0a21ac237125d204e78e436?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Curiousstudent"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://english.stackexchange.com/users/144538/curiousstudent">Curiousstudent</a></span><br />
+                    <span title="English Language &amp; Usage" class="sb-siteName">English Language &amp; Usage</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://codereview.stackexchange.com/users/86255/intboolstring"><img src="http://www.gravatar.com/avatar/985f62a656c7e5918ad6b415b6f9af02?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="intboolstring"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://codereview.stackexchange.com/users/86255/intboolstring">intboolstring</a></span><br />
+                    <span title="Code Review" class="sb-siteName">Code Review</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://academia.stackexchange.com/users/42428/james-smith"><img src="http://www.gravatar.com/avatar/f709b0a3a12c5aef988333a74a423b2b?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="James Smith"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://academia.stackexchange.com/users/42428/james-smith">James Smith</a></span><br />
+                    <span title="Academia" class="sb-siteName">Academia</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://codegolf.stackexchange.com/users/40695/downgoat"><img src="https://i.stack.imgur.com/2HGdJ.png?size=16&amp;g=1" alt="Downgoat"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://codegolf.stackexchange.com/users/40695/downgoat">Downgoat</a></span><br />
+                    <span title="Programming Puzzles &amp; Code Golf" class="sb-siteName">Programming Puzzles &amp; Code ...</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://codereview.stackexchange.com/users/92774/dg6"><img src="http://www.gravatar.com/avatar/4300b24010c3b81b53f62620ac65058b?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="DG6"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://codereview.stackexchange.com/users/92774/dg6">DG6</a></span><br />
+                    <span title="Code Review" class="sb-siteName">Code Review</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://tex.stackexchange.com/users/71629/w-v-ekeren"><img src="http://www.gravatar.com/avatar/85844b458b3eb3f4df194051b0fe8120?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="W. v. Ekeren"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://tex.stackexchange.com/users/71629/w-v-ekeren">W. v. Ekeren</a></span><br />
+                    <span title="TeX - LaTeX" class="sb-siteName">TeX - LaTeX</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://electronics.stackexchange.com/users/68606/whiskeyjack"><img src="http://www.gravatar.com/avatar/de3464820b0c4f78a06a97fa37f5645a?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Whiskeyjack"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://electronics.stackexchange.com/users/68606/whiskeyjack">Whiskeyjack</a></span><br />
+                    <span title="Electrical Engineering" class="sb-siteName">Electrical Engineering</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://travel.stackexchange.com/users/38239/user38239"><img src="http://www.gravatar.com/avatar/d25ef60348478baca88f4b49154b0e37?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="user38239"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://travel.stackexchange.com/users/38239/user38239">user38239</a></span><br />
+                    <span title="Travel" class="sb-siteName">Travel</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://scifi.stackexchange.com/users/4918/b-jonas"><img src="https://i.stack.imgur.com/Cl2ia.png?size=16&amp;g=1" alt="b_jonas"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://scifi.stackexchange.com/users/4918/b-jonas">b_jonas</a></span><br />
+                    <span title="Science Fiction &amp; Fantasy" class="sb-siteName">Science Fiction &amp; Fantasy</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://academia.stackexchange.com/users/46300/tim-hallyburton"><img src="http://www.gravatar.com/avatar/0df9f6815b5fcaf2467a44d8e9666769?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Tim Hallyburton"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://academia.stackexchange.com/users/46300/tim-hallyburton">Tim Hallyburton</a></span><br />
+                    <span title="Academia" class="sb-siteName">Academia</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://math.stackexchange.com/users/293509/mr-mbb"><img src="https://i.stack.imgur.com/vw0Xh.jpg?size=16&amp;g=1" alt="Mr. MBB"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://math.stackexchange.com/users/293509/mr-mbb">Mr. MBB</a></span><br />
+                    <span title="Mathematics" class="sb-siteName">Mathematics</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://workplace.stackexchange.com/users/16200/benjamin-gruenbaum"><img src="https://i.stack.imgur.com/cNQFu.jpg?size=16&amp;g=1" alt="Benjamin Gruenbaum"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://workplace.stackexchange.com/users/16200/benjamin-gruenbaum">Benjamin Gruenbaum</a></span><br />
+                    <span title="The Workplace" class="sb-siteName">The Workplace</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://photo.stackexchange.com/users/19485/deppfx"><img src="http://www.gravatar.com/avatar/d957fea337558cdd106a21dc2a006e63?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="deppfx"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://photo.stackexchange.com/users/19485/deppfx">deppfx</a></span><br />
+                    <span title="Photography" class="sb-siteName">Photography</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://german.stackexchange.com/users/19557/lucas"><img src="http://www.gravatar.com/avatar/d3a65481a725cb6c4cd4bd40211463b7?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Lucas"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://german.stackexchange.com/users/19557/lucas">Lucas</a></span><br />
+                    <span title="German Language" class="sb-siteName">German Language</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://worldbuilding.stackexchange.com/users/15669/user1804234"><img src="http://www.gravatar.com/avatar/2181831cddfdaf67a0cd5709f45e5a14?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="user1804234"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://worldbuilding.stackexchange.com/users/15669/user1804234">user1804234</a></span><br />
+                    <span title="Worldbuilding" class="sb-siteName">Worldbuilding</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://scifi.stackexchange.com/users/3500/slytherincess"><img src="https://i.stack.imgur.com/0MxXx.jpg?size=16&amp;g=1" alt="Slytherincess"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://scifi.stackexchange.com/users/3500/slytherincess">Slytherincess</a></span><br />
+                    <span title="Science Fiction &amp; Fantasy" class="sb-siteName">Science Fiction &amp; Fantasy</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://codegolf.stackexchange.com/users/34388/adnan"><img src="https://i.stack.imgur.com/KazNs.png?size=16&amp;g=1" alt="Adnan"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://codegolf.stackexchange.com/users/34388/adnan">Adnan</a></span><br />
+                    <span title="Programming Puzzles &amp; Code Golf" class="sb-siteName">Programming Puzzles &amp; Code ...</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://physics.stackexchange.com/users/98978/jake-mckenzie"><img src="http://www.gravatar.com/avatar/4759387ee902e56b6937367fbfc1d504?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="jake mckenzie"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://physics.stackexchange.com/users/98978/jake-mckenzie">jake mckenzie</a></span><br />
+                    <span title="Physics" class="sb-siteName">Physics</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://academia.stackexchange.com/users/46272/user44796"><img src="http://www.gravatar.com/avatar/6aacb4f280efb40fadaddfd733fbb9ef?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="user44796"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://academia.stackexchange.com/users/46272/user44796">user44796</a></span><br />
+                    <span title="Academia" class="sb-siteName">Academia</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://woodworking.stackexchange.com/users/173/dongemus"><img src="https://i.stack.imgur.com/TZrLe.png?size=16&amp;g=1" alt="dongemus"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://woodworking.stackexchange.com/users/173/dongemus">dongemus</a></span><br />
+                    <span title="Woodworking" class="sb-siteName">Woodworking</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://codereview.stackexchange.com/users/91809/dirk-reichel"><img src="http://www.gravatar.com/avatar/886183e33313c25395d36bcd1111c062?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Dirk Reichel"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://codereview.stackexchange.com/users/91809/dirk-reichel">Dirk Reichel</a></span><br />
+                    <span title="Code Review" class="sb-siteName">Code Review</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://english.stackexchange.com/users/151378/daniel-r-collins"><img src="http://www.gravatar.com/avatar/ad88340f6b2decb2bce7dd1404c1ea7a?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Daniel R. Collins"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://english.stackexchange.com/users/151378/daniel-r-collins">Daniel R. Collins</a></span><br />
+                    <span title="English Language &amp; Usage" class="sb-siteName">English Language &amp; Usage</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://stats.stackexchange.com/users/98739/richie"><img src="http://www.gravatar.com/avatar/86819ea0d89ded2347f27bcd2f411528?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Richie"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://stats.stackexchange.com/users/98739/richie">Richie</a></span><br />
+                    <span title="Cross Validated" class="sb-siteName">Cross Validated</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://chemistry.stackexchange.com/users/23169/mel"><img src="http://www.gravatar.com/avatar/5156900bcd8bfc3b02421c84bee7b466?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Mel"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://chemistry.stackexchange.com/users/23169/mel">Mel</a></span><br />
+                    <span title="Chemistry" class="sb-siteName">Chemistry</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://security.stackexchange.com/users/485/rory-alsop"><img src="http://www.gravatar.com/avatar/af1ed0816ed5a2164a4e343ad09309ad?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Rory Alsop"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://security.stackexchange.com/users/485/rory-alsop">Rory Alsop</a></span><br />
+                    <span title="Information Security" class="sb-siteName">Information Security</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://scifi.stackexchange.com/users/57632/steve"><img src="http://www.gravatar.com/avatar/199be7b9da948735bc6dfaf23d9a4450?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Steve"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://scifi.stackexchange.com/users/57632/steve">Steve</a></span><br />
+                    <span title="Science Fiction &amp; Fantasy" class="sb-siteName">Science Fiction &amp; Fantasy</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://workplace.stackexchange.com/users/45190/emre-dincer"><img src="http://www.gravatar.com/avatar/367125af51225271ec20479f34ee372f?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Emre Dincer"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://workplace.stackexchange.com/users/45190/emre-dincer">Emre Dincer</a></span><br />
+                    <span title="The Workplace" class="sb-siteName">The Workplace</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://electronics.stackexchange.com/users/94959/downrep-nation"><img src="https://i.stack.imgur.com/cEAmO.png?size=16&amp;g=1" alt="downrep_nation"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://electronics.stackexchange.com/users/94959/downrep-nation">downrep_nation</a></span><br />
+                    <span title="Electrical Engineering" class="sb-siteName">Electrical Engineering</span>
+                </div>
+            </div>
+            <div class="userDetails">
+                <a href="http://codereview.stackexchange.com/users/92784/rafael-lucio"><img src="http://www.gravatar.com/avatar/e400cd9d7ed0e9cb6afd847fb4ebf9fb?s=16&amp;d=identicon&amp;r=PG&amp;s=30" alt="Rafael Lucio"/></a>
+                <div class="userLinks">
+                    <span class="sb-userName"><a href="http://codereview.stackexchange.com/users/92784/rafael-lucio">Rafael Lucio</a></span><br />
+                    <span title="Code Review" class="sb-siteName">Code Review</span>
+                </div>
+            </div>
+</div>
+    <div class="module sites-sidebar">
+    <div class="heading">Top Network Sites</div>
+    <ul> 
+            <li>
+                <a href="http://stackoverflow.com" title="Stack Overflow - Q&amp;A for professional and enthusiast programmers">
+                    <img src="http://cdn.sstatic.net/stackoverflow/img/favicon.ico" class="favicon" alt="Stack Overflow" />
+                    Stack Overflow
+                </a>
+            </li>
+            <li>
+                <a href="http://superuser.com" title="Super User - Q&amp;A for computer enthusiasts and power users">
+                    <img src="http://cdn.sstatic.net/superuser/img/favicon.ico" class="favicon" alt="Super User" />
+                    Super User
+                </a>
+            </li>
+            <li>
+                <a href="http://math.stackexchange.com" title="Mathematics - Q&amp;A for people studying math at any level and professionals in related fields">
+                    <img src="http://cdn.sstatic.net/math/img/favicon.ico" class="favicon" alt="Mathematics" />
+                    Mathematics
+                </a>
+            </li>
+            <li>
+                <a href="http://askubuntu.com" title="Ask Ubuntu - Q&amp;A for Ubuntu users and developers">
+                    <img src="http://cdn.sstatic.net/askubuntu/img/favicon.ico" class="favicon" alt="Ask Ubuntu" />
+                    Ask Ubuntu
+                </a>
+            </li>
+            <li>
+                <a href="http://serverfault.com" title="Server Fault - Q&amp;A for system and network administrators">
+                    <img src="http://cdn.sstatic.net/serverfault/img/favicon.ico" class="favicon" alt="Server Fault" />
+                    Server Fault
+                </a>
+            </li>
+            <li>
+                <a href="http://english.stackexchange.com" title="English Language &amp; Usage - Q&amp;A for linguists, etymologists, and serious English language enthusiasts">
+                    <img src="http://cdn.sstatic.net/english/img/favicon.ico" class="favicon" alt="English Language &amp; Usage" />
+                    English Language &amp; Usage
+                </a>
+            </li>
+            <li>
+                <a href="http://gaming.stackexchange.com" title="Arqade - Q&amp;A for passionate videogamers on all platforms">
+                    <img src="http://cdn.sstatic.net/gaming/img/favicon.ico" class="favicon" alt="Arqade" />
+                    Arqade
+                </a>
+            </li>
+            <li>
+                <a href="http://unix.stackexchange.com" title="Unix &amp; Linux - Q&amp;A for users of Linux, FreeBSD and other Un*x-like operating systems">
+                    <img src="http://cdn.sstatic.net/unix/img/favicon.ico" class="favicon" alt="Unix &amp; Linux" />
+                    Unix &amp; Linux
+                </a>
+            </li>
+            <li>
+                <a href="http://apple.stackexchange.com" title="Ask Different - Q&amp;A for power users of Apple hardware and software">
+                    <img src="http://cdn.sstatic.net/apple/img/favicon.ico" class="favicon" alt="Ask Different" />
+                    Ask Different
+                </a>
+            </li>
+            <li>
+                <a href="http://programmers.stackexchange.com" title="Programmers - Q&amp;A for professional programmers interested in conceptual questions about software development">
+                    <img src="http://cdn.sstatic.net/programmers/img/favicon.ico" class="favicon" alt="Programmers" />
+                    Programmers
+                </a>
+            </li>
+    </ul>
+        
+    <p class="footer">
+        <a href="/sites"><b>view all 150 sites &raquo;</b></a>
+    </p>
+</div>
+</div>
+<div id="feed-link">
+    <a href="/feeds/questions" title="the 30 most recent hot questions"><span class="feed-icon"></span> hot questions feed</a>
+</div>
+<br class="cbo" />
+            </div>
+        </section>
+
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script>
+
+            <script src="//edge.quantserve.com/quant.js"></script>
+            <noscript>
+            <img src="//pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" style="display:none; border:none; height:1px; width:1px" alt="Quantcast"/>
+            </noscript>
+
+    </div> <!-- end wrapper -->
+
+    <footer id="footer">
+        <div class="contentWrapper">
+            <div class="footerLinksSpaced">
+                <p>
+                    <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a>
+                    <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a>
+                    <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a>
+                    <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a>
+                </p>
+            </div>
+            <p>site design / logo &copy; 2015 Stack Exchange, Inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+            <div class="footer-meta-info">
+                2015.12.17.4498
+            </div>
+
+        </div>
+    </footer>
+
+    
+    
+    <noscript>
+        <div id="noscript-warning">Stack Exchange works best with JavaScript enabled</div>
+    </noscript>
+    <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1450659354});
+            StackExchange.topbar.init();
+        });
+    </script>
+    
+</body>
+</html>

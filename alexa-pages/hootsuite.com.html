@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<script>
+        var HScms = HScms || {};
+                HScms.MSA = null;
+        try {
+                        HScms.MSA = (new Function('return JSON.parse(\'' + '{"planId":null,"isOrgMember":null,"countryName":"Australia","countryCode":"AU","activeSession":false}' + '\')'))();
+                    } catch (ex) {}
+    </script><meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAIDWFFVGwICVFZTAAYA"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><title>Social Media Management Dashboard - Hootsuite</title><script src="/cms/js/e3eac76-3cd7138.js"></script><script src="//cdn.optimizely.com/js/3972534047.js"></script><link rel="alternate" href="https://hootsuite.com/" hreflang="x-default"><link rel="alternate" href="https://hootsuite.com/de/" hreflang="de"><link rel="alternate" href="https://hootsuite.com/es/" hreflang="es"><link rel="alternate" href="https://hootsuite.com/it/" hreflang="it"><link rel="alternate" href="https://hootsuite.com/pt/" hreflang="pt"><link rel="alternate" href="https://hootsuite.com/fr/" hreflang="fr"><link rel="alternate" href="https://hootsuite.com/ja/" hreflang="ja"><link rel="alternate" href="https://hootsuite.com/id/" hreflang="id"><link rel="canonical" href="https://hootsuite.com/"><meta property="og:url" content="https://hootsuite.com/"><meta name="twitter:url" content="https://hootsuite.com/"><meta name="description" content="Enhance your social media management with Hootsuite, the leading social media dashboard. Manage multiple networks and profiles and measure your campaign results."><meta property="og:description" content="Enhance your social media management with Hootsuite, the leading social media dashboard. Manage multiple networks and profiles and measure your campaign results."><meta property="og:title" content="Home"><meta name="twitter:site" content="@hootsuite"><meta name="twitter:title" content="Home"><meta name="author" content="Hootsuite Media Inc."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="/cms/images/fd91d9d-be030b9.ico"><meta name="apple-itunes-app" content="app-id=341249709"><meta name="google-play-app" content="app-id=com.hootsuite.droid.full"><meta name="application-name" content="Hootsuite"><meta name="application-url" content="https://hootsuite.com"><meta name="msapplication-tooltip" content="Social Media Management"><meta name="msapplication-starturl" content="https://hootsuite.com/"><meta name="msapplication-tap-highlight" content="no"><link rel="apple-touch-icon-precomposed" href="/cms/images/a6d2f3f-89d6499.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/cms/images/2182900-a5b1af8.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/cms/images/a70f089-426b106.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css"><link href="/cms/css/c9cf873-739c684.css" rel="stylesheet" type="text/css"><meta http-equiv="cleartype" content="on"><!--[if lt IE 9]><script src="/cms/js/31aa097-d75ba3d.js"></script><![endif]--><!--[if IE]><link href="/cms/css/1e72bad-a3ca8d3.css" rel="stylesheet" type="text/css" media="screen"><![endif]--><script>(function() {if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile/)) {var msViewportStyle = document.createElement("style");msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(msViewportStyle);}})();</script><script>var HScms = HScms || {};</script><script>
+    HScms.Translations = {
+        showMoreLbl         : "Show more",
+        upgradeToProLbl     : "Upgrade to Pro",
+        learnMoreLbl        : "Learn More",
+        currentPlanLbl      : "Current Plan",
+        getStartedLbl       : "Get Started Now",
+        requestDemoLbl      : "Request a demo", 
+        returnToDashLbl     : "Return to Dashboard",
+        startFreeTrialLbl   : "Start Your 30-Day Free Trial",
+        marketoThankYou     : "Thank you! Your submission has been received.",
+        marketoThankYouTitle: "Thank you",
+        AmplifyCalculator: {
+            // Amplify Calculator Translation
+            calculatePotentialReachLbl : "Calculate Your Potential Reach",
+            pageTitle: "Calculate the impact of employee advocacy for your organization",
+            myOrganizationHasLbl: "My organization has",
+            employeesLbl: "employees",
+            followersLbl: "followers",
+            fansLbl: "fans",
+            maxSocialReach: "Your maximum social reach",
+            potentialSocialReach: "Your potential social reach with Amplify",
+            newPeopleLbl: "new people could be seeing your content",
+            potentialIncreaseLbl: "potential increase in your social reach",
+            howWeCalculate: "Here is how we calculate these numbers",
+            potentialImpact: "The potential impact of employee advocacy:",
+            calculateByCurrent: "To calculate your <strong>maximum social reach</strong>, we add together all of your followers and fans.",
+            calculateByPotential: "To calculate your <strong>potential social reach</strong> with Amplify, we add the average number of unique friends and followers individuals have, then multiply that by your total number of employees. Finally, we add that total to your current maximum social reach."
+        }
+    }
+</script><script>
+                            HScms.currentElement = 136;
+                                    HScms.locationID = 2;
+                                    HScms.debug = false;
+                                HScms.validLanguages = ["en","en-gb","en-hk","en-sg","fr","de","id","it","ja","pt","es"];
+                        HScms.cookieLanguages = {"en":"en-us","en-gb":"en-us","en-hk":"en-us","en-sg":"en-us","fr":"fr-fr","de":"de-de","id":"id-id","it":"it-it","ja":"ja-jp","pt":"pt-br","es":"es-es"};
+        HScms.currentSiteAccess = "eng";
+        HScms.defaultLocale = 'en-us';
+                HScms.jsDocDomain   = 'hootsuite.com';
+        HScms.baseURL       = 'https://hootsuite.com';
+        HScms.mobilebaseURL = 'https://m.hootsuite.com';
+        HScms.dashboardURL  = 'https://hootsuite.com/dashboard';
+        HScms.authURL       = 'https://hootsuite.com/microsites-redirect';
+        HScms.historyBackURLSpecific = '';
+                            HScms.hasAlert = 0;
+            </script><script src="/cms/js/f88367e-182b5a3.js"></script><script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56759815-1', 'auto');
+        ga('send', 'pageview');
+    </script><meta name="google-site-verification" content="KpvmLBGMWhFHamXP15L1E6QGj_n6WMIDTTP16xLvNMI" /><meta name="msvalidate.01" content="08E57C47E96B3BA3BDD092A9A03FEA97" /><script>
+        var _gaAccountId = 'UA-17737250-1';
+        var _gaq = _gaq || [];
+        var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+        _gaq.push(['_setAccount', _gaAccountId]);
+        _gaq.push(['_setDomainName', 'hootsuite.com']);
+                    
+        _gaq.push(['_trackPageview']);
+
+        
+        try{
+            (function(w,d,s) {
+                function go(){
+                    var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+                    n.src='//stats.g.doubleclick.net/dc.js';
+                    if (e && e.parentNode) {
+                        e.parentNode.insertBefore(n, e);
+                    } else {
+                        e=d.getElementsByTagName('head')[0];
+                        if (e) {
+                            e.appendChild(n);
+                        }
+                    }
+                }
+                if (w.addEventListener) {
+                    w.addEventListener("load", go, false);
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload",go);
+                }
+            })(window, document, "script");
+             // doubleclick checker
+            window.onload = function () {
+                setTimeout(function(){
+                    if(typeof _gat === "undefined"){
+                        (function(){
+                            var ga = document.createElement('script');
+                            ga.type = 'text/javascript';
+                            ga.async = true;
+                            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                        })();
+                        _gaq.push(['_trackEvent','GA Remarketing Tag','DC Script','Failed',0,true])
+                    }
+                }, 1000);
+            }
+        }
+        catch(err){
+            //Do nothing
+        }
+</script></head>
+
+    
+<body class="lang-eng   page page--general home" >
+
+<span name="top" id="top" class="u-visuallyhidden"></span><div class="smartbanner _smartbanner"><span class="smartbanner__close"><i class="i x-xxs x-close _smartbanner-close"></i></span><img class="smartbanner__icon" src="/cms/images/288e94a-dec3ab9.png"></img><div class="smartbanner__info"><p class="smartbanner__info__title">Hootsuite: Schedule Posts for Twitter, Instagram &amp; More</p><p class="smartbanner__info__company">Hootsuite Media Inc.</p></div><span class="smartbanner__view _smartbanner-view">VIEW</span></div><div class="alerts _alerts _smartBannerAdjust"></div><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-963X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-963X');</script><!-- End Google Tag Manager --><header class="header _smartBannerAdjust" role="banner"><div class="container"><a class="hs-logo" href="/">Hootsuite Media Inc.</a><nav class="nav-menu primary-nav _smartBannerAdjust" role="navigation"><ul class="nav-menu__items"><li class="nav-menu__items__item nav-menu__items__item--entry"><a class="nav-menu__items__item__link btn btn--outline" 
+                href="/plans/enterprise" 
+                data-ga-track-id="nav_main_header_level1_hootsuiteforenterprise">
+                Hootsuite for Enterprise
+            </a></li><li class="nav-menu__items__item has-children" aria-haspopup="true"><a href="/products" 
+            class="nav-menu__items__item__link " 
+            data-ga-track-id="nav_main_header_level1_products">
+            Products
+        </a><ul class="nav-menu__items__sub-menu sub-menu x-centered-droparrow" aria-hidden="true"><li id="menu_8995" class="sub-menu__item"><a href="/products/social-media-engagement" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_engagement">
+            Engagement
+        </a></li><li id="menu_9061" class="sub-menu__item"><a href="/products/social-media-publishing" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_publishing">
+            Publishing
+        </a></li><li id="menu_9062" class="sub-menu__item"><a href="/products/social-media-analytics" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_analytics">
+            Analytics
+        </a></li><li id="menu_9063" class="sub-menu__item"><a href="/products/campaigns" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_campaigns">
+            Campaigns
+        </a></li><li id="menu_9064" class="sub-menu__item"><a href="/products/platform" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_platform">
+            Platform
+        </a></li><li id="menu_9327" class="sub-menu__item"><a href="/products/amplify" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_amplify">
+            Amplify
+        </a></li><li id="menu_9065" class="sub-menu__item"><a href="/products/Extensions" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_extensions">
+            Extensions
+        </a></li><li id="menu_8998" class="sub-menu__item"><a href="/products/mobile-apps" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_mobile">
+            Mobile
+        </a></li></ul><i class="i x-angle-down sub-toggle _navDrill" aria-hidden="true"></i></li><li class="nav-menu__items__item has-children" aria-haspopup="true"><a href="/plans" 
+            class="nav-menu__items__item__link " 
+            data-ga-track-id="nav_main_header_level1_plans">
+            Plans
+        </a><ul class="nav-menu__items__sub-menu sub-menu x-centered-droparrow" aria-hidden="true"><li id="menu_9000" class="sub-menu__item"><a href="/plans/free" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_free">
+            Free
+        </a></li><li id="menu_9058" class="sub-menu__item"><a href="/plans/pro" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_pro">
+            Pro
+        </a></li><li id="menu_9059" class="sub-menu__item"><a href="/plans/enterprise" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_enterprise">
+            Enterprise
+        </a></li><li id="menu_9060" class="sub-menu__item"><a href="/plans" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_compareplans">
+            Compare Plans
+        </a></li></ul><i class="i x-angle-down sub-toggle _navDrill" aria-hidden="true"></i></li><li class="nav-menu__items__item nav-menu__items__item--btn" data-auth="out"><a class="nav-menu__items__item__link btn btn--sm btn--success" 
+                href="https://hootsuite.com/plans" 
+                data-ga-track-id="nav_main_header_level1_signup">
+                Sign Up
+            </a></li><li class="nav-menu__items__item nav-menu__items__item--btn" data-auth="out"><a class="nav-menu__items__item__link btn btn--sm btn--outline" 
+                href="https://hootsuite.com/login" 
+                data-ga-track-id="nav_main_header_level1_login">
+                Login
+            </a></li><li class="nav-menu__items__item nav-menu__items__item--btn" data-auth="in"><a class="nav-menu__items__item__link btn btn--sm btn--primary _dashboardLink" 
+                href="https://hootsuite.com/dashboard" 
+                data-ga-track-id="nav_main_header_level1_dashboard" 
+                target="_blank">
+                Dashboard
+            </a></li><li class="nav-menu__items__item nav-menu__items__item--btn" data-auth="in"><a class="nav-menu__items__item__link btn btn--sm btn--outline" 
+                href="https://hootsuite.com/logout" 
+                data-ga-track-id="nav_main_header_level1_signout" 
+                target="_blank">
+                Sign Out
+            </a></li></ul></nav><nav class="mobile-nav _mobileNav _smartBannerAdjust" role="navigation" aria-hidden="true"><ul class="mobile-nav__items"><li class="mobile-nav__items__item" aria-haspopup="true"><div class="mobile-nav__items__item__auth"><a data-auth="out" 
+                    class="mobile-nav__items__item__auth__link btn btn--xs btn--success" 
+                    href="/plans" 
+                    data-ga-track-id="nav_main_header_level1_signup">
+                    Sign Up
+                </a><a data-auth="in" 
+                    class="mobile-nav__items__item__auth__link btn btn--xs btn--secondary _dashboardLink" 
+                    href="https://hootsuite.com/dashboard" 
+                    data-ga-track-id="nav_main_header_level1_dashboard" 
+                    target="_blank">
+                    Dashboard
+                </a><a data-auth="out" 
+                    class="mobile-nav__items__item__auth__link btn btn--xs btn--outline" 
+                    href="https://hootsuite.com/login" 
+                    data-ga-track-id="nav_main_header_level1_login">
+                    Login
+                </a><a data-auth="in" 
+                    class="mobile-nav__items__item__auth__link btn btn--xs btn--outline" 
+                    href="https://hootsuite.com/logout" 
+                    data-ga-track-id="nav_main_header_level1_signout">
+                    Sign Out
+                </a></div></li><li class="mobile-nav__items__item has-children" aria-haspopup="true"><a href="/products" 
+            class="mobile-nav__items__item__link " 
+            data-ga-track-id="nav_main_header_level1_products">
+            Products
+        </a><ul class="mobile-nav__items__sub-menu sub-menu x-centered-droparrow" aria-hidden="true"><li id="menu_6718" class="sub-menu__item"><a href="/products/social-media-engagement" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_engagement">
+            Engagement
+        </a></li><li id="menu_6701" class="sub-menu__item"><a href="/products/social-media-publishing" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_publishing">
+            Publishing
+        </a></li><li id="menu_6714" class="sub-menu__item"><a href="/products/social-media-analytics" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_analytics">
+            Analytics
+        </a></li><li id="menu_2427" class="sub-menu__item"><a href="/products/campaigns" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_campaigns">
+            Campaigns
+        </a></li><li id="menu_9282" class="sub-menu__item"><a href="/products/amplify" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_amplify">
+            Amplify
+        </a></li><li id="menu_121" class="sub-menu__item"><a href="/products/platform" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_platform">
+            Platform
+        </a></li><li id="menu_6720" class="sub-menu__item"><a href="/products/Extensions" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_extensions">
+            Extensions
+        </a></li><li id="menu_6717" class="sub-menu__item"><a href="/products/mobile-apps" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_mobile">
+            Mobile
+        </a></li></ul><i class="i x-angle-down sub-toggle _navDrill" aria-hidden="true"></i></li><li class="mobile-nav__items__item has-children" aria-haspopup="true"><a href="/plans" 
+            class="mobile-nav__items__item__link " 
+            data-ga-track-id="nav_main_header_level1_plans">
+            Plans
+        </a><ul class="mobile-nav__items__sub-menu sub-menu x-centered-droparrow" aria-hidden="true"><li id="menu_213" class="sub-menu__item"><a href="/plans/free" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_free">
+            Free
+        </a></li><li id="menu_209" class="sub-menu__item"><a href="/plans/pro" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_pro">
+            Pro
+        </a></li><li id="menu_214" class="sub-menu__item"><a href="/plans/enterprise" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_enterprise">
+            Enterprise
+        </a></li><li id="menu_815" class="sub-menu__item"><a href="/plans" 
+            class="sub-menu__item__link" 
+            data-ga-track-id="nav_main_header_level2_compareplans">
+            Compare Plans
+        </a></li></ul><i class="i x-angle-down sub-toggle _navDrill" aria-hidden="true"></i></li><li class="mobile-nav__items__item"><div class="mobile-nav__items__item__entry"><a class="mobile-nav__items__item__entry__link btn btn--outline" 
+                    href="/plans/enterprise" 
+                    data-ga-track-id="nav_main_header_level1_hootsuiteforenterprise">
+                    Hootsuite for Enterprise
+                </a></div></li></ul></nav><button class="nav-trigger _navTrigger"><span class="burger"></span></button></div></header><span class="header-clear header-clear--simple _headerClear"></span><div id="wrapper"><div class="hero hero--overlay" role="banner"><div class="hero__container"><div class="hero__container__body"><h2 class="h0 -title">Get serious <span class="u-nowrap">about social</span></h2><h3 class="-sub-title">Join the 10+ million professionals who trust Hootsuite. Get started <span class="u-nowrap">for free.</span></h4><div class="signin-options row" data-auth="out"><div class="col-sm-12 col-md-10 x-centered -options"><div class="row"><div class="-option col-sm-4"><a href="https://hootsuite.com/login?startExternalMethod=twitter" class="btn btn-social btn-block x-twitter _socialSignIn" data-mobile-params="&amp;skiplanding=1&amp;redirect=https%3A%2F%2Fm.hootsuite.com"><i class="i x-twitter" aria-hidden="true"></i> Sign in with Twitter                                    </a></div><div class="-option col-sm-4"><a href="https://hootsuite.com/login?startExternalMethod=facebook" class="btn btn-social btn-block x-facebook _socialSignIn" data-mobile-params="&amp;skiplanding=1&amp;redirect=https%3A%2F%2Fm.hootsuite.com"><i class="i x-facebook" aria-hidden="true"></i> Sign in with Facebook                                    </a></div><div class="-option col-sm-4"><a href="https://hootsuite.com/login?startExternalMethod=google" class="btn btn-social btn-block x-googleplus _socialSignIn _socialLoginGoogle" data-mobile-params="&amp;skiplanding=1&amp;redirect=https%3A%2F%2Fm.hootsuite.com"><i class="i x-googleplus" aria-hidden="true"></i> Sign in with Google                                    </a></div></div></div><div class="col-sm-12"><a href="https://hootsuite.com/signup?planId=1" class="-new-account u-underline _launchSignupModal" data-auth="out">or create a new account</a></div></div><div class="signin-options row" data-auth="in"><a href="https://hootsuite.com/dashboard" class="btn btn-lg btn-secondary _dashboardLink" target="_blank">Go to Dashboard</a></div><div class="-cta u-hidden-xs"><span class="-desc">Using social media for business?</span><a href="#plans" class="btn btn-lg btn-success _scrolltohash">See Business Plans</a></div></div></div></div><main class="main" role="main"><div class="main__container"><div class="main__container__row"><section class="plans section section--bleed section--bleed-white section--arrow-next" id="plans" role="region"><div class="container"><div class="row"><div class="home-plans col-md-10 x-centered u-hidden-xs"><h3 class="h2 u-font-semibold u-text-center">Social media management for any organization</h3><p class="lead u-font-light u-text-center u-margin-btm-2x">Manage social networks, schedule messages, engage your audiences, <br class="sm">and measure ROI right from the dashboard.</p><div class="block-grid x-sm-2 plan-table x-featured-pricing"><ul><li class="plan-pro"><div class="header x-featured"><h4>Pro</h4><div class="featured-pricing">&mdash;&nbsp;30-day free trial&nbsp;&mdash;</div></div><div class="in"><p>Perfect for small and medium businesses, agencies, and busy community managers who need to manage, engage, and measure with a scalable, intuitive platform.</p><ul class="checklist"><li>Up to 100 Social Profiles</li><li>Up to 10 Enhanced Analytics Reports</li><li>Up to 10 Team Members</li></ul><div class="u-text-center"><a href="/plans/pro" class="btn btn-success">Learn More</a></div></div></li><li class="plan-enterprise"><div class="header"><h4>Enterprise</h4></div><div class="in"><p>For large corporations and government entities that require social implementation with regulatory compliance across all facets of the organization.</p><ul class="checklist"><li>Unlimited Social Profiles</li><li>Unlimited Enhanced Analytics</li><li>Unlimited Team Members</li></ul><div class="u-text-center"><a href="/plans/enterprise" class="btn btn-success">Learn More</a></div></div></li></ul><div class="u-text-center u-clearboth"><a href="/plans">Compare plans</a></div></div></div><article class="social-support"><h3 class="social-support__title lead">Connect with over 35 popular <span class="u-nowrap">social networks</span></h3><div class="social-support__icons"><i class="i x-facebook-box x-md" title="Facebook"><span class="u-visuallyhidden">Facebook</span></i><i class="i x-twitter x-md" title="Twitter"><span class="u-visuallyhidden">Twitter</span></i><i class="i x-instagram x-md" title="Instagram"><span class="u-visuallyhidden">Instagram</span></i><i class="i x-googleplus x-md" title="Google+"><span class="u-visuallyhidden">Google+</span></i><span class="u-nowrap"><i class="i x-youtube-box x-md" title="Youtube"><span class="u-visuallyhidden">Youtube</span></i><i class="i x-foursquare x-md" title="FourSquare"><span class="u-visuallyhidden">FourSquare</span></i><i class="i x-linkedin-box x-md" title="LinkedIn"><span class="u-visuallyhidden">LinkedIn</span></i></span></div></article></div></div></section><section class="section section--bleed section--arrow-next" role="region" id="products"><div class="container"><h3 class="h2 headline u-text-center">Hootsuite lets you do more with <span class="u-nowrap">social media</span></h3><div class="home-products block-grid x-sm-2"><ul><li class="iconed x-md"><i class="i x-speech-bubble" aria-hidden="true"></i><h4 class="-title"><a class="text" href="/products/social-media-engagement">Engagement</a></h4><p class="u-margin-btm-half">With the ability to manage all your social networks and schedule messages for future publishing, Hootsuite gives you a wide scope of your social media activity.</p><a href="/products/social-media-engagement">Learn more</a></li><li class="iconed x-md"><i class="i x-listening" aria-hidden="true"></i><h4 class="-title"><a class="text" href="/products/social-media-analytics/ubervu-via-hootsuite">Listening</a></h4><p class="u-margin-btm-half">What's your audience saying about your brand? Find out, engage them, and save the day with Hootsuite's best-in-class social media monitoring tools.</p><a href="/products/social-media-analytics/ubervu-via-hootsuite">Learn more</a></li><li class="iconed x-md"><i class="i x-chart" aria-hidden="true"></i><h4 class="-title"><a class="text" href="/products/social-media-analytics">Analytics</a></h4><p class="u-margin-btm-half">Hootsuite's social media analytics give you an in-depth view of how well your social media efforts are being received, so you can run with what's working or change directions.</p><a href="/products/social-media-analytics">Learn more</a></li><li class="iconed x-md"><i class="i x-team-members" aria-hidden="true"></i><h4 class="-title"><a class="text" href="/products/platform/social-media-workflow">Collaboration</a></h4><p class="u-margin-btm-half">Adding multiple Team Members makes sharing the workload easier. Social media management and being a voice for your brand is everyone's job. Team Members make that possible.</p><a href="/products/platform/social-media-workflow">Learn more</a></li><li class="iconed x-md"><i class="i x-lock" aria-hidden="true"></i><h4 class="-title"><a class="text" href="/products/platform/social-media-security">Security</a></h4><p class="u-margin-btm-half">Security is no joke. Reputations, assets, and financials are all at stake. Hootsuite's secure logins, profile protections, and permission levels keep your organization protected.</p><a href="/products/platform/social-media-security">Learn more</a></li><li class="iconed x-md"><i class="i x-appdir" aria-hidden="true"></i><h4 class="-title"><a class="text" href="http://appdirectory.hootsuite.com">Apps</a></h4><p class="u-margin-btm-half">Increase your social reach and productivity with our App Directory - a collection of 80+ applications like Instagram, YouTube, Reddit, and Marketo, right in the social media dashboard.</p><a href="http://appdirectory.hootsuite.com">Learn more</a></li></ul></div><div class="u-text-center"><a href="/plans" class="btn btn-success">Start your free 30-day trial</a></div></div></section><section class="section section--bleed section--bleed-white u-margin-bottom-reset" role="region" id="testimonials"><div class="container u-hidden-xs"><div class="row"><h3 class="h2 headline u-text-center">Who uses Hootsuite social media dashboard?</h3><div class="col-sm-4 persona x-expanded" id="herschel-testimonial"><div class="header"><h3>Small-med businesses</h3><button class="expand _openQuote"><span class="i x-minus"></span><span class="i x-plus"></span></button></div><div class="in"><p class="-desc">Grow and engage your audience using Hootsuite's robust social media listening tools. You'll always be up-to-date, and truly connected to your customer base.</p><div class="q _q" aria-hidden="true"><blockquote class="blockquote"><p>Using Hootsuite, we're able to serve our customers more effectively and on a personal level. Creating that bond while problem solving results in happy, repeat customers.</p><footer class="blockquote__footer"><cite>– Alison Butula</cite><br>
+                                    Social Media Manager,<br>
+                                    Herschel Supply Co.
+                                    <figure class="img logo-herschel"></figure></footer></blockquote></div></div></div><div class="col-sm-4 persona x-expanded"><div class="header"><h3>Agencies</h3><button class="expand _openQuote"><span class="i x-minus"></span><span class="i x-plus"></span></button></div><div class="in"><p class="-desc">Your clients want results. Our social media analytics reports give you an in-depth view of campaign momentum and how it relates to your clients' ROI and bottom line.</p><div class="q _q" aria-hidden="true"><blockquote class="blockquote"><p>Hootsuite analytic reporting lets us prove to clients that we're adding value while helping our team learn what works best for each audience.</p><footer class="blockquote__footer"><cite>– Alan Jones</cite><br>
+                                    Chief Hindsight Officer,<br>
+                                    The New Agency
+                                    <figure class="img logo-thenewagency"></figure></footer></blockquote></div></div></div><div class="col-sm-4 persona x-expanded"><div class="header"><h3>Enterprise</h3><button class="expand _openQuote"><span class="i x-minus"></span><span class="i x-plus"></span></button></div><div class="in"><p class="-desc">When your organization grows, your social media efforts should grow with it. Hootsuite scales to your company's size and adapts to your business objectives as needed.</p><div class="q _q" aria-hidden="true"><blockquote class="blockquote"><p>In the past, we might have put a single person on the scene posting tweets to the main account every five to ten minutes. Now with Hootsuite, we have the visibility to see news coming in from our entire staff and can run a much more comprehensive effort.</p><footer class="blockquote__footer"><cite>– Michael Landauer</cite><br>
+                                    Digital Communities Manager,<br>
+                                    The Dallas Morning News
+                                    <figure class="img logo-dallasmorningnews"></figure></footer></blockquote></div></div></div></div></div><blockquote class="blockquote u-visible-xs" id="mobile-testimonial"><p>Using Hootsuite, we're able to serve our customers more effectively and on a personal level. Creating that bond while problem solving results in happy, repeat customers.</p><footer class="blockquote__footer"><cite>– Alison Butula</cite><br>
+                Social Media Manager,<br>
+                Herschel Supply Co.
+                <figure class="img logo-herschel"></figure></footer></blockquote></section></div></div></main><footer role="contentinfo" class="footer"><div class="container"><div class="row"><nav id="footer-navigation" class="block-grid x-md-6 x-sm-3 x-xs-2 footer-nav" role="navigation"><ul class="footer-nav__links"><li class="footer-nav__links__column"><a class="footer-nav__links__column__header-link" 
+                href="/products"
+                data-ga-track-id="nav_main_footer_level1_products">
+                Products
+            </a><ul class="footer-nav__links__column__content"><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/products/social-media-engagement"
+                        data-ga-track-id="nav_main_footer_level2_engagement">
+                        Engagement
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/products/social-media-publishing"
+                        data-ga-track-id="nav_main_footer_level2_publishing">
+                        Publishing
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/products/social-media-analytics"
+                        data-ga-track-id="nav_main_footer_level2_analytics">
+                        Analytics
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="https://hootsuite.com/ads"
+                        data-ga-track-id="nav_main_footer_level2_ads">
+                        Ads
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/products/campaigns"
+                        data-ga-track-id="nav_main_footer_level2_campaigns">
+                        Campaigns
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/products/platform"
+                        data-ga-track-id="nav_main_footer_level2_platform">
+                        Platform
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/products/amplify"
+                        data-ga-track-id="nav_main_footer_level2_amplify">
+                        Amplify
+                    </a></li></ul></li><li class="footer-nav__links__column"><a class="footer-nav__links__column__header-link" 
+                href="/plans"
+                data-ga-track-id="nav_main_footer_level1_plans">
+                Plans
+            </a><ul class="footer-nav__links__column__content"><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/plans/free"
+                        data-ga-track-id="nav_main_footer_level2_free">
+                        Free
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/plans/pro"
+                        data-ga-track-id="nav_main_footer_level2_pro">
+                        Pro
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/plans/enterprise"
+                        data-ga-track-id="nav_main_footer_level2_enterprise">
+                        Enterprise
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/plans"
+                        data-ga-track-id="nav_main_footer_level2_compareplans">
+                        Compare Plans
+                    </a></li></ul></li><li class="footer-nav__links__column"><a class="footer-nav__links__column__header-link" 
+                href=""
+                data-ga-track-id="nav_main_footer_level1_downloads">
+                Downloads
+            </a><ul class="footer-nav__links__column__content"><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/products/mobile-apps"
+                        data-ga-track-id="nav_main_footer_level2_mobile">
+                        Mobile
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="http://appdirectory.hootsuite.com/"
+                        data-ga-track-id="nav_main_footer_level2_appdirectory">
+                        App Directory
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="http://www.hootlet.com/"
+                        data-ga-track-id="nav_main_footer_level2_hootlet">
+                        Hootlet
+                    </a></li></ul></li><li class="footer-nav__links__column"><a class="footer-nav__links__column__header-link" 
+                href=""
+                data-ga-track-id="nav_main_footer_level1_workwithus">
+                Work With Us
+            </a><ul class="footer-nav__links__column__content"><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/about/careers"
+                        data-ga-track-id="nav_main_footer_level2_careers">
+                        Careers
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/services/partner-programs"
+                        data-ga-track-id="nav_main_footer_level2_partnerprograms">
+                        Partner Programs
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/developers/app-directory"
+                        data-ga-track-id="nav_main_footer_level2_developers">
+                        Developers
+                    </a></li></ul></li><li class="footer-nav__links__column"><a class="footer-nav__links__column__header-link" 
+                href=""
+                data-ga-track-id="nav_main_footer_level1_learn">
+                Learn
+            </a><ul class="footer-nav__links__column__content"><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/resources"
+                        data-ga-track-id="nav_main_footer_level2_resourcelibrary">
+                        Resource Library
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/help"
+                        data-ga-track-id="nav_main_footer_level2_productsupport">
+                        Product Support
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="http://blog.hootsuite.com/"
+                        data-ga-track-id="nav_main_footer_level2_blog">
+                        Blog
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/services/education-services3"
+                        data-ga-track-id="nav_main_footer_level2_education">
+                        Education
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/webinars"
+                        data-ga-track-id="nav_main_footer_level2_webinars">
+                        Webinars
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/events"
+                        data-ga-track-id="nav_main_footer_level2_events">
+                        Events
+                    </a></li></ul></li><li class="footer-nav__links__column"><a class="footer-nav__links__column__header-link" 
+                href=""
+                data-ga-track-id="nav_main_footer_level1_aboutus">
+                About Us
+            </a><ul class="footer-nav__links__column__content"><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/about/contact-us"
+                        data-ga-track-id="nav_main_footer_level2_contactus">
+                        Contact Us
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/about/leadership"
+                        data-ga-track-id="nav_main_footer_level2_leadership">
+                        Leadership
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/security"
+                        data-ga-track-id="nav_main_footer_level2_security">
+                        Security
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/customers"
+                        data-ga-track-id="nav_main_footer_level2_customers">
+                        Customers
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/community"
+                        data-ga-track-id="nav_main_footer_level2_community">
+                        Community
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/about/press-releases"
+                        data-ga-track-id="nav_main_footer_level2_press">
+                        Press
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/about/media-kit"
+                        data-ga-track-id="nav_main_footer_level2_mediakit">
+                        Media Kit
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="/about/hootgiving"
+                        data-ga-track-id="nav_main_footer_level2_hootgiving">
+                        HootGiving
+                    </a></li><li class="footer-nav__links__column__content__item"><a class="footer-nav__links__column__content__item__link"
+                        href="http://shop.hootsuite.com"
+                        data-ga-track-id="nav_main_footer_level2_shop">
+                        Shop
+                    </a></li></ul></li></ul></nav><div class="col-sm-4 col-sm-push-4 u-text-center u-margin-btm-sm"><select class="input-sm _languageSwitcher"><option value="en" selected>English</option><option value="fr" >Français</option><option value="de" >Deutsch</option><option value="id" >Bahasa Indonesia</option><option value="it" >Italiano</option><option value="ja" >日本語</option><option value="pt" >Português</option><option value="es" >Español</option></select></div><ul class="social-icons col-sm-4 col-sm-push-4 u-text-right-sm u-text-center u-margin-btm-sm"><li><a href="https://twitter.com/hootsuite" target="_blank" class="i x-twitter-box x-social-fill x-color x-xs" title="Find Hootsuite on Twitter"><span class="u-visuallyhidden">Find Hootsuite on Twitter</span></a></li><li><a href="https://www.facebook.com/hootsuite" target="_blank" class="i x-facebook-box x-social-fill x-color x-xs" title="Find Hootsuite on Facebook"><span class="u-visuallyhidden">Find Hootsuite on Facebook</span></a></li><li><a href="https://plus.google.com/+Hootsuite/posts" class="i x-googleplus-box x-social-fill x-color x-xs" target="_blank" title="Find Hootsuite on Google+"><span class="u-visuallyhidden">Find Hootsuite on Google+</span></a></li><li><a href="http://www.linkedin.com/company/hootsuite" class="i x-linkedin-box x-social-fill x-color x-xs" target="_blank" title="Find Hootsuite on LinkedIn"><span class="u-visuallyhidden">Find Hootsuite on LinkedIn</span></a></li><li><a href="https://www.youtube.com/user/hootsuite" class="i x-youtube-box x-social-fill x-color x-xs" target="_blank" title="Find Hootsuite on Youtube"><span class="u-visuallyhidden">Find Hootsuite on Youtube</span></a></li><li><a href="http://instagram.com/hootsuite" class="i x-instagram x-color x-xs" target="_blank" title="Find Hootsuite on Instagram"><span class="u-visuallyhidden">Find Hootsuite on Instagram</span></a></li></ul><ul class="util col-sm-4 col-sm-pull-8 u-text-center-sm"><li><a href="/legal/terms">Terms &amp; Conditions</a></li><li><a href="/legal/privacy">Privacy Policy</a></li><li><a href="/legal/copyright">Copyright</a></li></ul><div class="copyright col-sm-12">&copy;&nbsp;2015 Hootsuite Media Inc. All Rights Reserved.</div></div></div></footer></div><div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4 class="modal-title" id="signupModalTitle">            Get Started - FREE        </h4></div><div class="modal-body"><div id="memberSignupForm" class="home-signup-form"><iframe class="-signup-iframe" id="memberSignupFormIframe" name="memberSignupFormIframe" data-src="https://hootsuite.com/login?viewState=createAccount&iframeView=true" src=""></iframe></div></div></div></div></div><script src="/cms/js/c7b8c02-f891962.js"></script><script>setTimeout(function(){var a=document.createElement("script"); var b=document.getElementsByTagName("script")[0]; a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/5557.js?"+Math.floor(new Date().getTime()/3600000); a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"923a018eb7","applicationID":"12071777","transactionName":"YARbMEBWWUMAVxJZWFlOeAdGXlheTnwJX0NEFFAQV3VWQwR2E15TWwQDIFdRVkUNQFxXUkMnVgtGUkVkE1UFW15ZBm0FVUQ=","queueTime":3,"applicationTime":1010,"atts":"TENYRghMSk0=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>

@@ -1,0 +1,1826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>사람이 좋아 함께하는 곳.. 뽐뿌!</title><link href="/css/ppomppu20151126.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/css/style_20151119.css" />
+<link type="text/css" rel="stylesheet" href="/thickbox/thickbox20130718.css" />
+
+
+<link rel="stylesheet" type="text/css" href="/zboard/dq_css/cate_tab_201303042.css" />
+<link rel="apple-touch-icon" href="/images/nn128.jpeg" />
+
+
+<link rel="apple-touch-icon" href="/images/nn128.jpeg" />
+
+<script type="text/javascript" src="/js/default3.js"></script>
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery.rolling.js"></script>
+<script type="text/javascript" src="/thickbox/thickbox.patch.20100708.js"></script>
+<script type="text/javascript" src="/js/writeCapture.js"></script>
+<script type="text/javascript" src="/js/jquery.writeCapture.js"></script>
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1778193-1', {'cookieDomain': 'ppomppu.co.kr'});
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="/js/jquery.hotkeys-0.7.8.js"></script>
+<script type="text/javascript" src="/js/load-hotkey.min.js"></script>
+
+
+</head>
+
+
+<script type="text/javascript">
+var hotKeyVar = new function() { this.enable = true; this.keys = ['a','f','z','h','0','1','2','3','4','5','6','7','8','9']; this.links = ['http://www.ppomppu.co.kr','http://www.ppomppu.co.kr/recent_forum_article.php','http://www.google.co.kr','http://www.ppomppu.co.kr/hot.php','http://www.ppomppu.co.kr/recent_main_article.php?type=market','http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu','http://www.ppomppu.co.kr/zboard/zboard.php?id=event','http://www.ppomppu.co.kr/zboard/zboard.php?id=buy','http://www.ppomppu.co.kr/zboard/zboard.php?id=help','http://www.ppomppu.co.kr/zboard/zboard.php?id=freeboard','http://www.ppomppu.co.kr/zboard/zboard.php?id=etc_info','http://www.ppomppu.co.kr/zboard/zboard.php?id=free_picture','http://www.ppomppu.co.kr/zboard/zboard.php?id=news2','http://www.ppomppu.co.kr/zboard/zboard.php?id=review']; };
+</script>
+
+<script type="text/javascript">
+$(function() {
+    var rollingDiv = $("#rolling1");
+    rollingDiv.rolling("down", 98, 35, 1);
+
+    //rollingDiv.addRollingItem("<a href=\"http://www.ppomppu.co.kr/partner/donutbook.php\"><span class=\"top_menu_text02\">기프티쇼</span></a>");
+    rollingDiv.addRollingItem("<a href=\"http://s.ppomppu.co.kr/?idno=ad&target=http://www.ppomppu.co.kr/zboard/zboard.php?id=consulting\"><span class=\"top_menu_text02\">보험상담실</span></a>");
+
+    rollingDiv.addRollingItem("<a href=\"http://s.ppomppu.co.kr/?idno=ad&target=http://www.ppomppu.co.kr/zboard/zboard.php?id=wedding_consult\"><span class=\"top_menu_text02\">웨딩상담실</span></a>");
+
+    rollingDiv.addRollingItem("<a href=\"http://s.ppomppu.co.kr/?idno=ad&target=http://www.ppomppu.co.kr/zboard/zboard.php?id=card_consult\"><span class=\"top_menu_text02\">카드상담실</span></a>");
+
+    rollingDiv.addRollingItem("<a href=\"http://s.ppomppu.co.kr/?idno=ad&target=http://www.ppomppu.co.kr/zboard/zboard.php?id=law_consult\"><span class=\"top_menu_text02\">법률상담실</span></a>");
+
+    rollingDiv.addRollingItem("<a href=\"/fortune/index.html\"><span class=\"top_menu_text02\">무료운세</span></a>");
+
+    rollingDiv.addRollingItem("<a href=\"/zboard/zboard.php?id=car_service\"><span class=\"top_menu_text02\">신차견적상담실</span></a>");
+
+    rollingDiv.addRollingItem("<a href=\"/zboard/zboard.php?id=car_consult\"><span class=\"top_menu_text02\">중고차상담실</span></a>"); //WEB-2493
+
+    rollingDiv.addRollingItem("<a href=\"/zboard/zboard.php?id=pc_consult\"><span class=\"top_menu_text02\">PC견적상담실</span></a>");
+
+    rollingDiv.addRollingItem("<a href=\"/zboard/workingtime_join.php\"><span class=\"top_menu_text02\">뽐뿌 근태관리</span></a>");
+
+    rollingDiv.bind("mouseover", function() {
+         $("#rolling1").stopRolling();
+    });
+    rollingDiv.bind("mouseout", function() {
+         $("#rolling1").resumeRolling();
+    });
+    rollingDiv.startRolling(1, 4000, 1);
+});
+</script>
+
+<script type="text/javascript">
+var search_val = 'bbs-sub_memo';
+var search_txt = '게시글검색';
+$(document).ready(function(){
+    searchFlag(search_val,search_txt);
+});
+
+function searchFlag(val,text)
+{
+    $('#disp_stx').html(text);
+    $('#search_flag').attr("value",val);
+    toggleHelpLayerOff('search01');
+}
+
+function toggleHelpLayerOn(id){
+    document.getElementById(id).style.display = '';
+    if (id == 'loginsm'){
+        document.zb_login.user_id.focus();
+    }
+}
+function toggleHelpLayerOff(id){
+    document.getElementById(id).style.display = 'none';
+}
+
+var tabTimeId;
+function tabChangeEvent(p){
+    clearTimeoutTab();
+    tabTimeId = setTimeout(p,300);
+}
+function clearTimeoutTab() {
+    clearTimeout(tabTimeId);
+}
+
+</script>
+
+<body style='_margin-top:0'>
+
+<div id="ppomppu_body">
+
+
+   <!--헤더 뽐뿌로고-->
+    <div id="logoadbox" class="main">
+            <div class="logo"><a href="http://www.ppomppu.co.kr/index.php"><img src="/images/main/201111/ppomppu.gif" alt="뽐뿌" /></a><span>사람이 좋아 함께하는 곳..뽐뿌!</span></div>
+        <div class="ad" id="pp_ban_top" style="padding-top:7px;height:60px;">
+                <iframe id="if_top_bn" src="/banner/top.html" scrolling="no" border="0" marginWidth="0" marginHeight="0" frameBorder="0" width="300px" height="60px"></iframe>
+        </div>
+
+  </div>
+<hr/>
+<!--탑메뉴-->
+   <div id="topmenubox">
+
+
+   <!-- 메인레프트 영역 -->
+   <div style="position:absolute;margin-left:-105px;">
+   <a href="http://s.ppomppu.co.kr/?idno=ad&ppomno=8&ad_no=1495&target=http://www.ppomppu.co.kr/event/point_rewards.php" target="_self"><img src="http://img1.ppomppu.co.kr/zboard/data3/banner/main/151215092205.gif" width="100px" height="100px" /></a>    </div>
+    <!-- 메인레프트 영역 -->
+        <div class="menulist">
+            <dl>
+            <dd  style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu01');" onmouseout="javascript:toggleHelpLayerOff('topmenu01');">
+             <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu">뽐뿌</a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd  style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu02');" onmouseout="javascript:toggleHelpLayerOff('topmenu02');">
+             <a href="http://www.ppomppu.co.kr/recent_main_article.php?type=event">이벤트 <em>+</em></a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd  style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu03');" onmouseout="javascript:toggleHelpLayerOff('topmenu03');">
+             <a href="http://www.ppomppu.co.kr/recent_main_article.php?type=info">정보 <em>+</em></a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd  style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu04');" onmouseout="javascript:toggleHelpLayerOff('topmenu04');">
+             <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=freeboard">커뮤니티</a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd   style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu05');" onmouseout="javascript:toggleHelpLayerOff('topmenu05');">
+             <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=free_picture">갤러리</a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd   style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu06');" onmouseout="javascript:toggleHelpLayerOff('topmenu06');">
+             <a href="http://www.ppomppu.co.kr/recent_main_article.php?type=market">장터 <em>+</em></a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd   style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu07');" onmouseout="javascript:toggleHelpLayerOff('topmenu07');">
+             <a href="http://www.ppomppu.co.kr/recent_forum_article.php">포럼 <em>+</em></a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd   style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu08');" onmouseout="javascript:toggleHelpLayerOff('topmenu08');">
+             <a href="http://www.ppomppu.co.kr/recent_main_article.php?type=news">뉴스 <em>+</em></a>
+            </dd>
+            <dd class="top_menu_line"></dd>
+            <dd   style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('topmenu09');" onmouseout="javascript:toggleHelpLayerOff('topmenu09');">
+             <div id="rolling1"></div>
+            </dd>
+            </dl>
+        </div>
+<!--뽐뿌 하위메뉴-->
+     <div class="popmenu01" id="topmenu01" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu01');" onmouseout="javascript:toggleHelpLayerOff('topmenu01');"  >
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd>
+            <ul>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu"><strong>뽐뿌게시판</strong></a></li>
+            <!--li><a href="/zboard/zboard.php?id=ppomppu11st">11번가뽐뿌</a></li-->
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu2">휴대폰뽐뿌</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu4">해외뽐뿌</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu3">MD뽐뿌</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu5">오프라인뽐뿌</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu7">뷰티뽐뿌</a></li>
+            <!--li><a href="http://job.ppomppu.co.kr/zboard/zboard.php?id=job">취업뽐뿌</a></li-->
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=saramin">취업뽐뿌</a></li>
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu6">업체뽐뿌</a></li>
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=pmarket">업체게시판</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=pmarket2">휴대폰업체</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=pmarket3">통신업체</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=card_market">카드업체</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=pmarket7">렌탈업체 <img src='/images/main/n_icon.gif' alt=''></a></li>
+            <li><a href="http://www.ppomppu.co.kr/books/index.php">책가격비교</a></li>
+                                    <li class="seemen01">
+            <a href="http://www.ppomppu.co.kr/hot.php"><strong>HOT게시글</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/hot_comment.php">HOT코멘트</a></li>
+            </ul>
+            </dd>
+            </dl>
+     </div>
+
+<!--이벤트 하위메뉴-->
+    <div class="popmenu02" id="topmenu02" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu02');" onmouseout="javascript:toggleHelpLayerOff('topmenu02');">
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd >
+            <ul>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=event"><strong>이벤트게시판</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=coupon">쿠폰게시판</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=mobile">모바일이벤트</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=experience">체험단모집</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=wcoupon">다운로드 쿠폰</a></li>
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=event_ppomppu"><strong>뽐뿌이벤트</strong></a></li>
+           
+            </ul>
+            </dd>
+            </dl>
+     </div>
+<!--기타정보 하위메뉴-->
+    <div class="popmenu03" id="topmenu03" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu03');" onmouseout="javascript:toggleHelpLayerOff('topmenu03');">
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd >
+            <ul>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=etc_info"><strong>생활정보</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomapp">앱정보</a></li>
+            <li  class="seemen01" ><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=review"><strong>사용기</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=receive">수령기</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=buy">구매게시판</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=wow">자랑게시판</a></li>
+<!--
+            <li  class="seemen01" ><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news2"><strong>IT소식</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news">뉴스 게시판</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=agentnews">체험단/제휴</a></li>
+-->
+            </ul>
+            </dd>
+            </dl>
+     </div>
+
+<!--커뮤니티 하위메뉴-->
+    <div class="popmenu04" id="topmenu04" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu04');" onmouseout="javascript:toggleHelpLayerOff('topmenu04');">
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd>
+            <ul>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=freeboard"><strong>자유게시판</strong></a></li>
+            <!--li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=hotissue">핫이슈</a></li-->
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=issue">이슈정치토론</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=humor">유머/감동 <img class='ico_beta' src='/images/main/r_icon.jpg' alt='renewal' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=help"><strong>질문/요청</strong></a></li>
+            <!--li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=feel">느낌있는공간</a></li-->
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=grade">자기소개</a></li>
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/chat"><strong>실시간채팅</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=campaign"><strong>뽐뿌캠페인</strong></a></li>
+
+                                    </ul>
+            </dd>
+            </dl>
+     </div>
+
+<!--갤러리 하위메뉴-->
+    <div class="popmenu05" id="topmenu05" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu05');" onmouseout="javascript:toggleHelpLayerOff('topmenu05');">
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd >
+            <ul>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=free_picture"><strong>자유갤러리</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=mobile_gallery">모바일갤러리 </a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=sketch_gallery">그림갤러리</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=bg_gallery">바탕화면갤러리</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=picture">링크갤러리</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=review_gallery">닉콘신청갤러리</a></li>
+
+            </ul>
+            </dd>
+            </dl>
+     </div>
+
+<!--장터 하위메뉴-->
+    <div class="popmenu06" id="topmenu06" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu06');" onmouseout="javascript:toggleHelpLayerOff('topmenu06');">
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd >
+            <ul>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market"><strong>뽐뿌장터</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_phone">휴대폰장터</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=cmarket">쿠폰장터</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=onmarket">온라인장터</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_social">소셜쿠폰장터</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_oversea">해외구매장터</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_item">아이템장터</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_talent">재능장터</a></li>
+
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_bike"><strong>자전거장터</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_ecig">전자담배장터 <img src='/images/main/n_icon.gif' alt=''></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_car">중고차장터 <img src='/images/main/n_icon.gif' alt=''></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_camping">캠핑장터</a></li>
+
+            <li  class="seemen01" ><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=gonggu"><strong>공동구매</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=gonggu_request">공동구매요청</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_agent">해외구매대행</a></li>
+            <li  class="seemen01" ><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=guin">구인게시판</a></li>
+            <li  class="seemen01" ><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=market_story"><strong>장터이야기</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=relay">추천릴레이</a></li>
+            <li  class="seemen01" ><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=love"><strong>사랑공간</strong></a></li>
+            </ul>
+            </dd>
+            </dl>
+     </div>
+<!--포럼 하위메뉴-->
+    <div class="popmenu07"  id="topmenu07" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu07');" onmouseout="javascript:toggleHelpLayerOff('topmenu07');" >
+            <dl class="menusty02">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif"/></dt>
+            <dd >
+            <ul>
+            <li class="forumtit01">휴대폰/가전</li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=phone"><strong>휴대폰포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=phone3">구입개통수령</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=phone2">휴대폰질문</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=iphone">아이폰포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=tablet">아이패드포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=android">안드로이드</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=androidtab">안드로이드탭</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=wintab">윈도우태블릿</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=smartphone">기타스마트폰</a></li>
+            <li class="seemen01" ><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=av"><strong>가전포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=mini">음향기기 <img class='ico_beta' src='/images/main/r_icon.jpg' alt='renewal' /></a></li>
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=computer"><strong>컴퓨터포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=nas">NAS포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=macintosh">맥포럼</a></li>
+            <li class='beta_open' style="padding-top:180px;">&nbsp;(<img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' />: 베타오픈)</li>
+            <li>&nbsp;(<img class='ico_beta' src='/images/main/r_icon.jpg' alt='renewal' />: 리뉴얼)</li>
+            </ul>
+            <ul>
+            <li class="forumtit01">스포츠/레저</li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=golf"><strong>골프포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=fishing">낚시포럼</a></li>
+             <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=basketball">농구포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=climb">등산포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=motorbike">바이크포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=lifesports">생활스포츠</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ski">스키/보드</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=scuba">스킨/스쿠버 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=rc">드론포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=sports">스포츠포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=baseball">야구포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppom_baseball_team">사회인야구 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=car">자동차포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=bike">자전거포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=soccer">축구포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=camping">캠핑포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=tennis">테니스포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li  class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=health"><strong>건강/헬스</strong></a></li>
+            </ul>
+
+            <ul>
+            <li class="forumtit01">경제/지역</li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=money"><strong>재테크포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=social">소셜포럼 <img class='ico_beta' src='/images/main/r_icon.jpg' alt='renewal' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=insurance">보험포럼 <img class="ico_beta" src="/images/main/ico_beta.gif" alt="beta" /></a></li>
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=stock">증권포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=soho">창업/자영업</a></li>
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=bitcoin">비트코인 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=lotto"><strong>로또포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=toto">토토/프로토</a></li>
+            <li  class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=house"><strong>부동산포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=offline">지역별포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=country">국가별포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li  class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=oversea"><strong>해외포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=china">중국포럼</a></li>
+            </ul>
+
+
+            <ul>
+            <li class="forumtit01">생활</li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=f7080"><strong>30+포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=morethan40">40+포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=wedding">결혼포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=problem">고민포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=publictransport">대중교통 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=nonsmoking">금연포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=e_cig">전자담배포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=pet">동식물포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=mart">마트/편의점</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=restaurant">맛집포럼 <img class='ico_beta' src='/images/main/r_icon.jpg' alt='renewal' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=medical">메디컬포럼</a></li>
+                        <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=delivery_food">배달음식</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=adult">성인포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=tour">여행포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=couple">연애포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=recipe">요리/레시피 <img class='ico_beta' src='/images/main/r_icon.jpg' alt='renewal' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=fortune">운세포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=baby">육아포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=alone">자취포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=religion">종교포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=worker">직장인포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=coffee">커피포럼</a></li>
+
+
+            </ul>
+
+            <ul>
+            <li class="forumtit01">게임/취미</li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=game"><strong>게임/오락</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=gamer">게임기포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=boardgame">보드게임 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=webgame">종목별게임</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=kakao_game">카카오톡게임</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=flash_game">플래시게임 <img class='ico_beta' src='/images/main/r_icon.jpg' alt='renewal' /></a></li>
+
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=gta">GTA포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=LOL">LOL포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=diablo">디아블로포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=fifaonline">피파온라인</a></li>
+
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=diy"><strong>DIY포럼</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=watch">시계포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=alcohol">주류포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=hobby">취미포럼</a></li>
+            </ul>
+
+            <ul>
+            <li class="forumtit01">문화</li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=drama"><strong>TV/드라마</strong></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=book">독서/e-book</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=animation">만화/애니</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=munwha">문화포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=camera">사진/카메라</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=announcer">아나운서 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=star">연예인포럼</a></li>
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=movie">영화포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=music">음악/악기</a></li>
+            </ul>
+
+            <ul>
+            <li class="forumtit01">기타</li>
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=developer"><strong>개발자포럼</strong></a></li>
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=fear">공포포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=science">과학포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=army">군대포럼</a></li>
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=mungu">문구포럼</a></li>
+             <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=stylesheet">문서/서식</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=beauty">뷰티/케어</a></li>
+
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=history">역사포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=style">스타일포럼</a></li>
+
+
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=whatever">전/현/무포럼</a></li>
+
+            <li class="seemen01">
+            <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=teenager">청소년포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='renewal' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=univ_student">대학생포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=alba">알바포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=employment">취업포럼</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=study">학습포럼</a></li>
+            
+            <li class="seemen01"><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=volunteer">봉사포럼 <img class='ico_beta' src='/images/main/ico_beta.gif' alt='beta' /></a></li>
+
+            <li style='padding-top:140px;'>&nbsp;<a href="/recent_forum_article.php"><img class='ico_beta' src='/images/memo/note_search_icon.gif' /> 포럼 검색</a></li>
+            </ul>
+
+
+
+
+
+                    </dd>
+                    </dl>
+     </div>
+<!--뉴스 하위메뉴-->
+    <div class="popmenu08" id="topmenu08" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu08');" onmouseout="javascript:toggleHelpLayerOff('topmenu08');">
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd >
+            <ul>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news_broadcast">방송/연예</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news_sports">스포츠</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news_life">라이프</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news_pol_eco">정치/경제</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news2">IT뉴스</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news">뉴스참여</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=agentnews">체험단/제휴</a></li>
+            </ul>
+            </dd>
+            </dl>
+     </div>
+<!--정보 하위메뉴-->
+    <div class="popmenu09" id="topmenu09" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('topmenu09');" onmouseout="javascript:toggleHelpLayerOff('topmenu09');">
+            <dl class="menusty01">
+            <dt><img class='top_icon' src="/images/main/ppimg_20100616_003.gif" /></dt>
+            <dd >
+            <ul>
+            <!--<li><a href="http://www.ppomppu.co.kr/partner/donutbook.php">기프티쇼 <span style="font-size:11px; color:#666">(도넛북)</span></a></li>-->
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=consulting">보험상담실 </a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=wedding_consult">웨딩상담실</a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=card_consult">카드상담실 </a></li>
+            <li><a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=law_consult">법률상담실</a></li>
+
+            <li class="seemen01"><a href="/zboard/zboard.php?id=car_service" >신차견적상담실 </a></li>
+            <li><a href="/zboard/zboard.php?id=car_consult" >중고차상담실 <img src='/images/main/n_icon.gif' alt=''></a></li><!-- WEB-2493 -->
+            <li><a href="/zboard/zboard.php?id=pc_consult" >PC견적상담실 <img src='/images/main/n_icon.gif' alt=''></a></li>
+            <li class="seemen01"><a href="/fortune/index.html" >무료운세 </a></li>
+                    <li class="seemen01"><a href="/zboard/workingtime_join.php">뽐뿌 근태관리</a></li>
+                    </ul>
+            </dd>
+            </dl>
+     </div>
+ <!--날개배너 by sangin. -->
+
+    <div id="wingbanner">
+                        <div id="pp_ban_right" style="height:604px;">
+<iframe id="if_right_bn" src="/banner/right.html" scrolling="no" border="0" marginWidth="0" marginHeight="0" frameBorder="0" width="120px" height="600px"></iframe>
+            </div>
+
+        <!-- HotKey -->
+        <div id="key_box">
+            <ul class="keyboard">
+                        <li class="key_01">개인단축키</li>
+        <li class="key_02"><img src="/images/main/setting_icon.png" /></li>
+                    </ul>
+
+            <ol class="shortKey">
+                <li><img src='/images/main/1_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu">뽐뿌게시판</a></li>
+            <li><img src='/images/main/2_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=event">이벤트게시판</a></li>
+            <li><img src='/images/main/3_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=buy">구매게시판</a></li>
+            <li><img src='/images/main/4_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=help">질문/요청</a></li>
+            <li><img src='/images/main/5_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=freeboard">자유게시판</a></li>
+            <li><img src='/images/main/6_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=etc_info">생활정보</a></li>
+            <li><img src='/images/main/7_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=free_picture">자유갤러리</a></li>
+            <li><img src='/images/main/8_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=news2">IT뉴스</a></li>
+            <li><img src='/images/main/9_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=review">사용기</a></li>
+            <li><img src='/images/main/0_icon.gif' alt='hokey' /> <a href="http://www.ppomppu.co.kr/recent_main_article.php?type=market">장터 리스트</a></li>
+                </ol>
+        </div>
+        <!-- HotKey -->
+
+
+    </div>
+<!--날개배너-->
+   </div>
+<hr/>
+
+
+
+    <!--검색영역-->
+    <div id="subhead">
+            <div class="newsearchbox2">
+<FORM method="post" name="search1" action="http://www.ppomppu.co.kr/search.php">
+<input type="hidden" name="search_flag" id="search_flag" value="" />
+<input type="hidden" name="ss" value="on" />
+
+            <FIELDSET>
+                <div class="search-wrap">
+                    <div class="selectbox">
+                    <SPAN class="stx" id="disp_stx" style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('search01');" onmouseout="javascript:toggleHelpLayerOff('search01');">게시글검색</SPAN>
+                        <UL class="selectbox-opt" id="search01" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('search01');" onmouseout="javascript:toggleHelpLayerOff('search01');">
+                            <li><a href="#" onClick="searchFlag('bbs-sub_memo','게시글검색'); return false;">게시글검색</a></li>
+                                        <li><a href="#" onClick="searchFlag('book','책가격비교'); return false;">책가격비교</a></li>
+                        </UL>
+                    </div>
+                    <INPUT class="input" title="검색어 입력" type="text" name="keyword" value="순천향대학교 수강신청" maxlength="255" onfocus="if(this.value==this.defaultValue){this.value='';}" />
+                </div>
+                    <INPUT type="image" class="search" alt=검색 src="/images/main/header/btn_search_02.gif" alt="검색">
+                    </FIELDSET>
+</FORM>
+            </div>
+
+    
+
+            <div class="searchkeyword">
+                <span class="hotwordttl" />인기검색어</span> : <span>
+                    &nbsp;<img src="http://ppomppu.co.kr/images/main/ppimg_hotword01.gif" /><a href="#" target="_blank" style="cursor:pointer;" onmouseover="javascript:toggleHelpLayerOn('hotword01');" onmouseout="javascript:toggleHelpLayerOff('hotword01');"/>터보</a></span>
+                <div class="hotword" id="hotword01" style="display:none;" onmouseover="javascript:toggleHelpLayerOn('hotword01');" onmouseout="javascript:toggleHelpLayerOff('hotword01');">
+                <ul >
+                            <li ><img src="/images/main/ppimg_hotword01.gif" /><a href="search_bbs.php?order_type=date&keyword=%C5%CD%BA%B8" >터보</a></li>
+                <li ><img src="/images/main/ppimg_hotword02.gif" /><a href="search_bbs.php?order_type=date&keyword=%C2%F7%C1%F6%BF%AC" >차지연</a></li>
+                <li ><img src="/images/main/ppimg_hotword03.gif" /><a href="search_bbs.php?order_type=date&keyword=%C8%A5%BF%EB%B9%AB%B5%B5" >혼용무도</a></li>
+                <li ><img src="/images/main/ppimg_hotword04.gif" /><a href="search_bbs.php?order_type=date&keyword=%B1%B3%C5%EB%BE%C8%C0%FC%B0%F8%B4%DC" >교통안전공단</a></li>
+                <li ><img src="/images/main/ppimg_hotword05.gif" /><a href="search_bbs.php?order_type=date&keyword=%C7%D1%BE%E7%BF%A9%B4%EB" >한양여대</a></li>
+                <li ><img src="/images/main/ppimg_hotword06.gif" /><a href="search_bbs.php?order_type=date&keyword=%C5%CD%BA%B8+%B4%D9%BD%C3" >터보 다시</a></li>
+                <li ><img src="/images/main/ppimg_hotword07.gif" /><a href="search_bbs.php?order_type=date&keyword=%BC%F8%C3%B5%C7%E2%B4%EB%C7%D0%B1%B3+%BC%F6%B0%AD%BD%C5%C3%BB" >순천향대학교 ..</a></li>
+                <li ><img src="/images/main/ppimg_hotword08.gif" /><a href="search_bbs.php?order_type=date&keyword=%C5%A9%B8%AE%BD%BA%B8%B6%BD%BA+%BC%B1%B9%B0" >크리스마스 선..</a></li>
+                <li ><img src="/images/main/ppimg_hotword09.gif" /><a href="search_bbs.php?order_type=date&keyword=%C1%F6%C1%D6%BF%AC" >지주연</a></li>
+                <li ><img src="/images/main/ppimg_hotword10.gif" /><a href="search_bbs.php?order_type=date&keyword=%C5%E8%C7%CF%B5%F0" >톰하디</a></li>
+                </ul>
+            </div>
+            </div>
+
+                <div class="contactnum">
+                <strong><font color="#777777">[접속]</font></strong> 회원: <strong>5774</strong> / 비회원: 8345            </div>
+        </div>
+<hr/>
+
+<!--  <div id='link_wrap' style='display:none'></div> -->
+<div id="bbs_wrap">
+
+
+<div class="ppomppu_mainbox">
+<link rel="stylesheet" type="text/css" href="/css/popup_layer.css">
+<script type="text/javascript">
+function setNoticeLayers(name,value,expiredays){
+	var todayDate = new Date();
+	todayDate.setDate(todayDate.getDate() + expiredays);
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+function closeNoticeLayers(cookiename,layername,closename,expiredays) {
+	if (document.getElementById(closename).checked == true) {
+		setNoticeLayers(cookiename, "done" ,expiredays);
+	}
+	document.getElementById(layername).style.display = "none";
+}
+</script>
+
+<!--왼쪽메뉴-->
+<div class="ppom_left_menu">
+
+  <div>
+  <p class="banner_553" style="border: 0;">
+<a href="http://s.ppomppu.co.kr/?idno=ad&ppomno=0&ad_no=1503&target=http://www.e-himart.co.kr/app/displayPlan/listPlanDetail?spdpNo=531&fromShop=p1" target="_blank"><img src="http://img1.ppomppu.co.kr/zboard/data3/banner/main/151218093354.jpg" width="100%" height="100px" /></a>  </p>
+  </div>
+
+        <!--쇼핑몰특가모음-->
+
+<script type="text/javascript">
+$(function(){
+    $('.nextShopping').click( function(event) {
+        if (this == event.target) {
+            var max_num = "1";
+            if (max_num == 1) return false;
+                for (var i = 1; i <= max_num; i++) {
+                $("ul[id='shop_mall_box_"+i+"']").hide();
+            }
+
+            var cur_num = parseInt($('#shopping_curpage').val());
+            next_num = cur_num + 1;
+            if (next_num > max_num) next_num = 1;
+            $("ul[id='shop_mall_box_"+next_num+"']").show();
+            $('#shopping_curpage').val(next_num);
+        }
+        return false;
+    }).css('cursor', 'pointer');
+    $('.prevShopping').click( function(event) {
+        if (this == event.target) {
+            var max_num = "1";
+            if ( max_num == 1 ) return false;
+            for (var i = 1; i <= max_num; i++) {
+                $("ul[id='shop_mall_box_"+i+"']").hide();
+            }
+
+            var cur_num = parseInt($('#shopping_curpage').val());
+            prev_num = cur_num - 1;
+            if (prev_num < 1) prev_num = max_num;
+            $("ul[id='shop_mall_box_"+prev_num+"']").show();
+            $('#shopping_curpage').val(prev_num);
+        }
+        return false;
+    }).css('cursor', 'pointer');
+});
+</script>
+
+<div>
+        <input type="hidden" name="shopping_curpage" id="shopping_curpage" value="1" />
+        <ol class="shop_mall">
+                <div style="float: left;">
+                        <span class="shop_mall_title"><a href="/zboard/zboard.php?id=shopping"><img src="/images/main/shop_icon.jpg"> 쇼핑몰특가모음</a> </span>
+                </div>
+                <div style="float: right; padding-right: 10px;">
+                        <span><a href="/books/index.php"><img src="/images/main/book_title_icon.jpg"> 책가격비교</a></span>
+                        <span class="line_top">|</span>
+                        <span><a href="/fortune/index.html"><img src="/images/main/ppimg_20100617_012.gif"> 무료운세</a></span>
+                </div>
+        </ol>
+
+<ul class="shop_mall_box" id="shop_mall_box_1" style="display:block">
+<li>
+<a href='/zboard/view.php?id=shopping&no=7158&search_type=name&keyword='><b>[CJ몰] 문화/디지털 카테고리 상품 12월 한달간~ KB국민카드로 5만원 이상 결제시 10% 청구할인!</b></a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7156&search_type=name&keyword='>[GS SHOP딜데이] 단48시간! 파격특가+13%적립금+7%청구할인!</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7152&search_type=name&keyword='>[이마트몰] Happy Christmas~! ~30%에누리 + ~5%카드혜택받고 아기자기 소품들로 꾸미는 행복한 크리스마스~!</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7119&search_type=name&keyword='>[롯데아이몰] -12/18 신한카드 최대17% 혜택/땡큐WEEK 모바일구매시 20%폭풍적립!/LF패밀리쇼핑대전 최대70%할인 신상/이월쇼핑/마틴싯봉리빙 아이몰 최초런칭! 최대20%세일/바디프랜드 베스트/리퍼 최대 15만원적립금증정/에잇세컨즈 슈퍼세일~ 망설이면 품절!</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=6682&search_type=name&keyword='>[OK캐쉬백] 매일 5포인트 무조건 적립! + OK캐쉬백 고객에게만 드리는 특별 쿠폰까지 받아가세요!!</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7164&search_type=name&keyword='>[다나와] LG기본형 TV 특가 / 티빙스틱 패키지 29,900원 / 샤오미 흥미노트2 15만원대 / 샤오미 16,000mAh 보조배터리 특가</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7163&search_type=name&keyword='>[신세계몰] 12.21 단 하루!! SUPER MONDAY 특가상품 + 전고객 10% + 7% 더블쿠폰 증정! ~10%카드혜택 까지~!!</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7162&search_type=name&keyword='>[롯데닷컴] 연말파티(모임)을 책임지기에 안성맞춤 혜택 !! 유혹의 4DAYS!!</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7161&search_type=name&keyword='>[11번가] 나이키/아디다스/리복  인기운동화 4만원대~ / 이 기회에 색깔별로 질러버려?</a>
+</li>
+<li>
+<a href='/zboard/view.php?id=shopping&no=7159&search_type=name&keyword='>[커플링 대박 세일] 14K커플링 20% 할인된 종로최저가 + 추가 3만원 대박할인</a>
+</li>
+</ul>
+</div>
+        <!--갤러리-->
+        <div class="gallery_box">
+        <!--자유갤러리-->
+           <div class="gallery_free">
+                <ul class="title_line">
+                        <li class="gallery_title_name">
+                                <a href="/zboard/zboard.php?id=free_picture">자유갤러리</a>
+                                                </li>
+                        <!--li class="shop_mall_arrow"><b>1</b>/2 <a href=""><img class="prevShopping" src="/images/main/leftbtn.gif" alt="이전" style="cursor: pointer;"></a>
+                        <a href=""><img class="nextShopping" src="/images/main/rightbtn.gif" alt="다음" style="cursor: pointer;"></a></li-->
+                </ul>
+                <ul>
+                        <li class="gallery_01">
+                        <a href="http://www.ppomppu.co.kr/zboard/view.php?id=free_picture&no=162572"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/free_picture/2/small_162572.jpg" width="100px;" height="100px" alt=""></a>
+                        </li>
+                        <li class="gallery_01">
+                        <a href="http://www.ppomppu.co.kr/zboard/view.php?id=free_picture&no=162571"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/free_picture/1/small_162571.jpg" width="100px;" height="100px" alt=""></a>
+                        </li>
+                        <li class="gallery_01">
+                        <a href="http://www.ppomppu.co.kr/zboard/view.php?id=free_picture&no=162570"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/free_picture/0/small_162570.jpg" width="100px;" height="100px" alt=""></a>
+                        </li>
+                </ul>
+           </div>
+<div class="gallery_mobile">
+                <ul class="title_line_02">
+                        <li class="gallery_title_name_b">
+                                <a href="/zboard/zboard.php?id=mobile_gallery">모바일갤러리</a>
+                                                </li>
+                        <!--li class="shop_mall_arrow"><b>1</b>/2 <a href=""><img class="prevShopping" src="/images/main/leftbtn.gif" alt="이전" style="cursor: pointer;"></a>
+                        <a href=""><img class="nextShopping" src="/images/main/rightbtn.gif" alt="다음" style="cursor: pointer;"></a></li-->
+                </ul>
+                <ul>
+                        <li class="gallery_01">
+                        <a href="http://www.ppomppu.co.kr/zboard/view.php?id=mobile_gallery&no=46293"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/mobile_gallery/3/small_46293.jpg" width="100px;" height="100px" alt=""></a>
+                        </li>
+                        <li class="gallery_img_last">
+                        <a href="http://www.ppomppu.co.kr/zboard/view.php?id=mobile_gallery&no=46292"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/mobile_gallery/2/small_46292.jpg" width="100px;" height="100px" alt=""></a>
+                        </li>
+                </ul>
+           </div>
+        </div>
+        <!--최신글-->
+<div id="recentbbs">
+<div class="rtitle">
+        <p class="new_title01" style="margin:0px; padding:0px;">
+                <span>전체 최신글 </span>
+                <span class="text_new">NEW</span>
+        </p>
+        <p class="new_title02" style="margin:0px; padding:0px;">
+                <span><a href="/recent_main_article.php">메뉴별 최신글 <img src="/images/main/plus_icon.jpg" /></a></span>
+                <span class="line_top">|</span>
+                <span><a href="/recent_forum_article.php">포럼별 최신글 <img src="/images/main/plus_icon.jpg" /></a></span>
+        </p>
+</div>
+<dl class="content">
+<dd><a href='/zboard/zboard.php?id=event_ppomppu' class='bbscol'><strong>[뽐뿌이벤트]</strong></a> <span class='bbscol02'><a href='/zboard/view.php?id=event_ppomppu&no=149'><strong><span style='color:#1264b1;'>영화 [포인트 브레이크] 시사회 이벤트(~12/23)</span></strong></a></span></dd><dd class="lispace"></dd><dd><a href="/zboard/zboard.php?id=camping" class="bbscol">[캠핑포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=camping&no=106458">터닝메카드 에반..이마트몰 오반장에서 18800원(택포)판매중임다<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/now!</span></dd><dd><a href="/zboard/zboard.php?id=freeboard" class="bbscol">[자유게시판]</a> <span class="bbscol02"><a href="/zboard/view.php?id=freeboard&no=4516230">이어폰 연장 케이블 사용하시는분 계신가요<span class="bbscol02">1</span></a></span>&nbsp;<span class="bbscol03">/바스케스사운드</span></dd><dd><a href="/zboard/zboard.php?id=freeboard" class="bbscol">[자유게시판]</a> <span class="bbscol02"><a href="/zboard/view.php?id=freeboard&no=4516229">하하하....권은희 의원 탈당설이돈다는 기사가 뜨네요......<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/제발고만먹자</span></dd><dd><a href="/zboard/zboard.php?id=money" class="bbscol">[재테크포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=money&no=213708">펀드마켓 소장펀드  펀드추천 조언 부탁드립니다.<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/까칠하군</span></dd><dd><a href="/zboard/zboard.php?id=freeboard" class="bbscol">[자유게시판]</a> <span class="bbscol02"><a href="/zboard/view.php?id=freeboard&no=4516228">AK몰 파리바게트 기프티콘 4천원권 -&gt; 천원입니다<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/아이러브만두</span></dd><dd><a href="/zboard/zboard.php?id=android" class="bbscol">[안드로이드]</a> <span class="bbscol02"><a href="/zboard/view.php?id=android&no=88479">사진 위치정보가 사라지는것은 어케 해야하나요?<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/이나바</span></dd><dd><a href="/zboard/zboard.php?id=movie" class="bbscol">[영화포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=movie&no=38281">주말에 히말라야 보고 왔는데 (노스포)<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/퍼플간지</span></dd><dd><a href="/zboard/zboard.php?id=car" class="bbscol">[자동차포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=car&no=482584">6세대 골프 gti, 7세대 골프 tsi 중 어떤걸 고르시겠습니까?<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/얼리자베스</span></dd><dd><a href="/zboard/zboard.php?id=freeboard" class="bbscol">[자유게시판]</a> <span class="bbscol02"><a href="/zboard/view.php?id=freeboard&no=4516227">지마켓 지구. 죠스딜 아깝네요<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/와우~</span></dd><dd class="lispace"></dd><dd><a href="/zboard/zboard.php?id=freeboard" class="bbscol">[자유게시판]</a> <span class="bbscol02"><a href="/zboard/view.php?id=freeboard&no=4516226"><strong>안경렌즈에 따라서 눈의 피로도가 다르네요</strong><span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/아피곤해안피곤해</span></dd><dd><a href="/zboard/zboard.php?id=motorbike" class="bbscol">[바이크포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=motorbike&no=56471">소소한 드레스업<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/너마저</span></dd><dd><a href="/zboard/zboard.php?id=ppomppu3" class="bbscol">[MD뽐뿌]</a> <span class="bbscol02"><a href="/zboard/view.php?id=ppomppu3&no=3316">[대호토이즈]오빠차 뽑았다~널 데리러가~♬<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/LOTTE닷컴</span></dd><dd><a href="/zboard/zboard.php?id=camping" class="bbscol">[캠핑포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=camping&no=106457">텐트 중고거래시 판매할때 택배문의 입니다.<span class="bbscol02">4</span></a></span>&nbsp;<span class="bbscol03">/똔똔이1114</span></dd><dd><a href="/zboard/zboard.php?id=watch" class="bbscol">[시계포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=watch&no=68980">티쏘 prc200 정품인가요<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/대구학생</span></dd><dd><a href="/zboard/zboard.php?id=ppomppu4" class="bbscol">[해외뽐뿌]</a> <span class="bbscol02"><a href="/zboard/view.php?id=ppomppu4&no=72433">[geekbuying] MXIII PRO Gigabit KODI TV BOX(54.99$/...<span class="bbscol02">2</span></a></span>&nbsp;<span class="bbscol03">/보리식빵</span></dd><dd><a href="/zboard/zboard.php?id=social" class="bbscol">[소셜포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=social&no=16334">17일자 목요일 구매한 신한 컬쳐 왔나요??<span class="bbscol02">2</span></a></span>&nbsp;<span class="bbscol03">/난돌이다</span></dd><dd><a href="/zboard/zboard.php?id=phone2" class="bbscol">[휴대폰질문]</a> <span class="bbscol02"><a href="/zboard/view.php?id=phone2&no=1423177">대구밴드질문이용<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/아우누아</span></dd><dd><a href="/zboard/zboard.php?id=camera" class="bbscol">[사진/카메라]</a> <span class="bbscol02"><a href="/zboard/view.php?id=camera&no=53846">NX500 사용중입니다.ㅜㅜ<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/으니랑쭈니랑</span></dd><dd><a href="/zboard/zboard.php?id=computer" class="bbscol">[컴퓨터포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=computer&no=392811">컴퓨터 부팅 불량 질문드려도 되나요? ㅠㅠ<span class="bbscol02">1</span></a></span>&nbsp;<span class="bbscol03">/Gee리Koo요</span></dd><dd class="lispace"></dd><dd><a href="/zboard/zboard.php?id=social" class="bbscol">[소셜포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=social&no=16333"><strong>토핑앱에서 모바일팝 다시 풀렸어요</strong><span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/샤프1004</span></dd><dd><a href="/zboard/zboard.php?id=tour" class="bbscol">[여행포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=tour&no=58941">제주도 렌트카 이정도면 괜찮은건가요?<span class="bbscol02">2</span></a></span>&nbsp;<span class="bbscol03">/천공영혼</span></dd><dd><a href="/zboard/zboard.php?id=phone" class="bbscol">[휴대폰포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=phone&no=3132331">S6 vs V10<span class="bbscol02">2</span></a></span>&nbsp;<span class="bbscol03">/드루와드루와아</span></dd><dd><a href="/zboard/zboard.php?id=house" class="bbscol">[부동산포럼]</a> <span class="bbscol02"><a href="/zboard/view.php?id=house&no=46403">분양권을 매수, 매도 하였는데 그담에 어떠한 처리를 해야하는지요?<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/수도중</span></dd><dd><a href="/zboard/zboard.php?id=animation" class="bbscol">[만화/애니]</a> <span class="bbscol02"><a href="/zboard/view.php?id=animation&no=3577">애니 이름이 가물가물한데..<span class="bbscol02">&nbsp;</span></a></span>&nbsp;<span class="bbscol03">/트와이스</span></dd></dl>
+</div>
+
+</div>
+<!--오른쪽메뉴-->
+<div class="ppom_right_menu">
+        <!-- 로그인 -->
+        <script type="text/javascript">
+//<![CDATA[
+    function zb_login_check_submit() {
+        var $user_id = $("form[name='zb_login'] input[id='user_id']");
+        var $password = $("form[name='zb_login'] input[name='password']");
+        if ($user_id.val() === "") {
+            alert("아이디를 입력하여 주십시요");
+            $user_id.focus();
+            return false;
+        }
+        if ($password.val() === "") {
+            alert("비밀번호를 입력하여 주십시요");
+            $password.focus();
+            return false;
+        }
+        return true;
+    }
+    function check_autologin() {
+        var $auto_login = $("form[name='zb_login'] input[name='auto_login']");
+        if ($auto_login.attr('checked')) {
+            var check;
+            check = confirm("자동 로그인 기능을 사용하시겠습니까?\n\n자동 로그인 사용시 다음 접속부터는 로그인을 하실필요가 없습니다.\n\n단, 게임방, 학교등 공공장소에서 이용시 개인정보가 유출될수 있으니 주의해주세요");
+            if (check === false) {
+                $auto_login.attr('checked', false);
+            }
+        }
+    }
+//]]>
+</script>
+
+	<!--로그인전-->
+	<div class="login_box">
+	<form name="zb_login" method="post" action="https://www.ppomppu.co.kr/zboard/login_check.php" onsubmit="return zb_login_check_submit();">
+	<input type="hidden" name="s_url" value="/" />
+	<input type="hidden" name="secure1" value="1" />
+			<ul class="log_in_box">
+	
+				<li class="log_in_id">
+					<span class="id_text">아이디</span><span><input title="아이디입력" type="text" name="user_id" id="user_id" maxlength="20"></span>
+					<span class="id_text">비밀번호</span><span><input title="비밀번호입력" type="password" name="password" maxlength="20"></span>
+				</li>
+				<li class="btn_login"><input type="image" src="/images/main/201309/btn_login.jpg"></li>
+	
+			</ul>
+			<ul class="login_bottom">
+				<li class="check_auto"><input type="checkbox" name="auto_login" value="1" onclick="check_autologin();"> 자동로그인</li>
+				<li class="line_sun">|</li>
+				<li><a href="https://www.ppomppu.co.kr/zboard/join.php?group_no=1"><b>회원가입</b></a></li>
+				<li class="line_sun">|</li>
+				<li><a href="https://www.ppomppu.co.kr/zboard/LostMgr.php?cmd=auth" target="_blank">아이디찾기</a></li>
+				<li class="line_sun">|</li>
+				<li><a href="https://www.ppomppu.co.kr/zboard/LostMgr.php" target="_blank">비밀번호찾기</a></li>
+			</ul>
+	</form>
+	</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+    $("form[name='zb_login'] input[id='user_id']").bind('blur focus keypress', function(event) {
+        switch (event.type) {
+//         case 'blur':
+//             if($(this).val() === "") {
+//                 $(this).css('background-image', 'url(/images/main/ppimg_20100617_007.gif)');
+//             }
+//         break;
+//         case 'focus':
+//             $(this).css('background-image', '');
+//         break;
+        case 'keypress':
+          if(event.which === 13) {
+               if ($(this).val() !== "") {
+                   $("input[name='password']").focus();
+               } else {
+                   alert('아이디를 입력해 주십시오.');
+               }
+               return false;
+          }
+        break;
+        }
+    });
+    $("form[name='zb_login'] input[name='password']").bind('blur focus keypress', function(event) {
+        switch (event.type) {
+//         case 'blur':
+//             if($(this).val() === "") {
+//                 $(this).css('background-image', 'url(/images/main/ppimg_20100617_008.gif)');
+//             }
+//         break;
+//         case 'focus':
+//             $(this).css('background-image', '');
+//         break;
+        case 'keypress':
+          if(event.which === 13) {
+               if ($(this).val() !== "") {
+                   if( zb_login_check_submit() ) zb_login.submit();
+               } else {
+                   alert('비밀번호를 입력해 주십시오.');
+               }
+               return false;
+          }
+        break;
+        }
+    });
+//     if ($("form[name='zb_login'] input[id='user_id']").val() !== "") {
+//     	$("form[name='zb_login'] input[id='user_id']").css('background-image', '');
+//     }
+});
+//]]>
+</script>
+        <!-- 상담실 -->
+        <div class="banner_ppom">
+    <ul>
+        <li><a href="/zboard/zboard.php?id=wedding_consult"><img src="http://static.ppomppu.co.kr/www/img/main/main_banner_01_150729.gif" alt='웨딩상담실' /></a></li>
+        <li><a href="/zboard/zboard.php?id=car_service"><img src="http://static.ppomppu.co.kr/www/img/main/main_banner_02_150729.gif" alt='보험상담실' /></a></li>
+        <li><a href="/zboard/zboard.php?id=car_consult"><img src="http://static.ppomppu.co.kr/www/img/main/main_banner_03_150729.gif"  alt='신차견적상담실' /></a></li>
+        <li><a href="/zboard/zboard.php?id=consulting"><img src="http://static.ppomppu.co.kr/www/img/main/main_banner_04_150729.gif"  alt='법률상담실' /></a></li>
+        <li><a href="/zboard/zboard.php?id=law_consult"><img src="http://static.ppomppu.co.kr/www/img/main/main_banner_05_150729.gif"  alt='PC견적상담실' /></a></li>
+        <li><a href="/zboard/zboard.php?id=pc_consult"><img src="http://static.ppomppu.co.kr/www/img/main/main_banner_06_150729.gif"  alt='중고차상담실' /></a></li>
+    </ul>
+</div>
+
+        <!-- 공지사항 -->
+        
+<script type="text/javascript">
+<!--
+function closeAllNoticeBox() {
+        for (var i = 1; i < 5; i++) {
+        $("span[id='noticespecial_tit"+i+"']").removeClass('on');
+        //$("a[id='noticespecial"+i+"'] > span").show();
+        $("#noticeshow"+i).hide();
+    }
+}
+
+function viewNoticeBoxContent(element, idx) {
+        
+        var $parent = $(element).parent();
+        var $content = $("#noticeshow"+idx);
+        if ($content.css("display") == "none") {
+            for (var i = 1; i < 5; i++) {
+                $("span[id='noticespecial_tit"+i+"']").removeClass('on');
+                //$("a[id='noticespecial"+i+"'] > span").show();
+                $("#noticeshow"+i).hide();
+            }
+
+            $parent.addClass('on');
+            $content.show();
+        } else {
+                if (element.attr('id') == 'noticespecial1' || element.attr('id') == 'noticespecial3' || element.attr('id') == 'noticespecial4') {
+                        document.location.href = element.attr('href');
+                }
+        }
+}
+
+$(document).ready(function() {
+    $("a[id='noticespecial1']").click(function (event) {
+        viewNoticeBoxContent($(this), 1);
+        event.preventDefault();
+    });
+
+    $("a[id='noticespecial2']").click(function (event) {
+        viewNoticeBoxContent($(this), 2);
+        event.preventDefault();
+    });
+
+    $("a[id='noticespecial3']").click(function (event) {
+        viewNoticeBoxContent($(this), 3);
+        event.preventDefault();
+    });
+
+    $("a[id='noticespecial4']").click(function (event) {
+        viewNoticeBoxContent($(this), 4);
+        event.preventDefault();
+    });
+});
+//-->
+</script>
+
+<div id="right_wrap">
+        <div id="special_area" class="box">
+                <dl class="content" id="noticeshow1" style="width: 310px;height: 110px;overflow: auto;display: inline;">
+                        <dd><font color="red">[필독]</font> <a href="/zboard/view.php?id=faq&no=30">뽐뿌이용규칙</a> / <a href="zboard/view.php?id=faq&no=2">포인트 레벨 정책</a></dd>
+                                        <dd><a href="/zboard/view.php?id=notice&page=1&divpage=1&no=858">1. [12월 16일] 제 1회 뽐뿌 포인트 경품 당첨자 발표</a>&nbsp;</dd>
+                                        <dd><a href="/zboard/view.php?id=notice&page=1&divpage=1&no=857">2. [12월 15일] 포인트 경품 이벤트 2차 오픈</a>&nbsp;</dd>
+                                        <dd><a href="/zboard/view.php?id=notice&page=1&divpage=1&no=855">3. [12월 02일] 2015 나눔캠페인 성금전달</a>&nbsp;</dd>
+                                        <dd><a href="/zboard/view.php?id=event_ppomppu&no=144">4. [11월 26일] 뽐뿌 10주년 감사 포인트 경품 이벤트</a>&nbsp;</dd>
+                                </dl>
+                <dl class="content" id="noticeshow2" style="width: 310px;height: 110px;overflow: auto;display: none;">
+                                </dl>
+                <dl class="content" id="noticeshow3" style="width: 310px;height: 110px;overflow: auto;display: none;">
+                                        <dd><a href="/zboard/view.php?id=event_ppomppu&no=149"><span style="max-width:270px;display: inline-block; text-overflow:ellipsis; overflow: hidden; white-space: nowrap;">영화 [포인트 브레이크] 시사회 이벤트(~12/23)</span></a> </dd>
+                                        <dd><a href="/zboard/view.php?id=event_ppomppu&no=147"><span style="max-width:270px;display: inline-block; text-overflow:ellipsis; overflow: hidden; white-space: nowrap;">[10주년 감사 이벤트-2차] 뽐뿌 포인트로 경품에 도전하세요!(~1/4)</span></a> </dd>
+                                </dl>
+                <dl class="content" id="noticeshow4" style="width: 310px;height: 110px;overflow: auto;display: none;">
+                                                <dd><a href="/zboard/view.php?id=faq&no=40">＊ 서버 과부하 시 일시 제한/축소되는 기능 목록</a></strong></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=39">＊ 스마트폰에 모바일뽐뿌 바로가기 만들기</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=38">＊ PC보안 강화 및 백신 정보, 비밀번호 변경 Tip</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=33">＊ 장터 비밀번호 설정/ 비밀번호 찾는 방법</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=32">＊ [FAQ] 자주하는 질문</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=30">＊ 뽐뿌 이용 규칙 - 2010년 8월 25일</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=29">＊ 각 게시판 설명 및 특색</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=22">＊ 뽐뿌의 로고 모음</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=17">＊ 뽐뿌에 광고를 하는 방법 - 뽐뿌 스폰서 프로그램</a></dd>
+                                                <dd><a href="/zboard/view.php?id=faq&no=15">＊ 뽐뿌에 처음 오시는 분들은 꼭 읽어보세요.</a></dd>
+                                        </dl>
+        <ul>
+                <span id="noticespecial_tit1" class="tab on"><a href="/zboard/zboard.php?id=notice" id="noticespecial1">공지사항<span style="display: none;"><em><strong>0</strong></em></span></a></span>
+                <span id="noticespecial_tit2" class="tab"><a href="#" id="noticespecial2">회원공지<span style="display: none;"><em><strong>0</strong></em></span></a></span>
+                <span id="noticespecial_tit3" class="tab"><a href="/zboard/zboard.php?id=event_ppomppu" id="noticespecial3">뽐뿌이벤트<span style="display: inline;"><em><strong>2</strong></em></span></a></span>
+                <span id="noticespecial_tit4" class="tab"><a href="/zboard/zboard.php?id=faq" id="noticespecial4">FAQ</a></span></a>
+        </ul>
+        </div>
+</div>
+
+        <!--banner336-->
+                <div class="banner_336">
+                                <iframe id="if_main_box_bn" src="/banner/main_box.html" scrolling="no" border="0" marginWidth="0" marginHeight="0" frameBorder="0" width="336px" height="280px"></iframe>
+        </div>
+        <!--휴대폰뽐뿌-->
+<div class="ppomppu_beauty">
+        <ol class="phone_title">
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=ppomppu'>뽐뿌게시판</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=ppomppu2'>휴대폰뽐뿌</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=ppomppu3'>MD뽐뿌</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=ppomppu7'>뷰티뽐뿌</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=saramin'>취업뽐뿌</a></span>
+        </ol>
+        <ul>
+        <li><a href="/zboard/zboard.php?id=ppomppu">[G마켓] 처세의 기술 세트 5권 14,400원 [무배]</a></li>
+<li><a href="/zboard/zboard.php?id=ppomppu2">[SK/KT/LG] 노트엣지,A8 공시상향! 기변도퀵퀵/최강30종!사은품[빔프로젝트]/[노트5 실버,핑크가능/전모델 선택약정가능][G4,V10공시상향][아이폰로골 ...</a></li>
+<li><a href="/zboard/zboard.php?id=ppomppu3">[대호토이즈]오빠차 뽑았다~널 데리러가~♬</a></li>
+<li><a href="/zboard/zboard.php?id=ppomppu7">청주다이어트한의원 나비환 한달 12만원 세달 29만9천원</a></li>
+<li><a href="/zboard/zboard.php?id=saramin">[금강주택 채용]  15년 하반기 금강주택 신입 및 경력사원 모집 (~1/3 일)</a></li>
+        </ul>
+</div>
+<div class="ppomppu_beauty">
+        <ol class="phone_title">
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=pmarket2'>휴대폰업체</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=pmarket3'>통신업체</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=card_market'>카드업체</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=pmarket7'>렌탈업체</a></span>
+                <span class="phone_menu_line">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=pmarket'>업체게시판</a></span>
+                </ol>
+        <ul>
+        <li><a href="/zboard/zboard.php?id=pmarket2">[CJ/유모비] [CJ가無유無] #프리미엄 사은품 3종 + 14종# 루나폰 / G3A 공짜 / J5 공짜 / 밴드플레이 공짜 / 아이폰 공짜 / 시크릿업 공짜 / G3비...</a></li>
+<li><a href="/zboard/zboard.php?id=pmarket3">[KT공식 대리점] 12월전국 최고의사은품 지급 ! KT휴대폰결합시 인터넷비용무료 ! 개인사업자 ! 법인사업자 접수가능 ! 실시간 상담전화 ! 1661-5476</a></li>
+<li><a href="/zboard/zboard.php?id=card_market">[현대카드] 제로, M, M2, M3, X, X2 빠른 발급, 빠른진행, 실시간 답변중입니다.</a></li>
+<li><a href="/zboard/zboard.php?id=pmarket7">&gt;&gt;저희보다 현금지원 많이 하는 곳 없습니다&lt;&lt;동양매직,쿠쿠,청호나이스,현대,LG,루헨스,대림,제일아쿠아,삼성,모든브랜드렌탈</a></li>
+<li><a href="/zboard/zboard.php?id=pmarket">(중고차삽니다) 중고자동차 뽐뿌 회원우대 최고가 삽니다</a></li>
+        </ul>
+</div>
+<!--뉴스-->
+<div class="unse_box">
+    <ol class="phone_title">
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=news_broadcast'>방송/연예</a></span>
+                <span class="phone_menu_line02">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=news_sports'>스포츠</a></span>
+                <span class="phone_menu_line02">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=news_life'>라이프</a></span>
+                <span class="phone_menu_line02">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=news_pol_eco'>정치/경제</a></span>
+                <span class="phone_menu_line02">|</span>
+                <span class="phone_title_name"><a href='/zboard/zboard.php?id=news2'>IT</a></span>
+    </ol>
+
+    <ul class="unse_info">
+                    <li class="gallery_01">
+                    <a href="http://www.ppomppu.co.kr/zboard/view.php?id=news_pol_eco&no=1844"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/news_pol_eco/4/small_1844.jpg" width="105px;" height="105px" alt=""><span class="news_t"> [TF이슈&주가] 이베스트 "크...</span></a>
+                    </li>
+                    <li class="gallery_01">
+                    <a href="http://www.ppomppu.co.kr/zboard/view.php?id=news_pol_eco&no=1843"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/news_pol_eco/3/small_1843.jpg" width="105px;" height="105px" alt=""><span class="news_t"> 그랜저 HG 반파 사고, 현대차...</span></a>
+                    </li>
+                    <li class="gallery_01">
+                    <a href="http://www.ppomppu.co.kr/zboard/view.php?id=news_pol_eco&no=1842"><img onError="this.src='http://www.ppomppu.co.kr/images/photo_no-lmage.gif';" src="http://img1.ppomppu.co.kr/zboard/data/_thumb/news_pol_eco/2/small_1842.jpg" width="105px;" height="105px" alt=""><span class="news_t"> [TF이슈&주가] 대신증권, 삼...</span></a>
+                    </li>
+                </ul>
+<!--
+    <ul class="unse_info">
+        <li><img src="http://cache1.ppomppu.co.kr/zboard/data/_thumb/news_broadcast/4/small_954.jpg" "="" onfocus="blur()" border="0" onerror="this.src=&quot;skin/DQ_Revolution_Gallery_New3/css/white_simple/noimg.gif&quot;" width="105px" height="105px;"><span class="news_t">무한도전 엑스포 개최…어떤 체험..</span></li>
+        <li><img src="http://cache1.ppomppu.co.kr/zboard/data/_thumb/news_broadcast/8/small_948.jpg" "="" onfocus="blur()" border="0" onerror="this.src=&quot;skin/DQ_Revolution_Gallery_New3/css/white_simple/noimg.gif&quot;" width="105px" height="105px;"><span class="news_t">신은경 측 "전 소속사 대표 고소.</span></li>
+        <li><img src="http://cache1.ppomppu.co.kr/zboard/data/_thumb/news_broadcast/6/small_946.jpg" "="" onfocus="blur()" border="0" onerror="this.src=&quot;skin/DQ_Revolution_Gallery_New3/css/white_simple/noimg.gif&quot;" width="105px" height="105px;"><span class="news_t">재경 결혼은 언제? "레인보우 멤버..</span></li>
+    </ul>
+-->
+</div>
+
+</div>
+
+<!--홍보알림-->
+<div class="contents_box">
+        <p>
+                <span class="new_contents_01" style="height: 100px;">
+                                <iframe id="if_main_bt_left_bn" src="/banner/main_bottom_left.html" scrolling="no" border="0" marginWidth="0" marginHeight="0" frameBorder="0" width="555px" height="100px"></iframe>
+                </span>
+                <span class="new_contents_02" style="height: 100px; text-align:center;">
+                                <iframe id="if_main_bt_right_bn" src="/banner/main_bottom_right.html" scrolling="no" border="0" marginWidth="0" marginHeight="0" frameBorder="0" width="320px" height="100px"></iframe>
+                </span>
+        </p>
+</div>
+
+
+<div class="hot_menu">
+<!--핫게시글-->
+
+    <script type="text/javascript">
+    $(function(){
+        $('.nextHotBBS').click( function(event) {
+            if (this == event.target) {
+                var max_num = "2";
+                if ( max_num == 1 ) return false;
+                var cur_num = parseInt($('#hot_bbs_curpage').text());
+                next_num = cur_num + 1;
+                if (next_num > max_num) next_num = 1;
+
+                if($('#pop_list_sub').css('display')=='none'){
+                    changeElemetId('page_show_hot_bbs',next_num,cur_num);
+                }else{
+                    changeElemetId('page_show_pop_bbs',next_num,cur_num);
+                }
+
+                $('#hot_bbs_curpage').html(next_num);
+            }
+            return false;
+        }).css('cursor', 'pointer');
+        $('.prevHotBBS').click( function(event) {
+            if (this == event.target) {
+                var max_num = "2";
+                if ( max_num == 1 ) return false;
+                var cur_num = parseInt($('#hot_bbs_curpage').text());
+                prev_num = cur_num - 1;
+                if (prev_num < 1) prev_num = max_num;
+
+                if($('#pop_list_sub').css('display')=='none'){
+                    changeElemetId('page_show_hot_bbs',prev_num,cur_num);
+                }else{
+                    changeElemetId('page_show_pop_bbs',prev_num,cur_num);
+                }
+
+                $('#hot_bbs_curpage').html(prev_num);
+            }
+            return false;
+        }).css('cursor', 'pointer');
+
+        $('#hot_title_bbs').click( function(event) {
+
+            if($('#hot_list_sub').css('display')=='block'){
+                window.location.replace("/hot.php?category=2");
+            }
+            $('#hot_bbs_curpage').html(1);
+
+            $('#page_show_pop_bbs1').show();
+            $('#page_show_pop_bbs2').hide();
+            $('#page_show_pop_bbs3').hide();
+
+
+            $('#pop_list_sub').hide();
+            $('#hot_list_sub').show();
+            $('#pop_title_bbs').removeClass('hot_title_name').addClass('hot_title_name_off');
+            $('#hot_title_bbs').removeClass('hot_title_name_off').addClass('hot_title_name');
+
+
+            return false;
+
+        }).css('cursor', 'pointer');
+
+        $('#pop_title_bbs').click( function(event) {
+
+            pop_list_show();
+
+            return false;
+
+        }).css('cursor', 'pointer');
+
+
+        function pop_list_show(){
+            if($('#hot_list_sub').css('display')=='none'){
+                window.location.replace("/hot.php?category=1");
+            }
+            $('#hot_bbs_curpage').html(1);
+
+            $('#page_show_hot_bbs1').show();
+            $('#page_show_hot_bbs2').hide();
+            $('#page_show_hot_bbs3').hide();
+
+            $('#pop_list_sub').show();
+            $('#hot_list_sub').hide();
+            $('#hot_title_bbs').removeClass('hot_title_name').addClass('hot_title_name_off');
+            $('#pop_title_bbs').removeClass('hot_title_name_off').addClass('hot_title_name');
+
+        }
+
+        
+    });
+
+
+    </script>
+
+
+<div class="hot_list_box">
+    <ol>
+        <span class="hot_title_name" id='hot_title_bbs'><em>HOT</em> 게시글 <img src='/images/puls_icon.gif' alt='' /></span><span class="ln">|</span>
+        <span class="hot_title_name_off" id='pop_title_bbs'>인기글 <img src='/images/puls_icon.gif' alt='' /></span>
+
+
+        <div class="pagebtn" ><span class="pagnum"><strong><span id="hot_bbs_curpage">1</span></strong>/2</span><a href="#" onClick="return false;"><img class="prevHotBBS" src="/images/arrow_pre.gif" alt="이전"/></a><a href="#" onClick="return false;"><img class="nextHotBBS" src="/images/arrow_nex.gif"  alt="다음"/></a></div>
+        <div style='clear:both;'></div>
+    </ol>
+
+    <div>
+    <ul class="hot_list" id='hot_list_sub'>
+
+                                        <div id="page_show_hot_bbs1" >                    <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60869">곤돌라이용 겨울덕유산 하프종주</a></span>
+                    <span class="com_comment">20</span>
+                    <span class="user_nic">&nbsp;/상근아빠</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60861">한라산 성판악-백록담 후기</a></span>
+                    <span class="com_comment">15</span>
+                    <span class="user_nic">&nbsp;/ㅎㄱㅎ</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60865">남덕유산 산행후기</a></span>
+                    <span class="com_comment">28</span>
+                    <span class="user_nic">&nbsp;/피셔67</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60860">남덕유산(황점-월성재-남덕유산-월성재-삿갓봉-삿갓재-황점) 2015년 12월 19일</a></span>
+                    <span class="com_comment">24</span>
+                    <span class="user_nic">&nbsp;/블루마스타</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=ppomppu4" style='color:#355eb4;'>해외뽐뿌</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=ppomppu4&no=72417">[ebay] Kaspersky Internet Security 2016 (8.71 파운드/무료)</a></span>
+                    <span class="com_comment">90</span>
+                    <span class="user_nic">&nbsp;/잘래</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=oversea" style='color:#355eb4;'>해외포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=oversea&no=520602">해포님들.. 감사합니다.</a></span>
+                    <span class="com_comment">6</span>
+                    <span class="user_nic">&nbsp;/가구만드는미르</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=humor" style='color:#355eb4;'>유머/감동</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=humor&no=259505">영화 베타랑 실제사건</a></span>
+                    <span class="com_comment">35</span>
+                    <span class="user_nic">&nbsp;/jjuuuuuni</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=ppomppu4" style='color:#355eb4;'>해외뽐뿌</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=ppomppu4&no=72415">[Amazon] Timex: Spend $100 and Receive 40%(전제품) Off + 25%(일부) Off Timex Watches (가격 다양)</a></span>
+                    <span class="com_comment">52</span>
+                    <span class="user_nic">&nbsp;/Barakuda</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60853">[거북이 등산대]12/19일 한라산 (성판악 - 백록담 - 성판악)</a></span>
+                    <span class="com_comment">25</span>
+                    <span class="user_nic">&nbsp;/거북이등산대</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=oversea" style='color:#355eb4;'>해외포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=oversea&no=520608">Dell 해외 직구품 경험을 통한 워런티(AS)관련 사항 정리 및 후기</a></span>
+                    <span class="com_comment">9</span>
+                    <span class="user_nic">&nbsp;/변씨다</span>
+                    </li>
+                    </div>                    <div id="page_show_hot_bbs2" style="display:none;">                    <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=nas" style='color:#355eb4;'>NAS포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=nas&no=18782">WD 마이클라우드에 시놀로지OS 올리기 (한국어판)</a></span>
+                    <span class="com_comment">52</span>
+                    <span class="user_nic">&nbsp;/Cliet</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=iphone" style='color:#355eb4;'>아이폰포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=iphone&no=369557">(서랍장대방출) 14가지품목 나눔 진행해보겠습니다!</a></span>
+                    <span class="com_comment">177</span>
+                    <span class="user_nic">&nbsp;/대구달서구뽐뻐</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=phone" style='color:#355eb4;'>휴대폰포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=phone&no=3132272">(서랍장대방출) 14가지품목 나눔 진행해보겠습니다.</a></span>
+                    <span class="com_comment">187</span>
+                    <span class="user_nic">&nbsp;/대구달서구뽐뻐</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=ppomppu4" style='color:#355eb4;'>해외뽐뿌</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=ppomppu4&no=72412">[amazon] Black+Decker BDH2000PL MAX Lithium Pivot Vacuum, 20-volt ($50.99/FS)</a></span>
+                    <span class="com_comment">129</span>
+                    <span class="user_nic">&nbsp;/드러머1</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=ppomppu4" style='color:#355eb4;'>해외뽐뿌</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=ppomppu4&no=72392">[eBay] $100 eBay Gift Card - Email delivery ($95/FS)</a></span>
+                    <span class="com_comment">33</span>
+                    <span class="user_nic">&nbsp;/TooBlack</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60820">콜핑 쉘러바지 품번입니다.기억해두셔요~</a></span>
+                    <span class="com_comment">32</span>
+                    <span class="user_nic">&nbsp;/체큐카드</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=oversea" style='color:#355eb4;'>해외포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=oversea&no=520420">해뽐에 올라온 마소 공홈 199달러짜리 노트북 많이들 궁금해하시는거 같아서 아는대로 알려드려요</a></span>
+                    <span class="com_comment">24</span>
+                    <span class="user_nic">&nbsp;/airarmy</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60816">2015/12/19  덕유산,  삼공매표소 - 백련사 - 향적봉 - 중봉 - 동업령 - 안성매표소</a></span>
+                    <span class="com_comment">27</span>
+                    <span class="user_nic">&nbsp;/산타는거북이</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=stock" style='color:#355eb4;'>증권포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=stock&no=106317">대한항공이 비상하지못하는 이유</a></span>
+                    <span class="com_comment">44</span>
+                    <span class="user_nic">&nbsp;/쿨ㅋㅋㅋㅋㅋ</span>
+                    </li>
+ <dd>&nbsp;</dd> </div>
+
+    </ul>
+
+
+
+
+
+
+        <ul class="hot_list" id="pop_list_sub" style='display:none;'>
+
+                                        <div id="page_show_pop_bbs1" >                    <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=phone3" style='color:#355eb4;'>구입개통수령</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=phone3&no=41210">어제 공책5 ㄹㄱㅂㅇ 개통완료!!</a></span>
+                    <span class="com_comment">7</span>
+                    <span class="user_nic">&nbsp;/걱정말아요그대여</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=problem" style='color:#355eb4;'>고민포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=problem&no=59436">쓰레기입니다..여자친구 있는데 다른여자와 잡니다...</a></span>
+                    <span class="com_comment">63</span>
+                    <span class="user_nic">&nbsp;/[* 익명 *]</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=freeboard" style='color:#355eb4;'>자유게시판</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=freeboard&no=4516116">이혜숙 예비후보 ㅋㅋㅋㅋ</a></span>
+                    <span class="com_comment">28</span>
+                    <span class="user_nic">&nbsp;/할렘가얼짱</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=pet" style='color:#355eb4;'>동식물포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=pet&no=35031">종을 초월한 모성애</a></span>
+                    <span class="com_comment">8</span>
+                    <span class="user_nic">&nbsp;/아잉슈타인-</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=car" style='color:#355eb4;'>자동차포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=car&no=482553">엑센트 디젤이 그랜저 디젤 잡는다는데 사실입니까 ? ? ?</a></span>
+                    <span class="com_comment">63</span>
+                    <span class="user_nic">&nbsp;/망상충</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=gamer" style='color:#355eb4;'>게임기포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=gamer&no=16820">블러드본..아멜리아..멘붕왔어요..</a></span>
+                    <span class="com_comment">14</span>
+                    <span class="user_nic">&nbsp;/초원숭이</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60841">뒤늦은 아차산</a></span>
+                    <span class="com_comment">10</span>
+                    <span class="user_nic">&nbsp;/천천히가는고래</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=house" style='color:#355eb4;'>부동산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=house&no=46376">전라도 광주  분양당첨됬는데요</a></span>
+                    <span class="com_comment">17</span>
+                    <span class="user_nic">&nbsp;/아프냐</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=house" style='color:#355eb4;'>부동산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=house&no=46381">우리나라 중개보수요.. 매우 저렴한 편입니다.</a></span>
+                    <span class="com_comment">56</span>
+                    <span class="user_nic">&nbsp;/친절한한울씨</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=free_picture" style='color:#355eb4;'>자유갤러리</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=free_picture&no=162568">흰양말</a></span>
+                    <span class="com_comment">9</span>
+                    <span class="user_nic">&nbsp;/koltugy</span>
+                    </li>
+                    </div>                    <div id="page_show_pop_bbs2" style="display:none;">                    <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=car" style='color:#355eb4;'>자동차포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=car&no=482548">쏘카 레이 앞범퍼 해먹었어요...</a></span>
+                    <span class="com_comment">130</span>
+                    <span class="user_nic">&nbsp;/변덕</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=computer" style='color:#355eb4;'>컴퓨터포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=computer&no=392775">i7 2600 사용자분들 업글뽐뿌 오시나요?</a></span>
+                    <span class="com_comment">20</span>
+                    <span class="user_nic">&nbsp;/코코어린이</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=climb" style='color:#355eb4;'>등산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=climb&no=60855">오늘 처음으로 수락산 다녀왔습니다.</a></span>
+                    <span class="com_comment">9</span>
+                    <span class="user_nic">&nbsp;/형부무서워요</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=event" style='color:#355eb4;'>이벤트게시판</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=event&no=68250">[MBC] 해피타임 시청자퀴즈</a></span>
+                    <span class="com_comment">8</span>
+                    <span class="user_nic">&nbsp;/오영</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=mobile_gallery" style='color:#355eb4;'>모바일갤러리</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=mobile_gallery&no=46266">건대 로니로티 다녀왔어요~~~~~</a></span>
+                    <span class="com_comment">12</span>
+                    <span class="user_nic">&nbsp;/박상원입니다</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=mobile_gallery" style='color:#355eb4;'>모바일갤러리</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=mobile_gallery&no=46281">옛날통닭</a></span>
+                    <span class="com_comment">15</span>
+                    <span class="user_nic">&nbsp;/빠빠라기a</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=phone" style='color:#355eb4;'>휴대폰포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=phone&no=3132309">SK 번호놀이 입니다.</a></span>
+                    <span class="com_comment">15</span>
+                    <span class="user_nic">&nbsp;/SSH</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=mobile_gallery" style='color:#355eb4;'>모바일갤러리</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=mobile_gallery&no=46289">꼬치는 항상 옳습니다!</a></span>
+                    <span class="com_comment">10</span>
+                    <span class="user_nic">&nbsp;/꽃순이아빠</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=pet" style='color:#355eb4;'>동식물포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=pet&no=35032">3일동안 애들을 못챙겨줬네요ㅠㅜ</a></span>
+                    <span class="com_comment">4</span>
+                    <span class="user_nic">&nbsp;/마욤</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=iphone" style='color:#355eb4;'>아이폰포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=iphone&no=369554">아이폰 사진관리 궁금점</a></span>
+                    <span class="com_comment">13</span>
+                    <span class="user_nic">&nbsp;/훈임이</span>
+                    </li>
+                    </div>                    <div id="page_show_pop_bbs3" style="display:none;">                    <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=mobile_gallery" style='color:#355eb4;'>모바일갤러리</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=mobile_gallery&no=46290">배스킨라빈스 인형</a></span>
+                    <span class="com_comment">16</span>
+                    <span class="user_nic">&nbsp;/걇걇걇</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=phone3" style='color:#355eb4;'>구입개통수령</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=phone3&no=41227">ㄹㄱㅂㅇ 사과s 64 개통했습니다!</a></span>
+                    <span class="com_comment">26</span>
+                    <span class="user_nic">&nbsp;/토묘크</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=house" style='color:#355eb4;'>부동산포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=house&no=46386">집 자산으로 먹고 사는 수단을 도대체 왜 제도적으로 허용하는거죠?</a></span>
+                    <span class="com_comment">73</span>
+                    <span class="user_nic">&nbsp;/Brianstorm</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=pet" style='color:#355eb4;'>동식물포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=pet&no=35026">고냥이는 끈을 좋아 합니다.</a></span>
+                    <span class="com_comment">6</span>
+                    <span class="user_nic">&nbsp;/또냥이</span>
+                    </li>
+                                                            <li>
+                    <span class="com_category" style="clear: both;"><a href="/zboard/zboard.php?id=car" style='color:#355eb4;'>자동차포럼</a></span>
+                    <span class="com_subject" style="max-width:320px;"><a href="/zboard/view.php?id=car&no=482523">저는 운전할 때 가속할땐 4~5000RPM까지 그냥 밟아버리는데</a></span>
+                    <span class="com_comment">55</span>
+                    <span class="user_nic">&nbsp;/길라엔</span>
+                    </li>
+ <dd>&nbsp;</dd>  <dd>&nbsp;</dd>  <dd>&nbsp;</dd>  <dd>&nbsp;</dd>  <dd>&nbsp;</dd> </div>
+
+    </ul>
+
+
+</div>
+</div>
+
+
+<!--핫코멘트-->
+
+
+
+<script type="text/javascript">
+	function changeElemetId(id,bnum,nnum) {
+		var element_none = id+nnum;
+		$('#'+element_none).css('display', 'none');
+		var element_block = id+bnum;
+		$('#'+element_block).css('display', 'block');
+	}
+	
+	$(function(){
+		$('.nextHotComment').click( function(event) {
+			if (this == event.target) {
+				var max_num = "3";
+				if ( max_num == 1 ) return false;
+				var cur_num = parseInt($('#hot_comment_curpage').text());
+				next_num = cur_num + 1;
+				if (next_num > max_num) next_num = 1;
+				changeElemetId('page_show_hot_comment',next_num,cur_num);
+				$('#hot_comment_curpage').html(next_num);
+			}
+			return false;
+		}).css('cursor', 'pointer');
+		$('.prevHotComment').click( function(event) {
+            if (this == event.target) {
+                var max_num = "3";
+				if ( max_num == 1 ) return false;
+                var cur_num = parseInt($('#hot_comment_curpage').text());
+                prev_num = cur_num - 1;
+                if (prev_num < 1) prev_num = max_num;
+                changeElemetId('page_show_hot_comment',prev_num,cur_num);
+                $('#hot_comment_curpage').html(prev_num);
+            }
+            return false;
+        }).css('cursor', 'pointer');
+	});
+
+</script>
+
+
+<div class="hot_com_list_box">
+	<ol>
+		<div class="hot_com_title_name" ><a href="/hot_comment.php"><em>HOT</em> 코멘트 <img src='/images/puls_icon.gif' alt='' /></a></div>
+	
+		
+		<div class="pagebtn"><span class="pagnum"><strong><span id="hot_comment_curpage">1</span></strong>/3</span><a href="#" onClick="return false;"><img class="prevHotComment" src="/images/arrow_pre.gif" alt="이전"/></a><a href="#" onClick="return false;"><img class="nextHotComment" src="/images/arrow_nex.gif"  alt="다음"/></a></div>
+		
+		<div style='clear:both;'></div>
+		
+	</ol>
+	
+	<div>
+	<ul class="hot_list">
+	
+		
+						<div id="page_show_hot_comment1" style="display:block;">			<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516196" title='자유게시판' alt='자유게시판'> 내귀에 델리~ ♬</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516212" title='자유게시판' alt='자유게시판'> 포인트 농부질 그만해라 전해라~</a></span>
+			<span class="com_comment">10</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=problem&no=59436" title='고민포럼' alt='고민포럼'>아오 여자들 자궁경부암 왜 걸리는지 아세요?
+남자의 난잡한 성생활 때문인데 의사들은 말해주지 않는다네요.. 가정 파탄날까봐
+여자사귀지 마시고 평생 업소 다니세요 제발
+멀쩡한 여자 암환자 만들지 말고</a></span>
+			<span class="com_comment">13</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=problem&no=59436" title='고민포럼' alt='고민포럼'>성욕이 심한데 1주일에 한번 밖에 안한데.....ㅋㅋㅋ
+여자가 소설을 썼나??</a></span>
+			<span class="com_comment">17</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=problem&no=59436" title='고민포럼' alt='고민포럼'>너 혼자 성병 걸려 고생하는 건 괜찮은데 ... 아무것도 모르는 어린 여친은 무슨 죄냐? 
+헤어지기 싫으면 다니지를 말고, 다니고 싶으면 헤어져라 이눔아.
+세상에 스트레스 안 받는 사람이 어디있냐? 너만  힘드냐 다 힘들다. 참고 사는거지. 그리고 스트레스 푸는 법을 배워라.
+손가락질 안 받는 스트레스 푸는 법을 배워 건전한 인생 좀 살아 봐라. 
+니 인생을 돌아보고 ,,, 두 갈래 길에서 누구든 고민하고 선택해야 하는데 ,, 정말 순간의 선택이 니 인</a></span>
+			<span class="com_comment">19</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516156" title='자유게시판' alt='자유게시판'>소라넷을 두둔하는 글과 댓글을 보다니 충격이네요. 몰카 문제로 이슈화되었는데 무슨 피해를 안 줘요. 그리고 전 여친 영상 올리는데면 말 다한거죠. 동의해서 올리는 것도 아닐텐데 어떻게 보면 여성 입장에서는 최악의 사이트죠</a></span>
+			<span class="com_comment">8</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516147" title='자유게시판' alt='자유게시판'>현재 남아있는건 뻣뻣한 고자세와 탐욕..</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=car&no=482315" title='자동차포럼' alt='자동차포럼'>예전 스포티지는 그렇게 안샜죠. 수타페도 예전 싼타페는 안샜습니다.
+물 새는걸 못 막는게 아니라 절감질을 마구잡이로 해대다보니 기본기 부분까지 원가절감이 들어간거라고 봐야죠. 절감하고 또 절감하고 모든걸 최소화해서 차를 만들다보니 결국 저리 물이 새고.. 아주 기본적인 부분에서 문제가 생기는거라고 봐야죠.
+
+하지만 이런 배경에는 역시나 물이 샌다. 나는 안샐것이다. 그래서 산다. 또 산다.. 물이 새건 말건 현기는 잘 팔린다. 그럼 보강하지 않고 절감한</a></span>
+			<span class="com_comment">8</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=phone&no=3132264" title='휴대폰포럼' alt='휴대폰포럼'> 근데 이 분은 왜 삼성 얘기만 나오면 발끈하시나요?</a></span>
+			<span class="com_comment">8</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516125" title='자유게시판' alt='자유게시판'> 아버지한테 버는 족족 다 갖다 줬는데 아마 사기당했을거에요 당시에 .. 근데 무도할때라 기사가 그냥 그리 나갔던걸로 ...;
+전진 키워준 엄마도 친엄마가 아니고 ..양엄마 이기도 하고 ..아빠가 좀 날티 나는 스타일인지라 전진이 평범한 가족을 많이 꿈꾸고 그랬어요 그래서 그나마 있는 말썽쟁이 아버지지만 가족애를 많이
+그리워 해서 끌어앉고 매번 앨범 내준다고 돈쓰고 ..사업한다고 돈주고 ..그랬을걸요 ?
+그래서 전진이</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+			</div>			<div id="page_show_hot_comment2" style="display:none;">			<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516147" title='자유게시판' alt='자유게시판'>창의력은 무슨...</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=phone&no=3132264" title='휴대폰포럼' alt='휴대폰포럼'> 금색 마감 ... 실제 금으로 도금한건데;;;
+골드바를 깎아 박아 놨어야 고급스럽단 말 나올라나요;;;</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=phone&no=3132264" title='휴대폰포럼' alt='휴대폰포럼'> 요약하면 고급스럽지않다네요?
+세컨드 디스플레이는 저한테는 역신적인 기능인데...
+소프트키 말씀하시는것 같은데...그거역시 개인 취향입니다.
+
+개인취향 존중해드립니다.
+
+저의 개인 취향도 존중해주신다면...역대최고의 폰입니다.
+</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=house&no=46381" title='부동산포럼' alt='부동산포럼'>서비스가 같지 않은데 
+요율 낮다고 투덜거리는건
+역시 업자이기 때문인가요.
+우리나라 중개업자들 거래자들 꼬득일줄만 알지
+하는일이 뭔가요</a></span>
+			<span class="com_comment">11</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=phone&no=3132310" title='휴대폰포럼' alt='휴대폰포럼'>후기게시판 놔두고 휴포에 글 올린 사람들이 문제이거나  영업목적으로 휴포에  의도적으로  후기 써놓은 신도림  폰파리들이 문제인거죠
+
+글쓴이님도 생각 해보세요
+
+후기게시판 가보시면 어느 누구도 터치 없잖아요
+</a></span>
+			<span class="com_comment">8</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516156" title='자유게시판' alt='자유게시판'>소라넷이 피해를 안준다구요 ? 
+여친 사진 찍어 올리는데 그게 피해를 안주는건가..</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=stock&no=106320" title='증권포럼' alt='증권포럼'>장기투자자란
+저가에 사서 고가에 파는겁니다..
+남들이 잘모를때 사서 잘알때 파는?
+님은 고가에 사서 물려있는거지요</a></span>
+			<span class="com_comment">8</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=house&no=46386" title='부동산포럼' alt='부동산포럼'>댓글을 어떻게 쓰는게 좋을까 한 5분가량 멍하게 천장을 바라보고 있네요
+민주, 사법, 맑스, 자유, 평등, 시장, 자본, 시민, 아담 스미스.........
+머리 속에서 엄청난 수의 단어들이 떠오르지만 모든 것을 축약해서 짧게 쓸 능력이 없네요
+
+분명한건 부동산 자산가가 사회 구성원으로서 님에게 직간접적으로 현재 생활에 일조하고 있다는 사실입니다</a></span>
+			<span class="com_comment">10</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516116" title='자유게시판' alt='자유게시판'>ㅋㅋㅋㅋㅋㅋㅋ
+솔직하게 답한게 자기팀 대가리년 팀킬 ㅋㅋㅋㅋㅋㅋㅋ</a></span>
+			<span class="com_comment">15</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=house&no=46386" title='부동산포럼' alt='부동산포럼'>헐.. 댓글들이... 부동산의 비중이 높을수록 경제의 건전성이 악화되는건 상식아닌가요 일부의 자산가가 부동산을 다수 보유하여 이득을 꾀함에 따라 주거안정을 해치고 부의 편중을 가속화하고.. 차라리 주식은 기업에라도 도움이 되지... 글쓴분 말 틀린점 하나도 없구만요. 자본주의니 뭐니... 부동산에 목메는 사회가 건전한 자본주의던가요? 부동산포럼이라 다들 건물주들이신지... ㅎ</a></span>
+			<span class="com_comment">10</span>
+			</li>
+					
+		
+			</div>			<div id="page_show_hot_comment3" style="display:none;">			<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=house&no=46386" title='부동산포럼' alt='부동산포럼'>어디서부터 이야기해야할지 막막합니다만...
+일단 자본주의가 현 시점에서 최선의 경제체제라는 것은 동의하신다는 가정 하에서 출발하겠습니다.
+
+어느집은 비싸고 어느집은 싸고, 왜 내가 사고 싶은 집은 비싼지... 즉, 집의 가격이 결정되는 것은
+수요와 공급의 비대칭성에서부터 출발합니다.
+
+내가 살고 싶어하는 토지는 다른사람도 살고싶어합니다.
+이로인해 강남의 땅 값이 강북보다 비싸고, 서울의 땅 값이 지방보다 비쌉니다.
+내가 오래된 쪽방이 아닌 신축 아파트에</a></span>
+			<span class="com_comment">10</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516147" title='자유게시판' alt='자유게시판'>진행력이 없죠
+정리를 못함
+혼자서 못해서 말아먹은 프로가 다수</a></span>
+			<span class="com_comment">11</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=stock&no=106320" title='증권포럼' alt='증권포럼'>아무튼, 저는 정답은 없다고 봅니다. 손절했어야지~, 분할매수 했어야지~ 결국 전부 결과론이에요. 만약 님이 샀던 타이밍이 절대적인 저가의 영역이였다면 대박을 맞으셨을 겁니다. 지난 일을 가지고 훈수두는 것, 누구나 할 수 있죠. 주식에 정답은 없으니 단기간의 주가향방에 일희일비 안하셨으면 하는 바램입니다..</a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=humor&no=259505" title='유머/감동' alt='유머/감동'> 국민 혈세로 키운 공기업 유공(석유공사)을 노태우의 입김으로  민영화시켜 선경그룹(SK)한테  갖다 주죠. 훗날 노태우와 SK 는 사돈관계..
+또 노태우는 대통령 된후 임기말 한국이동통신(sk텔레콤 전신임)도 민영화시켜  통채로 갖다줌 ㅋ </a></span>
+			<span class="com_comment">9</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=freeboard&no=4516115" title='자유게시판' alt='자유게시판'> 후쿠시마에서 먼 오키나와라는 소리죠
+
+댓글 달 때마다 논문쓰듯 고심해서 써야하나요
+
+지엽적인 부분 지적해서 논점 흐리는 것도 별로넹&#4514;</a></span>
+			<span class="com_comment">10</span>
+			</li>
+					
+		
+									<li>
+			<span class="com_subject" style="clear: both;max-width:270px;"><a href="/zboard/view.php?id=humor&no=259505" title='유머/감동' alt='유머/감동'>빠따텔레콤
+11빠따</a></span>
+			<span class="com_comment">10</span>
+			</li>
+					
+ <dd>&nbsp;</dd>  <dd>&nbsp;</dd>  <dd>&nbsp;</dd>  <dd>&nbsp;</dd> </div>	
+	
+	</ul>
+</div>
+
+</div>
+
+</div>
+
+<hr />
+</div>
+<br />
+<!--푸터-->
+<div id="footer">
+    <div class="footMenu">
+        <ul>
+        
+        
+        <li>
+            <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=faq">사이트소개/FAQ</a>
+        </li>
+        <li>
+            <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=propose">운영참여게시판</a>
+        </li>
+        <li>
+            <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=apply">포럼지원센터</a>
+        </li>
+        <li>
+                <a href="#">마이페이지</a>
+        </li>
+        <li>
+
+                                <a href="#">나만의공간</a>
+                </li>
+        <li>
+            <a href="http://www.ppomppu.co.kr/recruit.php">인재채용</a>
+        </li>
+        </ul>
+    </div>
+
+    <div class="logo">
+        <p class="logo"><a href="http://www.ppomppu.co.kr/index.php"><img src="/images/main/201111/footer_logo_01.jpg" alt="뽐뿌" /></a></p>
+        <p class="etc">
+
+
+            <a href="http://www.ppomppu.co.kr/zboard/zboard.php?id=dup">중복게시판</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="http://www.ppomppu.co.kr/zboard/view.php?id=regulation&no=3"><span style="color:#527bc2"><b>개인정보취급방침</b></span></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="http://www.ppomppu.co.kr/zboard/view.php?id=regulation&page=2&divpage=1&no=5">청소년보호정책</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="http://www.ppomppu.co.kr/zboard/view.php?id=faq&no=17">광고/제휴 안내</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="mailto:webmaster@ppomppu.co.kr">메일문의 (<em>webmaster@ppomppu.co.kr</em>)</a>
+        </p>
+    </div>
+    
+
+    <div class="address">
+        <p>Copyright 2005-2015 <strong>ppomppu</strong>. All rights reserved</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+
+
+<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {}; wcs_add["wa"] = "f5a2939f5eafe4"; wcs_do();
+</script>
+
+
+
+
+</div>
+
+</body>
+</html>
