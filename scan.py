@@ -39,13 +39,16 @@ def summarize(root):
     summary = defaultdict(lambda: defaultdict(int))
     def walk(elem):
         tag = tag_name(elem)
-        summary[tag][None] += len_iter(elem.itertext())
-        for child in elem.getchildren():
+        if elem.text and not elem.text.isspace():
+            summary[tag][None] += 1
+        for child in elem:
             try:
                 child_tag = tag_name(child)
             except Exception:
                 continue
             summary[tag][child_tag] += 1
+            if child.tail and not child.tail.isspace():
+                summary[tag][None] += 1
             walk(child)
     walk(root)
     return undefaultdict(summary)
@@ -63,7 +66,8 @@ def ubersummarize(summaries):
 def main():
     pool = Pool()
     trees = pool.imap_unordered(html5lib.parse, load_files())
-    ubersummary = ubersummarize(pool.imap_unordered(summarize, trees))
+    summaries = pool.imap_unordered(summarize, trees)
+    ubersummary = ubersummarize(summaries)
     pprint(ubersummary)
 
 
