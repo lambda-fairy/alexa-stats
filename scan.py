@@ -7,10 +7,7 @@ import json
 import os
 from multiprocessing import Pool
 from pprint import pprint
-
-
-# Ensure that all file paths are relative to the script directory
-os.chdir(os.path.dirname(__file__))
+import sys
 
 
 VALID_TAGS = frozenset("""
@@ -138,14 +135,6 @@ wbr
 """.strip().split())
 
 
-def load_files(dirname):
-    """Yield all the files in the specified directory."""
-    for name in os.listdir(dirname):
-        with open(os.path.join(dirname, name), 'rb') as f:
-            yield f.read()
-            print('Loaded', name)
-
-
 def tag_name(elem):
     """Extract the unqualified tag name from an element."""
     name = elem.tag.split('}')[-1]
@@ -206,19 +195,13 @@ def collate_summaries(summaries):
 
 
 def main():
+    inputs = [open(input_path, 'rb').read() for input_path in sys.argv[1:]]
     pool = Pool()
     # Parsing is very slow, so run lots of instances in parallel
-    trees = pool.imap_unordered(html5lib.parse, load_files('alexa-pages'))
+    trees = pool.imap_unordered(html5lib.parse, inputs)
     summaries = pool.imap_unordered(summarize_page, trees)
     ubersummary = collate_summaries(summaries)
-    with open('alexa-stats.json', 'w') as out:
-        json.dump(ubersummary, out)
-    pprint(ubersummary)
-    unused_tags = VALID_TAGS.difference(
-            tag
-            for children in ubersummary.values()
-            for tag in children.keys())
-    print('Unused tags:', *sorted(unused_tags))
+    json.dump(ubersummary, sys.stdout)
 
 
 if __name__ == '__main__':
