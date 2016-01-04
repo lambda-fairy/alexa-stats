@@ -218,6 +218,11 @@ def main():
     with open('alexa-stats.json', 'w') as out:
         json.dump(ubersummary, out)
     pprint(ubersummary)
+    unused_tags = VALID_TAGS.difference(
+            tag
+            for children in ubersummary.values()
+            for tag in children.keys())
+    print('Unused tags:', *sorted(unused_tags))
 
 
 if __name__ == '__main__':
