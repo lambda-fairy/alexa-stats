@@ -156,11 +156,6 @@ def tag_name(elem):
     return name
 
 
-def len_iter(it):
-    """Return the number of elements yielded by an iterator."""
-    return sum(1 for _ in it)
-
-
 def undefaultdict(d):
     """
     Convert a defaultdict of defaultdicts to a dict of dicts.
