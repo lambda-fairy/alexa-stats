@@ -196,11 +196,12 @@ def summarize_page(root):
 def collate_summaries(summaries):
     """Given an iterable of summaries returned by ``summarize_page``,
     combine them all into a single summary."""
+    summaries = list(summaries)
     ubersummary = defaultdict(lambda: defaultdict(int))
     for summary in summaries:
         for parent, children in summary.items():
             for child, count in children.items():
-                ubersummary[parent][child] += count
+                ubersummary[parent][child] += count / len(summaries)
     return undefaultdict(ubersummary)
 
 
