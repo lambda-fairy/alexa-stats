@@ -8,20 +8,24 @@ from multiprocessing import Pool
 from pprint import pprint
 
 
+# Ensure that all file paths are relative to the script directory
 os.chdir(os.path.dirname(__file__))
 
 
-def load_files():
-    dirname = 'alexa-pages'
+def load_files(dirname):
+    """Yield all the files in the specified directory."""
     for name in os.listdir(dirname):
-        print(name)
         with open(os.path.join(dirname, name), 'rb') as f:
             yield f.read()
+            print('Loaded', name)
 
 
 def tag_name(elem):
     """Extract the unqualified tag name from an element."""
     name = elem.tag.split('}')[-1]
+    # Some nodes have weird values as the tag name; no idea why
+    # This encoding operation makes sure that these weird nodes result
+    # in an error
     name.encode('ascii')
     return name
 
@@ -32,10 +36,18 @@ def len_iter(it):
 
 
 def undefaultdict(d):
+    """
+    Convert a defaultdict of defaultdicts to a dict of dicts.
+
+    This is necessary because defaultdicts can't be serialized, a
+    requirement for multiprocessing.
+    """
     return {k: dict(v) for k, v in d.items()}
 
 
-def summarize(root):
+def summarize_page(root):
+    """Given the root of a parse tree, return a nested dict mapping each
+    tag type to its possible children."""
     summary = defaultdict(lambda: defaultdict(int))
     def walk(elem):
         tag = tag_name(elem)
@@ -54,7 +66,9 @@ def summarize(root):
     return undefaultdict(summary)
 
 
-def ubersummarize(summaries):
+def collate_summaries(summaries):
+    """Given an iterable of summaries returned by ``summarize_page``,
+    combine them all into a single summary."""
     ubersummary = defaultdict(lambda: defaultdict(int))
     for summary in summaries:
         for parent, children in summary.items():
@@ -65,9 +79,10 @@ def ubersummarize(summaries):
 
 def main():
     pool = Pool()
-    trees = pool.imap_unordered(html5lib.parse, load_files())
-    summaries = pool.imap_unordered(summarize, trees)
-    ubersummary = ubersummarize(summaries)
+    # Parsing is very slow, so run lots of instances in parallel
+    trees = pool.imap_unordered(html5lib.parse, load_files('alexa-pages'))
+    summaries = pool.imap_unordered(summarize_page, trees)
+    ubersummary = collate_summaries(summaries)
     pprint(ubersummary)
 
 
