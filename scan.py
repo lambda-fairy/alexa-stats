@@ -3,6 +3,7 @@
 
 from collections import defaultdict
 import html5lib
+import json
 import os
 from multiprocessing import Pool
 from pprint import pprint
@@ -171,13 +172,17 @@ def undefaultdict(d):
 
 
 def summarize_page(root):
-    """Given the root of a parse tree, return a nested dict mapping each
-    tag type to its possible children."""
+    """
+    Given the root of a parse tree, return a nested dict mapping each
+    tag type to its possible children.
+
+    Text nodes are represented by an empty string as the tag name.
+    """
     summary = defaultdict(lambda: defaultdict(int))
     def walk(elem):
         tag = tag_name(elem)
         if elem.text and not elem.text.isspace():
-            summary[tag][None] += 1
+            summary[tag][''] += 1
         for child in elem:
             try:
                 child_tag = tag_name(child)
@@ -187,7 +192,7 @@ def summarize_page(root):
                 continue
             summary[tag][child_tag] += 1
             if child.tail and not child.tail.isspace():
-                summary[tag][None] += 1
+                summary[tag][''] += 1
             walk(child)
     walk(root)
     return undefaultdict(summary)
@@ -210,6 +215,8 @@ def main():
     trees = pool.imap_unordered(html5lib.parse, load_files('alexa-pages'))
     summaries = pool.imap_unordered(summarize_page, trees)
     ubersummary = collate_summaries(summaries)
+    with open('alexa-stats.json', 'w') as out:
+        json.dump(ubersummary, out)
     pprint(ubersummary)
 
 
