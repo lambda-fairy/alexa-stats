@@ -201,7 +201,7 @@ def main():
     trees = pool.imap_unordered(html5lib.parse, inputs)
     summaries = pool.imap_unordered(summarize_page, trees)
     ubersummary = collate_summaries(summaries)
-    json.dump(ubersummary, sys.stdout)
+    json.dump(ubersummary, sys.stdout, indent=4, sort_keys=True)
 
 
 if __name__ == '__main__':
